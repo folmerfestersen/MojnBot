@@ -5,7 +5,16 @@
 
    Opsætning: se worker/README.md. Kræver en Workers AI-binding med navnet AI. */
 
+// Standardmodel og de modeller, siden må vælge imellem
 const MODEL = "@cf/google/gemma-4-26b-a4b-it";
+const MODELLER = [
+  "@cf/google/gemma-4-26b-a4b-it",
+  "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+  "@cf/mistralai/mistral-small-3.1-24b-instruct",
+  "@cf/zai-org/glm-4.7-flash",
+  "@cf/qwen/qwen3-30b-a3b-fp8",
+  "@cf/meta/llama-4-scout-17b-16e-instruct"
+];
 
 // Kun disse sider må bruge workeren fra en browser
 const TILLADTE_ORIGINS = [
@@ -90,7 +99,7 @@ export default {
     const h = cors(origin);
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
-    if (request.method === "GET") return json({ ok: true, model: MODEL }, 200, h);
+    if (request.method === "GET") return json({ ok: true, version: 2, model: MODEL, modeller: MODELLER }, 200, h);
     if (request.method !== "POST") return json({ fallback: true, grund: "metode" }, 405, h);
     if (origin && !TILLADTE_ORIGINS.includes(origin)) return json({ fallback: true, grund: "origin" }, 403, h);
     if (!env.AI) return json({ fallback: true, grund: "ingen-ai-binding" }, 500, h);
@@ -100,7 +109,10 @@ export default {
 
     const historik = Array.isArray(body.beskeder) ? body.beskeder.slice(-MAX_BESKEDER) : [];
     const messages = [];
-    let system = SYSTEM;
+    // Siden må sende sin egen instruks (så den kan finjusteres uden at røre workeren)
+    let system = typeof body.system === "string" && body.system.length > 200 ? body.system.slice(0, 9000) : SYSTEM;
+    const model = MODELLER.includes(body.model) ? body.model : MODEL;
+    const temperatur = Math.max(0, Math.min(1, Number(body.temperature ?? 0.6)));
     const kontekst = String(body.kontekst || "").slice(0, MAX_KONTEKST);
     const profil = String(body.profil || "").slice(0, 1500);
     if (profil) system += `\n\nPROFIL (det du ved om brugeren og æ vej):\n${profil}`;
@@ -117,16 +129,16 @@ export default {
     }
 
     try {
-      const svar = await env.AI.run(MODEL, {
+      const svar = await env.AI.run(model, {
         messages,
         max_tokens: MAX_SVAR_TOKENS,
-        temperature: 0.8,
+        temperature: temperatur,
         top_p: 0.95,
         chat_template_kwargs: { enable_thinking: false }
       });
       const tekst = rens(hentTekst(svar));
       if (!tekst) return json({ fallback: true, grund: "tomt-svar" }, 200, h);
-      return json({ svar: tekst }, 200, h);
+      return json({ svar: tekst, model, forbrug: svar && svar.usage ? svar.usage : undefined }, 200, h);
     } catch (e) {
       const msg = String((e && e.message) || e);
       const kvote = /4006|daily free allocation|neurons|quota|limit/i.test(msg);

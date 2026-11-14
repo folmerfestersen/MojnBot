@@ -52,7 +52,10 @@
       const res = await fetch(CFG.workerUrl, {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ beskeder: historik.slice(-12), kontekst: kontekst.join("\n"), profil: MojnBot.profil() }),
+        body: JSON.stringify({
+          beskeder: historik.slice(-12), kontekst: kontekst.join("\n"), profil: MojnBot.profil(),
+          system: window.MOJNBOT_PROMPT, model: CFG.model, temperature: CFG.temperature
+        }),
         signal: ctrl.signal
       });
       const data = await res.json().catch(() => ({}));
