@@ -139,6 +139,7 @@ const Oversaetter = (() => {
     if (!tekst) return tekst;
     // Fjern evt. tænke-tags fra modellen
     tekst = tekst.replace(/<\|?channel\|?>thought[\s\S]*?<\|?channel\|?>/g, "").replace(/<\/?think>[\s\S]*?<\/think>/g, "").trim();
+    tekst = tekst.split(/\n\s*(?:ORDBOG|EKSEMPLER|FAKTA|PROFIL|Bruger:|MojnBot:)/)[0].trim();
     tekst = tekst.replace(/\blich lige\b/gi, "lich").replace(/\blige lich\b/gi, "lich");
     tekst = retDoDae(tekst);
     return tekst.replace(/[\p{L}']+/gu, (w, off, hel) => {
@@ -173,19 +174,20 @@ const Oversaetter = (() => {
     return t;
   }
 
-  /* Ordbog til AI'en: en fast kerne + de ord, brugeren selv har skrevet */
-  const KERNE = ("jeg mig du dig os er var har havde ikke og på til med nu noget også lige bare meget mange mere alle altid aldrig her hvad hvor hvordan nej kan skal synes siger sagde går gik sidder får fik købe tilbage selvfølgelig tillykke god godt glad stor kage dag aften morgen eftermiddag mor far bror søster børn kone mand dreng pige ven venner nabo hus vej by bil mad kaffe slik øl penge tid uge år skole arbejde kirke have køkken stue dør vindue bord stol seng hoved hånd øjne hund kat hest vejr regn sol koldt varmt træt sulten sød sjov dejlig hyggelig rigtig mærkelig billig dyr hurtig smuk færdig svær nem lille ny gammel lang kort komme gå se tage give sove bo hedde tro tænke huske vide lave snakke høre finde hjælpe vente kende spise drikke køre fest familie").split(" ");
-  function ordbogTilAI(brugertekst, gloser, max = 160) {
+  /* Ordbog til AI'en: kun de ord, brugeren selv har skrevet (kerneordene står allerede i instruksen) */
+  const I_INSTRUKS = new Set("jeg mig du dig os er var har havde ikke og på til med nu noget også lige bare meget mange mere alle altid aldrig her hvad hvor hvordan nej kan skal synes siger sagde går gik sidder får fik købe tilbage selvfølgelig tillykke god glad stor kage sprog dag aften morgen eftermiddag mor far bror børn kone dejlig hyggelig træt rolig".split(" "));
+  function ordbogTilAI(brugertekst, gloser, max = 25) {
     const linjer = new Set();
     const ord = (brugertekst || "").toLowerCase().match(/[\p{L}']+/gu) || [];
     for (const w of ord) {
-      if (ORD[w] !== undefined && ORD[w] !== w) linjer.add(`${w} = ${ORD[w]}`);
+      if (linjer.size >= max) break;
+      if (I_INSTRUKS.has(w)) continue;
+      if (ORD[w] !== undefined && ORD[w] !== w) linjer.add(`${w} → ${ORD[w]}`);
       const m = w.match(/^(.+?)(erne|ene|en|et)$/);
-      if (m && ORD[m[1]] !== undefined && m[1].length >= 2) linjer.add(`${w} = æ ${ORD[m[1]]}`);
-      if (gloser) { const g = Object.keys(gloser).find(k => k.toLowerCase() === w); if (g) linjer.add(`${g} betyder ${gloser[g].split(".")[0]}`); }
+      if (m && m[1].length >= 2 && ORD[m[1]] !== undefined) linjer.add(`${w} → æ ${ORD[m[1]]}`);
+      if (gloser) { const g = Object.keys(gloser).find(k => k.toLowerCase() === w); if (g) linjer.add(`${g} betyder: ${gloser[g].split(".")[0]}`); }
     }
-    for (const w of KERNE) { if (linjer.size >= max) break; if (ORD[w] !== undefined && ORD[w] !== w) linjer.add(`${w} = ${ORD[w]}`); }
-    return [...linjer].join("\n");
+    return linjer.size ? [...linjer].join("\n") : "(ingen ekstra ord til denne besked)";
   }
 
   return { load, setOrdbog, oversaet, lydregler, efterbehandl, ordbogTilAI, retDoDae };
