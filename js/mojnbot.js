@@ -351,7 +351,44 @@ const MojnBot = (() => {
   };
   const FOELGEOP_RE = /^(hvorfor|hvofor|hvordan det|hvodan det|hvorfor det|er det rigtigt|æ det richte|virkelig|seriøst|fortæl mere|fortæl meje|mere|meje|og|å|hvad mere|hva meje|ja og|okay og|interessant|spændende|hvad ellers|hva essen|uddyb|forklar)(?![\p{L}])[\s!?.]*$/iu;
 
-  /* ---------- Analyse: hvem skal svare? ----------
+    /* ---------- Skældsord: en ægte sønderjyde giver igen ---------- */
+  const SKAELD_ORD = /(?<![\p{L}])(idiot\w*|dum|dumme|dumt|dumrian|klaphat|klovn|nar|taber|tabere|lort|lorte\w*|møg\w*|pis|pisse\w*|fuck\w*|røv\w*|svin|skiderik|kælling|kraftidiot|åndssvag|tumpe|fjols|fjolle\w*|elendig|ubrugelig|værdiløs|crap|shit|stupid|noob|nørd|tosse|torsk|skvadderhoved|dumbo|kæft|klamp|bøsse\w*|spasser\w*|mongol\w*)(?![\p{L}])/u;
+  const MOD_BOT = /(?<![\p{L}])(du er|du's|do æ|din|dit|dine|dumme|fuck dig|fuck af|fuck off|hold kæft|hold din|klap i|skrid|ad helvede|rend mig|du kan|du suger|du stinker|du lugter|bot|mojnbot|maskine)(?![\p{L}])/u;
+  function erSkaeld(n) {
+    if (!SKAELD_ORD.test(n)) return false;
+    if (/hold kæft|fuck dig|fuck af|fuck off|klap i|skrid|rend mig/.test(n)) return true;
+    if (MOD_BOT.test(n)) return true;
+    return n.split(" ").length <= 3 && !/^(det|sikke|hvor|sådan|åh|ej|nej|hvilken|hvilket|noget|æv|øv|pyha)(?![\p{L}])/u.test(n);
+  }
+  const SKAELD_NAVNE = ["stjaf", "fjoch", "tokkebæe", "klomme", "pjolt", "stjamp", "klojfas", "aaf", "skarnworn knejt", "narworne kjøwenhauner", "pjok", "gelleve", "fissemand", "jappgaf", "skvadderhovede stjaf"];
+  const SKAELD_SVAR = [
+    // 1: rolig
+    () => pick([
+      "Nå nå, do lille stjaf. Sinne mæ æ vinne, æ hæ it gjoet dæ nau.",
+      "Hov hov, do fjoch. Sådan snakke vi it ve æ kaffeboe. Tæl tæ ti å præw igen.",
+      "Det va da it så pænt saj, do tokkebæe. Æ læ det gå denne gång."
+    ]),
+    // 2: giver igen
+    () => pick([
+      `Hør nu hee, do ${pick(SKAELD_NAVNE)}! Det æ do sjel.`,
+      `Sjel ${pick(SKAELD_NAVNE)}! Æ hæ hørt bejer skældsoe fra Gunnar, nå han træe å en Lego-klods.`,
+      `Do æ sgu en rigtig ${pick(SKAELD_NAVNE)}, do. Høg dæ.`
+    ]),
+    // 3+: fuld synnejysk skrue
+    () => pick([
+      `Do æ en ${pick(SKAELD_NAVNE)} å en ${pick(SKAELD_NAVNE)} å nå æ æ helt nøks! Pekkel a mæ dæ.`,
+      `Hum dæ, do ${pick(SKAELD_NAVNE)}! Do ka it engång stav tæ "mojn". Æ moster Erna ka skæld bejer ud, å hun æ 84.`,
+      `Naj nå ska do hør, do jappgaf: Do æ så tokket, at do tøs æ trillebør æ en flywmaskine. Ga hjem å drik en kop kaffe å kom tebach, nå do ka skæg dæ.`,
+      `Do ${pick(SKAELD_NAVNE)}! Do snakke som en kjøwenhauner mæ æ mund fuld a remoulade. Høg dæ, æ ska drikke kaffe.`
+    ])
+  ];
+  function skaeldSvar() {
+    mem.skaeld = (mem.skaeld || 0) + 1; gem();
+    const niv = Math.min(mem.skaeld, 3) - 1;
+    return SKAELD_SVAR[niv]();
+  }
+
+/* ---------- Analyse: hvem skal svare? ----------
      Returnerer { svar, kilde, kontekst[], hint, regelSvar }
      - svar != null: regelmotoren svarer selv (oversæt, sladder, gloser, klokken ...)
      - svar == null: fri snak. Med AI: send kontekst/hint til AI'en. Uden AI: brug fallback(). */
@@ -360,6 +397,10 @@ const MojnBot = (() => {
     const n = norm(raw);
     mem.beskeder = (mem.beskeder || 0) + 1; gem();
     const res = { svar: null, kilde: "fri", kontekst: [], hint: null, regelSvar: null, raw };
+
+    // Skældsord? Så får man igen, på synnejysk. Ellers køle æ stemning a igen.
+    if (erSkaeld(n)) { ukendtTaeller = 0; res.svar = skaeldSvar(); res.kilde = "skaeld"; return res; }
+    if (mem.skaeld) { mem.skaeld = Math.max(0, mem.skaeld - 1); gem(); }
 
     // Opfølgning ("hvorfor?", "fortæl mere") på sidste emne/sted
     if (FOELGEOP_RE.test(raw) && mem.sidsteEmneKey && !mem.sidsteSladderAktiv) {
