@@ -324,7 +324,10 @@
   /* Dagens oe: samme ord for alle på samme dato */
   const dagensOrdEl = document.getElementById("dagensOrd");
   function visDagensOrd() {
-    const ord = Object.keys(ordbog.gloser || {}).filter(k => k.length > 2 && !/[\/(]/.test(k)).sort();
+    // Kun ægte sønderjyske gloser: ingen småord, egennavne eller ord, resten af landet også bruger
+    const UDEN = new Set(["mojn", "nau", "lich", "hæ", "goj", "meje", "ålle", "hee", "jem", "wo", "vå", "gek", "soj", "daw", "jen", "tow", "trej", "fie", "syw", "ååt", "tyyw", "klok", "ring", "pråblem", "put", "pot", "bull", "kjø", "wie", "svat", "røj", "biel", "boch", "moe", "fae", "broe", "duels"]);
+    const ord = Object.keys(ordbog.gloser || {})
+      .filter(k => k.length > 3 && !UDEN.has(k) && k === k.toLowerCase() && !/[\/(]/.test(k)).sort();
     if (!ord.length) return;
     const dato = new Date().toLocaleDateString("sv-SE");
     let h = 0; for (const ch of dato) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
