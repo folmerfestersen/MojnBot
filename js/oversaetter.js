@@ -112,6 +112,8 @@ const Oversaetter = (() => {
   function oversaet(tekst) {
     if (!tekst) return "";
     let t = " " + tekst + " ";
+    // "at" som bindeord (at du, at det ...) skal blive "at", ikke "å"
+    t = t.replace(/(?<![\p{L}])([Aa])t(?=\s+(?:du|jeg|han|hun|vi|de|det|der|man|den|I|dem|vores|min|din)(?![\p{L}]))/gu, "$1\u0003");
     const laast = [];
     // 1) flerordsudtryk (case-insensitive, hele ord) – resultatet låses, så ord-passet ikke rører det
     for (const [da, sj] of FRASER) {
@@ -122,7 +124,7 @@ const Oversaetter = (() => {
     let forrige = "";
     t = t.replace(/[\p{L}']+/gu, w => { const r = oversaetOrd(w, forrige); forrige = w; return r; });
     // 3) lås op
-    t = t.replace(/\u0001(\d+)\u0002/g, (_, i) => laast[+i]);
+    t = t.replace(/\u0001(\d+)\u0002/g, (_, i) => laast[+i]).replace(/([Aa])\u0003/g, "$1t");
     return t.trim().replace(/\s+([,.!?;:])/g, "$1");
   }
 
