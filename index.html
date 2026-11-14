@@ -18,8 +18,7 @@
       </div>
     </div>
     <div class="status">
-      <span id="motor" class="pill">Regelmotor</span>
-      <button id="aabnIndstillinger" class="ikon" title="Indstillinger" aria-label="Indstillinger">⚙</button>
+      <button id="rydChat" class="ikon" title="Ryd samtale" aria-label="Ryd samtale">🧹</button>
     </div>
   </header>
 
@@ -27,10 +26,11 @@
 
   <div class="forslag" id="forslag">
     <button data-t="Mojn! Hvem er du?">Hvem æ do?</button>
-    <button data-t="Oversæt: Jeg vil gerne have en kop kaffe og et stykke kage">Øwersæt nau</button>
-    <button data-t="Hvad betyder kach?">Hva betye "kach"?</button>
+    <button data-t="Fortæl om Æ Spritte">Æ Spritte</button>
+    <button data-t="Hvad sker der med Gunnar og Birgit fra nummer 16?">Nummer 16</button>
     <button data-t="Fortæl mig om det sønderjyske kaffebord">Æ kaffeboe</button>
-    <button data-t="Jeg er fra København">Æ æ kjøwenhauner</button>
+    <button data-t="Oversæt: Jeg vil gerne have en kop kaffe og et stykke kage">Øwersæt nau</button>
+    <button data-t="Hvad ved du om Rødekro?">Røekro</button>
   </div>
 
   <form class="skriv" id="form" autocomplete="off">
@@ -38,36 +38,14 @@
     <button type="submit" id="send">Send</button>
   </form>
 
-  <dialog id="indstillinger">
-    <form method="dialog" class="dlg">
-      <h2>Indstillinger</h2>
-      <p>MojnBot virker uden nøgle (regelmotor). Indtaster du din egen Anthropic API-nøgle, overtager Claude med MojnBots sønderjyske system-prompt. Nøglen gemmes <strong>kun i din egen browser</strong> (localStorage) og sendes direkte til api.anthropic.com.</p>
-      <label>API-nøgle
-        <input id="apiKey" type="password" placeholder="sk-ant-…" spellcheck="false">
-      </label>
-      <label>Model
-        <select id="model">
-          <option value="claude-haiku-5-5">claude-haiku-5-5 (hurtig og billig)</option>
-          <option value="claude-sonnet-5-5">claude-sonnet-5-5 (klogere)</option>
-          <option value="claude-opus-5-5">claude-opus-5-5 (klogest, dyrest)</option>
-        </select>
-      </label>
-      <p class="lille">Få en nøgle på <a href="https://console.anthropic.com" target="_blank" rel="noopener">console.anthropic.com</a>. Et svar koster typisk under en øre med Haiku.</p>
-      <div class="knapper">
-        <button value="ryd" id="rydNoegle" class="sekundaer" type="button">Fjern nøgle</button>
-        <button value="rydChat" id="rydChat" class="sekundaer" type="button">Ryd samtale</button>
-        <button value="gem" id="gem" type="submit">Gem</button>
-      </div>
-    </form>
-  </dialog>
 
   <footer class="bund">
     <span>Bygget mæ snaps i æ kaffe · <a href="https://github.com/folmerfestersen/MojnBot" target="_blank" rel="noopener">GitHub</a> · <a href="docs/stilguide.md" target="_blank">Stilguide</a></span>
   </footer>
 
+  <script src="data/viden.js"></script>
   <script src="js/oversaetter.js"></script>
   <script src="js/mojnbot.js"></script>
-  <script src="js/claude.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

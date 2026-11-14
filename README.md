@@ -11,16 +11,19 @@ Sønderjysk er ikke et skriftsprog, men folk skriver det alligevel, bl.a. i
 MojnBot er et forsøg på at samle de mønstre i én konsekvent, lydnær stavning
 (østsønderjysk / Aabenraa-egnen) og bygge en bot, der holder fast i den.
 
-Den kører i to tilstande:
+Den kører 100 % i browseren uden API-nøgle og uden server. Motoren er regelbaseret:
 
-| Tilstand | Kræver | Hvad sker der |
-|---|---|---|
-| **Regelmotor** (standard) | Ingenting | En lille ELIZA-agtig bot med hensigtsgenkendelse, svarskabeloner og en rigsdansk → sønderjysk-oversætter (ordbog + lydregler). Gratis, kører 100 % i browseren. |
-| **Claude** (valgfri) | Din egen Anthropic API-nøgle | Claude svarer med MojnBots sønderjyske system-prompt. Nøglen gemmes kun i din browsers `localStorage` og sendes direkte til `api.anthropic.com`. Hvis kaldet fejler, tager regelmotoren over. |
-
-Klik på ⚙ øverst til højre for at indtaste en nøgle. Nøgler fås på
-[console.anthropic.com](https://console.anthropic.com). Standardmodellen er
-`claude-haiku-5-5`; `claude-sonnet-5-5` og `claude-opus-5-5` kan vælges.
+- **Vidensbase** (`data/viden.js`): alle byer og egne i Aabenraa, Sønderborg, Haderslev og
+  Tønder kommuner plus grænselandet, hver med flere svar; emner som kaffebord, ringridning,
+  Genforeningen, Æ Rummelpot, Tønder Festival, SønderjyskE, Æ Spritte, mad, vejr, familie osv.
+- **Sladder**: eskalerende historier om Gunnar og Birgit fra nummer 16, Kesse fra nummer 14 og
+  Åge fra æ Brugs. Hver gang man spørger ("og så?", "hvad skete der med Gunnar?") kommer næste
+  kapitel, og det bliver vildere. Man kan også spørge til fakta (alder, bil, hund, job).
+- **Hukommelse**: husker navn, by og ting man har nævnt, og vender tilbage til dem.
+- **Oversætter** (`js/oversaetter.js`): rigsdansk → sønderjysk via fraser, ordbog, bestemt form
+  ("huset" → "æ hus") og lydregler for ukendte ord. Bruges med "Oversæt: …" og til at spejle
+  det, brugeren skriver.
+- **Gloser**: "Hvad betyder kach?" slår op i `data/ordbog.json`.
 
 ## Mappestruktur
 
@@ -28,11 +31,11 @@ Klik på ⚙ øverst til højre for at indtaste en nøgle. Nøgler fås på
 index.html          chat-UI
 css/stil.css        udseende
 js/oversaetter.js   rigsdansk -> sønderjysk (fraser, ordbog, bestemt form, lydregler)
-js/mojnbot.js       regelbaseret samtalemotor
-js/claude.js        valgfri Claude-klient (BYOK)
-js/app.js           binder det hele sammen, gemmer samtale lokalt
+js/mojnbot.js       samtalemotor (regler, sladder, steder, emner, noter)
+js/app.js           binder det hele sammen, tænkepause, gemmer samtale lokalt
+data/viden.js       vidensbase: steder, emner, sladderhistorier
 data/ordbog.json    oversættelsesordbog + gloseliste med forklaringer
-prompt/system.md    system-prompt til Claude
+prompt/system.md    persona-beskrivelse (kan bruges hvis man senere vil sætte en sprogmodel på)
 docs/stilguide.md   hvordan MojnBot staver, og hvorfor
 ```
 
@@ -47,9 +50,15 @@ Kort version (hele guiden ligger i [docs/stilguide.md](docs/stilguide.md)):
 - blødt d → j: goj, glaj, staj · v → w: wo, wand, skryw
 - Mojn = hej. Mojn mojn = farvel.
 
-## Udvid ordbogen
+## Udvid botten
 
-Alt ordforråd ligger i `data/ordbog.json`:
+Vil du have MojnBot til at vide mere, så er det `data/viden.js`, du skal i:
+
+- `steder`: tilføj et objekt med `navne` (alle stavemåder, små bogstaver) og `svar` (liste).
+- `emner`: `id`, `ord` (nøgleord på rigsdansk og sønderjysk) og `svar`.
+- `sladder`: tilføj en person med `navne`, `intro`, `fakta` og `kapitler` (rækkefølgen er historien).
+
+Ordforråd ligger i `data/ordbog.json`:
 
 - `oversaet`: rigsdansk ord → sønderjysk (bruges af oversætteren)
 - `gloser`: sønderjysk ord → forklaring (bruges til "Hvad betyder …")
