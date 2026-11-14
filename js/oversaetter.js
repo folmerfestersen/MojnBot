@@ -58,7 +58,7 @@ const Oversaetter = (() => {
     // hv- -> w-
     if (o.startsWith("hv")) o = "w" + o.slice(2);
     // -lig/-ligt -> -le ; -ig/-igt -> -ich
-    if (/ligt?$/.test(o)) o = o.replace(/ligt?$/, "le");
+    if (/ligt?$/.test(o)) return o.replace(/ligt?$/, "le").replace(/^hv/, "w");
     else if (/igt?$/.test(o)) o = o.replace(/igt?$/, "ich");
     // -else -> -els (bevarels, tæmælling)
     o = o.replace(/else$/, "els");
