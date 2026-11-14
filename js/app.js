@@ -111,6 +111,7 @@
   document.getElementById("rydChat").addEventListener("click", () => {
     historik = [];
     localStorage.removeItem(HIST_KEY);
+    MojnBot.nulstil();
     chat.innerHTML = "";
     const t = hilsen();
     boble("bot", t);
