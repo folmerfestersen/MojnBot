@@ -183,6 +183,8 @@ const Oversaetter = (() => {
       if (linjer.size >= max) break;
       if (I_INSTRUKS.has(w)) continue;
       if (ORD[w] !== undefined && ORD[w] !== w) linjer.add(`${w} → ${ORD[w]}`);
+      const W = w.charAt(0).toUpperCase() + w.slice(1);
+      if (ORD[W] !== undefined && ORD[W] !== W) linjer.add(`${W} → ${ORD[W]}`);
       const m = w.match(/^(.+?)(erne|ene|en|et)$/);
       if (m && m[1].length >= 2 && ORD[m[1]] !== undefined) linjer.add(`${w} → æ ${ORD[m[1]]}`);
       if (gloser) { const g = Object.keys(gloser).find(k => k.toLowerCase() === w); if (g) linjer.add(`${g} betyder: ${gloser[g].split(".")[0]}`); }
