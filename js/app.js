@@ -117,13 +117,38 @@
     input.style.height = Math.min(160, input.scrollHeight) + "px";
   });
 
+  const OVERSAET_FRASER = [
+    "Jeg vil gerne have en kop kaffe og et stykke kage",
+    "Hvad laver du i weekenden?",
+    "Jeg har ikke tid i dag, jeg skal på arbejde",
+    "Kan du ikke lige hjælpe mig med at bære sofaen?",
+    "Det regner, så vi bliver hjemme og ser fjernsyn",
+    "Min mor siger, at jeg skal komme hjem til aftensmad",
+    "Hvor har du parkeret bilen?",
+    "Jeg er så træt, jeg går i seng nu",
+    "Skal vi tage til Tyskland og købe øl på lørdag?",
+    "Hvad hedder din hund?",
+    "Jeg glæder mig til jul",
+    "Tak for i dag, det var hyggeligt",
+    "Hvordan har du det i dag?",
+    "Jeg har glemt min nøgle hjemme",
+    "Vi ses i morgen ved kirken",
+    "Hun er min bedste veninde",
+    "Det er alt for dyrt i København",
+    "Han kører alt for stærkt på motorvejen"
+  ];
   document.getElementById("forslag").addEventListener("click", e => {
     const b = e.target.closest("button[data-t]");
-    if (b && !send.disabled) svarPaa(b.dataset.t);
+    if (!b || send.disabled) return;
+    if (b.dataset.oversaet !== undefined) {
+      svarPaa("Oversæt: " + OVERSAET_FRASER[Math.floor(Math.random() * OVERSAET_FRASER.length)]);
+    } else {
+      svarPaa(b.dataset.t);
+    }
   });
 
   document.getElementById("rydChat").addEventListener("click", () => {
-    if (historik.length && !confirm("Ny samtale? Så glemme æ ålt, å Gunnar å Birgit starte forfra.")) return;
+    if (historik.length && !confirm("Vil do slet æ samtale å start forfra?")) return;
     historik = [];
     localStorage.removeItem(HIST_KEY);
     MojnBot.nulstil();
