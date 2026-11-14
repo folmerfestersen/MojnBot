@@ -43,3 +43,14 @@ Bruger skriver
 Workeren accepterer kun kald fra folmerfestersen.github.io og localhost
 (`TILLADTE_ORIGINS` øverst i `worker.js`). Model, svarlængde og stavereglerne
 til modellen kan også rettes øverst i filen.
+
+## 👎-feedback (valgfrit)
+
+Når nogen trykker 👎 under et svar, sender siden spørgsmål og svar til `/feedback` på workeren. Sådan gemmes det:
+
+1. Cloudflare-dashboardet → **Storage & Databases → KV** → **Create** → kald den `mojnbot-feedback`.
+2. Gå til din worker → **Settings → Bindings → Add → KV namespace**. Variabelnavn: `FEEDBACK`, vælg `mojnbot-feedback`. Gem.
+3. Indsæt den nye `worker.js` i editoren og tryk **Deploy**.
+4. Tjek at `https://mojnbot.folmerfestersen.workers.dev` viser `"version":3` og `"feedback":true`.
+
+Feedbacken ligger under KV → `mojnbot-feedback`, én post pr. 👎 (nøgle `fb:<tidspunkt>`), og slettes automatisk efter et år. Uden binding virker alt andet som før, og siden gemmer bare de seneste 50 i browserens localStorage (`mojnbot.feedback`).

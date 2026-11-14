@@ -99,7 +99,29 @@ export default {
     const h = cors(origin);
 
     if (request.method === "OPTIONS") return new Response(null, { status: 204, headers: h });
-    if (request.method === "GET") return json({ ok: true, version: 2, model: MODEL, modeller: MODELLER }, 200, h);
+    const sti = new URL(request.url).pathname.replace(/\/+$/, "");
+
+    // 👎-feedback fra siden gemmes i KV (binding: FEEDBACK)
+    if (sti === "/feedback") {
+      if (request.method !== "POST") return json({ ok: false }, 405, h);
+      if (origin && !TILLADTE_ORIGINS.includes(origin)) return json({ ok: false, grund: "origin" }, 403, h);
+      if (!env.FEEDBACK) return json({ ok: false, grund: "ingen-kv-binding" }, 200, h);
+      let fb;
+      try { fb = await request.json(); } catch (_) { return json({ ok: false, grund: "json" }, 400, h); }
+      const rec = {
+        tid: new Date().toISOString(),
+        bruger: String(fb.bruger || "").slice(0, 1500),
+        svar: String(fb.svar || "").slice(0, 2500),
+        kilde: String(fb.kilde || "").slice(0, 20),
+        sprog: String(fb.sprog || "").slice(0, 20)
+      };
+      if (!rec.svar) return json({ ok: false, grund: "tom" }, 400, h);
+      const noegle = "fb:" + rec.tid + ":" + Math.random().toString(36).slice(2, 8);
+      await env.FEEDBACK.put(noegle, JSON.stringify(rec, null, 1), { expirationTtl: 60 * 60 * 24 * 365 });
+      return json({ ok: true }, 200, h);
+    }
+
+    if (request.method === "GET") return json({ ok: true, version: 3, model: MODEL, modeller: MODELLER, feedback: !!env.FEEDBACK }, 200, h);
     if (request.method !== "POST") return json({ fallback: true, grund: "metode" }, 405, h);
     if (origin && !TILLADTE_ORIGINS.includes(origin)) return json({ fallback: true, grund: "origin" }, 403, h);
     if (!env.AI) return json({ fallback: true, grund: "ingen-ai-binding" }, 500, h);

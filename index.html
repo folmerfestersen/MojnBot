@@ -11,7 +11,7 @@
   <meta property="og:title" content="MojnBot – æ synnejysk chatbot">
   <meta property="og:description" content="Æ snakke kun synnejysk. Spøe mæ om byer, kaffe, ringrien, Æ Spritte elle naboerne.">
   <meta property="og:image" content="https://folmerfestersen.github.io/MojnBot/assets/logo-512.png">
-  <link rel="stylesheet" href="css/stil.css?v=22">
+  <link rel="stylesheet" href="css/stil.css?v=23">
 </head>
 <body>
   <header class="top">
@@ -31,14 +31,8 @@
       <img class="tom-logo" src="assets/logo-512.png" alt="MojnBot">
       <h1>Mojn!</h1>
       <p>Æ æ MojnBot. Æ snakke kun synnejysk, men do må skryw lich som do vil.</p>
-      <div class="kort" id="forslag">
-        <button data-t="Hvem er du?"><strong>Hvem æ do?</strong><span>Lær MojnBot å kinne</span></button>
-        <button data-t="Fortæl om spritbådene fra Sønderborg"><strong>Æ Spritte</strong><span>Spritbådene fra Synneborre</span></button>
-        <button data-t="Hvad sker der med Gunnar og Birgit fra nummer 16?"><strong>Nummer 16</strong><span>Sladder fra æ vej</span></button>
-        <button data-t="Fortæl mig om det sønderjyske kaffebord"><strong>Æ kaffeboe</strong><span>Syw slaus kach, mindst</span></button>
-        <button data-t="Hvad ved du om Rødekro?"><strong>Røekro</strong><span>Elle en anne by</span></button>
-        <button data-t="oversæt" data-oversaet><strong>Øwersæt nau</strong><span>Rigsdansk → synnejysk</span></button>
-      </div>
+      <button class="dagens-ord" id="dagensOrd" type="button" hidden></button>
+      <div class="kort" id="forslag"></div>
     </section>
     <section class="chat" id="chat" aria-live="polite"></section>
   </main>
@@ -53,11 +47,11 @@
     <p class="lille">Bygget mæ snaps i æ kaffe · <a href="https://github.com/folmerfestersen/MojnBot" target="_blank" rel="noopener">GitHub</a> · <a href="docs/stilguide.md" target="_blank">Stilguide</a></p>
   </footer>
 
-  <script src="data/viden.js?v=22"></script>
-  <script src="js/oversaetter.js?v=22"></script>
-  <script src="js/mojnbot.js?v=22"></script>
-  <script src="data/prompt.js?v=22"></script>
-  <script src="js/config.js?v=22"></script>
-  <script src="js/app.js?v=22"></script>
+  <script src="data/viden.js?v=23"></script>
+  <script src="js/oversaetter.js?v=23"></script>
+  <script src="js/mojnbot.js?v=23"></script>
+  <script src="data/prompt.js?v=23"></script>
+  <script src="js/config.js?v=23"></script>
+  <script src="js/app.js?v=23"></script>
 </body>
 </html>

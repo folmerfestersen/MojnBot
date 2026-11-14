@@ -6,3 +6,8 @@ compatibility_date = "2026-11-01"
 
 [ai]
 binding = "AI"
+
+# Til 👎-feedback (opret først KV-navnerummet og indsæt dets id)
+# [[kv_namespaces]]
+# binding = "FEEDBACK"
+# id = "<dit-kv-id>"
