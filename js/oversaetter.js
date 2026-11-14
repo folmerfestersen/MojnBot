@@ -195,7 +195,36 @@ const Oversaetter = (() => {
     return linjer.size ? [...linjer].join("\n") : "(ingen ekstra ord til denne besked)";
   }
 
-  return { load, setOrdbog, oversaet, lydregler, efterbehandl, ordbogTilAI, retDoDae };
+  /* Forståelse: forklar AI'en hvad de sønderjyske ord i brugerens besked betyder */
+  const FLERTYDIGE = {
+    "æ": "jeg / er / bestemt artikel (æ hus = huset)", "å": "og / at / på / (ofte også: også)", "dæ": "dig / der",
+    "vej": "ved (æ vej = jeg ved) / vej", "ve": "ved (vide) / ved (hos)", "sku": "sgu / skulle", "it": "ikke",
+    "do": "du", "mæ": "mig / med", "wos": "os", "hæ": "har", "ka": "kan", "ska": "skal", "saje": "sige / siger",
+    "præwe": "prøve / prøver", "prøw": "prøve", "lich": "lige", "nau": "noget", "ås": "også", "ålle": "alle / aldrig",
+    "goj": "god", "sproch": "sprog", "oe": "ord", "daw": "dag", "tøs": "synes", "hva": "hvad", "wo": "hvor",
+    "hvodan": "hvordan", "komme": "kommer", "gæ": "går", "boe": "bor", "jem": "hjem", "hee": "her", "ba": "bare",
+    "naj": "nej", "nå": "nu", "tæ": "til", "vå": "var", "ve'": "ved", "sjel": "selv", "enne": "ingen", "manne": "mange",
+    "møj": "meget", "meje": "mere", "kinne": "kender", "snakke": "snakker", "fin": "fin (snak fin = tale rigsdansk)",
+    "da": "da (fyldord)", "affenraa": "Aabenraa", "affenrå": "Aabenraa", "haasle": "Haderslev", "tynne": "Tønder",
+    "synneborre": "Sønderborg", "røekro": "Rødekro", "kjøwenhaun": "København"
+  };
+  let OMVENDT = null;
+  function forstaaelse(tekst, gloser) {
+    if (!OMVENDT) { OMVENDT = {}; for (const [da, sj] of Object.entries(ORD)) { const k = String(sj).toLowerCase(); if (!k.includes(" ") && k !== da.toLowerCase()) (OMVENDT[k] = OMVENDT[k] || []).includes(da) || OMVENDT[k].push(da); } }
+    const linjer = [];
+    const set = new Set();
+    for (const w0 of (tekst || "").match(/[\p{L}']+/gu) || []) {
+      const w = w0.toLowerCase();
+      if (set.has(w)) continue; set.add(w);
+      if (FLERTYDIGE[w]) { linjer.push(`${w0} = ${FLERTYDIGE[w]}`); continue; }
+      const g = gloser && Object.keys(gloser).find(k => k.toLowerCase() === w);
+      if (g) { linjer.push(`${w0} = ${gloser[g].split(".")[0]}`); continue; }
+      if (OMVENDT[w] && OMVENDT[w].length <= 3) linjer.push(`${w0} = ${OMVENDT[w].join(" / ")}`);
+    }
+    return linjer.length >= 2 ? linjer.slice(0, 30).join("\n") : "";
+  }
+
+  return { load, setOrdbog, oversaet, lydregler, efterbehandl, ordbogTilAI, retDoDae, forstaaelse };
 })();
 
 if (typeof module !== "undefined") module.exports = Oversaetter;

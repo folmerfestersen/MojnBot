@@ -54,7 +54,9 @@
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           beskeder: historik.slice(-12), kontekst: kontekst.join("\n"), profil: MojnBot.profil(),
-          system: window.MOJNBOT_PROMPT.replace("{ORDBOG}", Oversaetter.ordbogTilAI(analyse.raw, ordbog.gloser)),
+          system: (CFG.metode === "oversaet" ? window.MOJNBOT_PROMPT_DA : window.MOJNBOT_PROMPT)
+            .replace("{ORDBOG}", Oversaetter.ordbogTilAI(analyse.raw, ordbog.gloser))
+            .replace("{FORSTAAELSE}", Oversaetter.forstaaelse(analyse.raw, ordbog.gloser) || "(beskeden er på rigsdansk)"),
           model: CFG.model, temperature: CFG.temperature
         }),
         signal: ctrl.signal
@@ -62,7 +64,7 @@
       const data = await res.json().catch(() => ({}));
       if (data.grund === "kvote") localStorage.setItem(KVOTE_KEY, utcDato());
       if (!res.ok || data.fallback || !data.svar) { console.info("MojnBot: regelmotor tager over", data.grund || res.status); return null; }
-      return Oversaetter.efterbehandl(data.svar);
+      return CFG.metode === "oversaet" ? Oversaetter.efterbehandl(Oversaetter.oversaet(data.svar)) : Oversaetter.efterbehandl(data.svar);
     } catch (e) {
       console.info("MojnBot: AI utilgængelig, regelmotor tager over", e.name);
       return null;
