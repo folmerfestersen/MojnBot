@@ -131,8 +131,8 @@ const Oversaetter = (() => {
     "ude": "ue", "over": "øwer", "efter": "ætte", "allerede": "ollrej", "sammen": "sammen", "måske": "måske",
     "ju": "jo", "blive": "blyw", "bliver": "blyve", "holde": "holl", "holder": "holle", "eller": "elle", "bare": "ba'",
     "hele": "heel", "lyde": "lye", "lyder": "lye", "møje": "møj", "ud": "u", "af": "a", "weekend": "løwde-synde",
-    "weekenden": "æ løwde-synde", "lave": "lav", "laver": "lave", "der": "dæ", "hvis": "wis", "når": "wenn",
-    "plejer": "plejje", "tror": "troe", "godt": "godt", "dejlig": "dejle", "dejligt": "dejle", "hyggeligt": "gemytle",
+    "weekenden": "æ løwde-synde", "lave": "lav", "laver": "lave", "hvis": "wis", "når": "wenn",
+    "plejer": "plejje", "tror": "troe", "godt": "godt", "dejlig": "glant", "dejligt": "glant", "hyggeligt": "gemytle", "herhen": "heehen", "derhen": "dæhen",
     "hyggelig": "gemytle", "sikke": "sikke", "høre": "høe", "nogensinde": "naunsinde", "altså": "ålså", "kom": "kom", "gerne": "gern", "ville": "vil", "kunne": "ku", "skulle": "sku"
   };
   function efterbehandl(tekst) {
@@ -140,6 +140,7 @@ const Oversaetter = (() => {
     // Fjern evt. tænke-tags fra modellen
     tekst = tekst.replace(/<\|?channel\|?>thought[\s\S]*?<\|?channel\|?>/g, "").replace(/<\/?think>[\s\S]*?<\/think>/g, "").trim();
     tekst = tekst.replace(/\blich lige\b/gi, "lich").replace(/\blige lich\b/gi, "lich");
+    tekst = retDoDae(tekst);
     return tekst.replace(/[\p{L}']+/gu, (w, off, hel) => {
       const lw = w.toLowerCase();
       const foer = hel.slice(Math.max(0, off - 3), off).toLowerCase();
@@ -160,7 +161,33 @@ const Oversaetter = (() => {
     });
   }
 
-  return { load, setOrdbog, oversaet, lydregler, efterbehandl };
+  /* do (du) vs. dæ (dig/der): ret de typiske fejl, hvor "dæ" står som grundled */
+  const VERBER = "vil|ville|ka|kan|ku|ska|skal|sku|hæ|har|haj|vå|ve|tøs|synes|komme|kom|gæ|går|saje|siger|lave|lav|snakke|fe|får|køe|boe|bor|mene|troe|tror|kinne|kender|ligge|sedde|spise|drikke|blyve|bliver|må|se|ser|skrywe|høe|hører|hjælpe|elske|hade|savne|glæe|ønske|behøwe|plejje";
+  function retDoDae(t) {
+    const L = "(?<![\\p{L}'])", R = "(?![\\p{L}'])";
+    // "wis dæ vil" -> "wis do vil": dæ som grundled efter bindeord/spørgeord, foran et udsagnsord
+    t = t.replace(new RegExp(`${L}(wis|hvis|wenn|når|at|å|så|men|fordi|om|elle|hvodan|hva|wo|hvem)\\s+dæ\\s+(?=(?:${VERBER})${R})`, "giu"), (m, a) => `${a} do `);
+    // "Hva tøs dæ", "Hæ dæ ...?", "Ka dæ ..." -> do (dæ lige efter et hjælpe-/tankeudsagnsord)
+    t = t.replace(new RegExp(`${L}(tøs|hæ|ka|ska|vil|ve|kinne|ku|sku|må|savne|boe|gæ|komme|snakke|vå|har|kan|skal|synes)\\s+dæ${R}`, "giu"), (m, v) => `${v} do`);
+    return t;
+  }
+
+  /* Ordbog til AI'en: en fast kerne + de ord, brugeren selv har skrevet */
+  const KERNE = ("jeg mig du dig os er var har havde ikke og på til med nu noget også lige bare meget mange mere alle altid aldrig her hvad hvor hvordan nej kan skal synes siger sagde går gik sidder får fik købe tilbage selvfølgelig tillykke god godt glad stor kage dag aften morgen eftermiddag mor far bror søster børn kone mand dreng pige ven venner nabo hus vej by bil mad kaffe slik øl penge tid uge år skole arbejde kirke have køkken stue dør vindue bord stol seng hoved hånd øjne hund kat hest vejr regn sol koldt varmt træt sulten sød sjov dejlig hyggelig rigtig mærkelig billig dyr hurtig smuk færdig svær nem lille ny gammel lang kort komme gå se tage give sove bo hedde tro tænke huske vide lave snakke høre finde hjælpe vente kende spise drikke køre fest familie").split(" ");
+  function ordbogTilAI(brugertekst, gloser, max = 160) {
+    const linjer = new Set();
+    const ord = (brugertekst || "").toLowerCase().match(/[\p{L}']+/gu) || [];
+    for (const w of ord) {
+      if (ORD[w] !== undefined && ORD[w] !== w) linjer.add(`${w} = ${ORD[w]}`);
+      const m = w.match(/^(.+?)(erne|ene|en|et)$/);
+      if (m && ORD[m[1]] !== undefined && m[1].length >= 2) linjer.add(`${w} = æ ${ORD[m[1]]}`);
+      if (gloser) { const g = Object.keys(gloser).find(k => k.toLowerCase() === w); if (g) linjer.add(`${g} betyder ${gloser[g].split(".")[0]}`); }
+    }
+    for (const w of KERNE) { if (linjer.size >= max) break; if (ORD[w] !== undefined && ORD[w] !== w) linjer.add(`${w} = ${ORD[w]}`); }
+    return [...linjer].join("\n");
+  }
+
+  return { load, setOrdbog, oversaet, lydregler, efterbehandl, ordbogTilAI, retDoDae };
 })();
 
 if (typeof module !== "undefined") module.exports = Oversaetter;

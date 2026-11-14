@@ -369,7 +369,7 @@ const MojnBot = (() => {
         ukendtTaeller = 0;
         res.regelSvar = pick(["Jo, ", "Ja, altså: ", "Nå, men ", "Å så: ", ""]) + vaelg(mem.sidsteEmneKey, k.svar, k.ordnet);
         if (!aiTil) { res.svar = res.regelSvar; res.kilde = "viden"; return res; }
-        res.kilde = "viden"; res.kontekst = [res.regelSvar, pick(k.svar)]; return res;
+        res.kilde = "viden"; res.kontekst = [res.regelSvar]; return res;
       }
     }
 
@@ -408,7 +408,7 @@ const MojnBot = (() => {
       const a = vaelg(mem.sidsteEmneKey, sted.svar);
       res.kilde = "viden"; res.regelSvar = a + hale();
       if (!aiTil) { res.svar = res.regelSvar; return res; }
-      res.kontekst = [a, ...sted.svar.filter(x => x !== a).slice(0, 1)];
+      res.kontekst = [a];
       return res;
     }
     if (emne) {
@@ -418,7 +418,7 @@ const MojnBot = (() => {
       const a = vaelg(mem.sidsteEmneKey, emne.svar, emne.ordnet);
       res.kilde = "viden"; res.regelSvar = a + (spoergsmaal ? hale() : (sp && Math.random() < 0.5 ? " " + pick(sp) : ""));
       if (!aiTil) { res.svar = res.regelSvar; return res; }
-      res.kontekst = [a, ...emne.svar.filter(x => x !== a).slice(0, 1)];
+      res.kontekst = [a];
       return res;
     }
 
