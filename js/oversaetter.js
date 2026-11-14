@@ -127,7 +127,7 @@ const Oversaetter = (() => {
     "nej": "naj", "selvfølgelig": "seføle", "tilbage": "tebach", "rigtig": "richte", "rigtigt": "richte",
     "dag": "daw", "kage": "kach", "kager": "kach", "sprog": "sproch", "sønderjysk": "synnejysk",
     "sønderjyde": "synnejye", "sønderjyder": "synnejye", "hjem": "jem", "her": "hee", "godt": "godt",
-    "ved": "ve", "på": "å", "at": "å", "mor": "moe", "far": "fae", "stor": "stoe", "god": "goj", "glad": "glaj",
+    "ved": "ve", "på": "å", "mor": "moe", "far": "fae", "stor": "stoe", "god": "goj", "glad": "glaj",
     "ude": "ue", "over": "øwer", "efter": "ætte", "allerede": "ollrej", "sammen": "sammen", "måske": "måske",
     "ju": "jo", "blive": "blyw", "bliver": "blyve", "holde": "holl", "holder": "holle", "eller": "elle", "bare": "ba'",
     "hele": "heel", "lyde": "lye", "lyder": "lye", "møje": "møj", "ud": "u", "af": "a", "weekend": "løwde-synde",
