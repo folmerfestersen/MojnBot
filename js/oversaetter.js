@@ -21,6 +21,10 @@ const Oversaetter = (() => {
     "tale rigsdansk": "snak fin", "snakke rigsdansk": "snak fin", "på sønderjysk": "å synnejysk", "på dansk": "å dansk",
     "sønderjysk kaffebord": "synnejysk kaffeboe", "over grænsen": "øwer æ græns", "syd for grænsen": "syd for æ græns",
     "hinanden": "æ nan", "med hinanden": "mæ æ nan",
+    "at du": "at do", "at jeg": "at æ", "at han": "at han", "at hun": "at hun", "at vi": "at vi", "at de": "at de",
+    "at det": "at det", "at der": "at der", "at man": "at man", "at den": "at den", "at i": "at I",
+    "næsten": "næsten", "slappe af": "slapp a", "ser du": "se do", "kan du": "ka do", "har du": "hæ do", "er du": "æ do",
+    "vil du": "vil do", "skal du": "ska do", "ved du": "ve do", "synes du": "tøs do", "kommer du": "komme do",
     "klokken er": "æ klok æ", "hvad er klokken": "hva æ æ klok"
   };
 
