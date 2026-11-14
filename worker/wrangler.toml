@@ -1,0 +1,8 @@
+# Kun nødvendig hvis du deployer fra terminalen med `npx wrangler deploy`.
+# Bruger du Cloudflares webeditor, kan du ignorere denne fil.
+name = "mojnbot"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+[ai]
+binding = "AI"

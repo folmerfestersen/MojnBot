@@ -11,7 +11,15 @@ Sønderjysk er ikke et skriftsprog, men folk skriver det alligevel, bl.a. i
 MojnBot er et forsøg på at samle de mønstre i én konsekvent, lydnær stavning
 (østsønderjysk / Aabenraa-egnen) og bygge en bot, der holder fast i den.
 
-Den kører 100 % i browseren uden API-nøgle og uden server. Motoren er regelbaseret:
+Den kører i to lag:
+
+- **AI (valgfri):** en lille Cloudflare Worker med Workers AI (Gemma 4) tager den frie snak,
+  med fakta fra vidensbasen og det, botten ved om brugeren, som baggrund. Gratis op til
+  Cloudflares daglige kvote. Se [worker/README.md](worker/README.md).
+- **Regelmotor:** svarer altid på oversættelser, gloser og sladderkapitler, og tager over,
+  når AI'en ikke er sat op, kvoten er brugt, eller noget fejler.
+
+Regelmotoren består af:
 
 - **Vidensbase** (`data/viden.js`): alle byer og egne i Aabenraa, Sønderborg, Haderslev og
   Tønder kommuner plus grænselandet, hver med flere svar; emner som kaffebord, ringridning,
@@ -32,7 +40,10 @@ index.html          chat-UI
 css/stil.css        udseende
 js/oversaetter.js   rigsdansk -> sønderjysk (fraser, ordbog, bestemt form, lydregler)
 js/mojnbot.js       samtalemotor (regler, sladder, steder, emner, noter)
-js/app.js           binder det hele sammen, tænkepause, gemmer samtale lokalt
+js/app.js           binder det hele sammen, tænkepause, AI-kald med fallback
+js/config.js        workerUrl til Cloudflare-workeren (tom = kun regelmotor)
+worker/worker.js    Cloudflare Worker med Workers AI
+assets/             logo og ikoner
 data/viden.js       vidensbase: steder, emner, sladderhistorier
 data/ordbog.json    oversættelsesordbog + gloseliste med forklaringer
 prompt/system.md    persona-beskrivelse (kan bruges hvis man senere vil sætte en sprogmodel på)

@@ -37,6 +37,36 @@
   const gemHistorik = () => localStorage.setItem(HIST_KEY, JSON.stringify(historik.slice(-80)));
   const vent = ms => new Promise(r => setTimeout(r, ms));
 
+  /* ---------- AI via Cloudflare Worker (valgfri) ---------- */
+  const CFG = window.MOJNBOT_CONFIG || {};
+  const KVOTE_KEY = "mojnbot.kvoteBrugt";
+  const utcDato = () => new Date().toISOString().slice(0, 10);
+  const aiAktiv = () => !!CFG.workerUrl && localStorage.getItem(KVOTE_KEY) !== utcDato();
+
+  async function spoergAI(analyse) {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), CFG.timeoutMs || 15000);
+    try {
+      const kontekst = [...analyse.kontekst];
+      if (analyse.hint) kontekst.push("Et forslag tæ et svar (du må gern skryw dit eget): " + analyse.hint);
+      const res = await fetch(CFG.workerUrl, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ beskeder: historik.slice(-12), kontekst: kontekst.join("\n"), profil: MojnBot.profil() }),
+        signal: ctrl.signal
+      });
+      const data = await res.json().catch(() => ({}));
+      if (data.grund === "kvote") localStorage.setItem(KVOTE_KEY, utcDato());
+      if (!res.ok || data.fallback || !data.svar) { console.info("MojnBot: regelmotor tager over", data.grund || res.status); return null; }
+      return Oversaetter.efterbehandl(data.svar);
+    } catch (e) {
+      console.info("MojnBot: AI utilgængelig, regelmotor tager over", e.name);
+      return null;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
   if (historik.length) historik.forEach(m => besked(m.role === "user" ? "bruger" : "bot", m.text));
 
   async function svarPaa(tekst) {
@@ -47,8 +77,14 @@
 
     const taenker = besked("bot", "", "taenker");
     taenker.querySelector(".tekst").innerHTML = '<span class="prik"></span><span class="prik"></span><span class="prik"></span>';
-    const svar = MojnBot.svar(tekst);
-    await vent(Math.min(3200, 700 + svar.length * 12 + Math.random() * 600));
+    const start = Date.now();
+    const ai = aiAktiv();
+    const analyse = MojnBot.analyser(tekst, ai);
+    let svar = analyse.svar;
+    if (!svar && ai) svar = await spoergAI(analyse);
+    if (!svar) svar = MojnBot.fallback(analyse);
+    const oensket = Math.min(3200, 700 + svar.length * 12 + Math.random() * 600);
+    await vent(Math.max(0, oensket - (Date.now() - start)));
 
     taenker.remove();
     besked("bot", svar);

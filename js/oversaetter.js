@@ -116,7 +116,45 @@ const Oversaetter = (() => {
     return t.trim().replace(/\s+([,.!?;:])/g, "$1");
   }
 
-  return { load, setOrdbog, oversaet, lydregler };
+  /* Efterbehandling af AI-tekst: retter kun de hyppigste rigsdanske smuttere
+     og bestemt form ("huset" -> "æ hus"). Rører ikke ord, der allerede er sønderjyske. */
+  const SMUTTERE = {
+    "jeg": "æ", "ikke": "it", "ik": "it", "du": "do", "dig": "dæ", "mig": "mæ", "os": "wos",
+    "og": "å", "med": "mæ", "til": "tæ", "hvad": "hva", "hvor": "wo", "hvordan": "hvodan",
+    "også": "ås", "noget": "nau", "meget": "møj", "mange": "manne", "lige": "lich", "nu": "nå",
+    "har": "hæ", "havde": "haj", "er": "æ", "var": "vå", "blev": "blew", "kan": "ka", "skal": "ska",
+    "siger": "saje", "sagde": "soj", "synes": "tøs", "altid": "åltins", "aldrig": "ålle", "alle": "ålle",
+    "nej": "naj", "selvfølgelig": "seføle", "tilbage": "tebach", "rigtig": "richte", "rigtigt": "richte",
+    "dag": "daw", "kage": "kach", "kager": "kach", "sprog": "sproch", "sønderjysk": "synnejysk",
+    "sønderjyde": "synnejye", "sønderjyder": "synnejye", "hjem": "jem", "her": "hee", "godt": "godt",
+    "ved": "ve", "på": "å", "at": "å", "mor": "moe", "far": "fae", "stor": "stoe", "god": "goj", "glad": "glaj",
+    "ude": "ue", "over": "øwer", "efter": "ætte", "allerede": "ollrej", "sammen": "sammen", "måske": "måske"
+  };
+  function efterbehandl(tekst) {
+    if (!tekst) return tekst;
+    // Fjern evt. tænke-tags fra modellen
+    tekst = tekst.replace(/<\|?channel\|?>thought[\s\S]*?<\|?channel\|?>/g, "").replace(/<\/?think>[\s\S]*?<\/think>/g, "").trim();
+    return tekst.replace(/[\p{L}']+/gu, (w, off, hel) => {
+      const lw = w.toLowerCase();
+      const foer = hel.slice(Math.max(0, off - 3), off).toLowerCase();
+      const harArtikel = /(^|\s)[æe]\s$/.test(foer);
+      if (SMUTTERE[lw] !== undefined) return matchCase(w, SMUTTERE[lw]);
+      const KORT = { byen: "by", øen: "ø", åen: "å", søen: "sø", koen: "ko", broen: "bro", kroen: "kro", fjorden: "fjoe", havnen: "havn", vejen: "vej", kirken: "kirk", grænsen: "græns", naboerne: "naboer", børnene: "bøen" };
+      if (KORT[lw]) return harArtikel ? KORT[lw] : matchCase(w, "æ " + KORT[lw]);
+      // bestemt form af kendte navneord -> æ + stamme
+      const m = lw.match(/^(.+?)(erne|ene|en|et)$/);
+      if (m && m[1].length >= 3) {
+        const stam = ORD[m[1]] !== undefined ? m[1] : (ORD[m[1] + "e"] !== undefined ? m[1] + "e" : null);
+        if (stam && !["den", "det", "end", "men"].includes(lw)) {
+          const sj = ORD[stam];
+          return harArtikel ? sj : matchCase(w, "æ " + sj);
+        }
+      }
+      return w;
+    });
+  }
+
+  return { load, setOrdbog, oversaet, lydregler, efterbehandl };
 })();
 
 if (typeof module !== "undefined") module.exports = Oversaetter;
