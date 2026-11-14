@@ -151,6 +151,9 @@ const Oversaetter = (() => {
     return tekst.replace(/[\p{L}']+/gu, (w, off, hel) => {
       const lw = w.toLowerCase();
       const foer = hel.slice(Math.max(0, off - 3), off).toLowerCase();
+      if (IKKE_NAVNEORD.has(lw)) return w;
+      const forrigeOrd = (hel.slice(0, off).match(/([\p{L}']+)\s*$/u) || [])[1] || "";
+      if (/et$/.test(lw) && HJAELPEVERBER.has(forrigeOrd.toLowerCase())) return w;
       const harArtikel = /(^|\s)[æe]\s$/.test(foer);
       if (SMUTTERE[lw] !== undefined) return matchCase(w, SMUTTERE[lw]);
       if (/^\p{Lu}/u.test(w) && ORD[w] !== undefined) return ORD[w];   // bynavne: Aabenraa -> Affenrå
