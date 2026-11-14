@@ -146,6 +146,7 @@ const Oversaetter = (() => {
       const foer = hel.slice(Math.max(0, off - 3), off).toLowerCase();
       const harArtikel = /(^|\s)[æe]\s$/.test(foer);
       if (SMUTTERE[lw] !== undefined) return matchCase(w, SMUTTERE[lw]);
+      if (/^\p{Lu}/u.test(w) && ORD[w] !== undefined) return ORD[w];   // bynavne: Aabenraa -> Affenrå
       const KORT = { byen: "by", øen: "ø", åen: "å", søen: "sø", koen: "ko", broen: "bro", kroen: "kro", fjorden: "fjoe", havnen: "havn", vejen: "vej", kirken: "kirk", grænsen: "græns", naboerne: "naboer", børnene: "bøen" };
       if (KORT[lw]) return harArtikel ? KORT[lw] : matchCase(w, "æ " + KORT[lw]);
       // bestemt form af kendte navneord -> æ + stamme
