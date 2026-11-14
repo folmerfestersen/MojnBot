@@ -91,10 +91,15 @@ const Oversaetter = (() => {
     return null;
   }
 
-  function oversaetOrd(raw) {
+  const IKKE_NAVNEORD = new Set(["næsten", "siden", "inden", "uden", "igen", "eksempel", "sammen", "hen", "frem", "hjemmet", "måske", "altid", "ellers", "egentlig", "temmelig", "meget", "noget", "intet", "andet", "lidt", "godt", "slet", "helt", "sket", "fået", "været"]);
+  const HJAELPEVERBER = new Set(["har", "havde", "hæ", "haj", "er", "æ", "blev", "blew", "var", "vå", "og", "å", "bliver", "blyve", "være", "været", "have", "ha'", "ha"]);
+  function oversaetOrd(raw, forrige) {
     const lower = raw.toLowerCase();
     if (ORD[raw] !== undefined) return matchCase(raw, ORD[raw]);           // egennavne (Aabenraa)
     if (ORD[lower] !== undefined) return matchCase(raw, ORD[lower]);
+    if (IKKE_NAVNEORD.has(lower)) return raw;
+    // "kigget", "lavet" efter har/er/og er kort tillægsform, ikke "æ ..."
+    if (/et$/.test(lower) && forrige && HJAELPEVERBER.has(forrige.toLowerCase())) return matchCase(raw, lydregler(lower));
     const bf = bestemtForm(lower);
     if (bf) return matchCase(raw, bf);
     return matchCase(raw, lydregler(lower));
@@ -110,7 +115,8 @@ const Oversaetter = (() => {
       t = t.replace(re, m => { laast.push(matchCase(m, sj)); return "\u0001" + (laast.length - 1) + "\u0002"; });
     }
     // 2) ord for ord
-    t = t.replace(/[\p{L}']+/gu, w => oversaetOrd(w));
+    let forrige = "";
+    t = t.replace(/[\p{L}']+/gu, w => { const r = oversaetOrd(w, forrige); forrige = w; return r; });
     // 3) lås op
     t = t.replace(/\u0001(\d+)\u0002/g, (_, i) => laast[+i]);
     return t.trim().replace(/\s+([,.!?;:])/g, "$1");
