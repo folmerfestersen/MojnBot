@@ -1,6 +1,8 @@
 /* MojnBot – UI */
 (async () => {
+  const scroll = document.getElementById("scroll");
   const chat = document.getElementById("chat");
+  const tom = document.getElementById("tom");
   const form = document.getElementById("form");
   const input = document.getElementById("input");
   const send = document.getElementById("send");
@@ -13,65 +15,64 @@
   MojnBot.setGloser(ordbog.gloser);
   MojnBot.setViden(window.VIDEN);
 
-  function boble(role, text, meta) {
+  function besked(role, text, meta) {
     const el = document.createElement("div");
-    el.className = "boble " + role + (meta ? " " + meta : "");
-    el.textContent = text;
+    el.className = "besked " + role + (meta ? " " + meta : "");
+    if (role === "bot") {
+      const av = document.createElement("div");
+      av.className = "avatar";
+      av.innerHTML = '<img src="assets/logo-512.png" alt="">';
+      el.appendChild(av);
+    }
+    const t = document.createElement("div");
+    t.className = "tekst";
+    t.textContent = text;
+    el.appendChild(t);
     chat.appendChild(el);
-    chat.scrollTop = chat.scrollHeight;
+    tom.classList.add("skjult");
+    scroll.scrollTop = scroll.scrollHeight;
     return el;
   }
 
-  function gemHistorik() {
-    localStorage.setItem(HIST_KEY, JSON.stringify(historik.slice(-60)));
-  }
-
-  function hilsen() {
-    const h = new Date().getHours();
-    const tid = h < 10 ? "Goj morn" : h < 18 ? "Mojn" : "Goj awten";
-    return `${tid}! Æ æ MojnBot. Æ snakke kun synnejysk, men do må skryw lich som do vil. Spøe mæ om byer, kaffe, ringrien, Æ Spritte, elle hva der sker nee ve naboerne. Hva ska vi snak om?`;
-  }
-
-  if (historik.length) {
-    historik.forEach(m => boble(m.role === "user" ? "bruger" : "bot", m.text));
-  } else {
-    const t = hilsen();
-    boble("bot", t);
-    historik.push({ role: "assistant", text: t });
-    gemHistorik();
-  }
-
+  const gemHistorik = () => localStorage.setItem(HIST_KEY, JSON.stringify(historik.slice(-80)));
   const vent = ms => new Promise(r => setTimeout(r, ms));
 
+  if (historik.length) historik.forEach(m => besked(m.role === "user" ? "bruger" : "bot", m.text));
+
   async function svarPaa(tekst) {
-    boble("bruger", tekst);
+    besked("bruger", tekst);
     historik.push({ role: "user", text: tekst });
     gemHistorik();
     send.disabled = true;
-    input.disabled = true;
 
-    // Tænkepause: tre prikker, længde afhænger af svarets længde
-    const taenker = boble("bot", "", "taenker");
-    taenker.innerHTML = '<span class="prik"></span><span class="prik"></span><span class="prik"></span>';
+    const taenker = besked("bot", "", "taenker");
+    taenker.querySelector(".tekst").innerHTML = '<span class="prik"></span><span class="prik"></span><span class="prik"></span>';
     const svar = MojnBot.svar(tekst);
-    const ms = Math.min(3200, 600 + svar.length * 14 + Math.random() * 500);
-    await vent(ms);
+    await vent(Math.min(3200, 700 + svar.length * 12 + Math.random() * 600));
 
     taenker.remove();
-    boble("bot", svar);
+    besked("bot", svar);
     historik.push({ role: "assistant", text: svar });
     gemHistorik();
     send.disabled = false;
-    input.disabled = false;
     input.focus();
   }
 
-  form.addEventListener("submit", e => {
-    e.preventDefault();
+  function indsend() {
     const t = input.value.trim();
     if (!t || send.disabled) return;
     input.value = "";
+    input.style.height = "auto";
     svarPaa(t);
+  }
+
+  form.addEventListener("submit", e => { e.preventDefault(); indsend(); });
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); indsend(); }
+  });
+  input.addEventListener("input", () => {
+    input.style.height = "auto";
+    input.style.height = Math.min(160, input.scrollHeight) + "px";
   });
 
   document.getElementById("forslag").addEventListener("click", e => {
@@ -80,15 +81,13 @@
   });
 
   document.getElementById("rydChat").addEventListener("click", () => {
-    if (!confirm("Ryd samtalen å glem ålt? (Gunnar å Birgit starte forfra.)")) return;
+    if (historik.length && !confirm("Ny samtale? Så glemme æ ålt, å Gunnar å Birgit starte forfra.")) return;
     historik = [];
     localStorage.removeItem(HIST_KEY);
     MojnBot.nulstil();
     chat.innerHTML = "";
-    const t = hilsen();
-    boble("bot", t);
-    historik.push({ role: "assistant", text: t });
-    gemHistorik();
+    tom.classList.remove("skjult");
+    input.focus();
   });
 
   input.focus();

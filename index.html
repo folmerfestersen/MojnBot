@@ -2,50 +2,60 @@
 <html lang="da">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MojnBot – æ synnejysk chatbot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>MojnBot</title>
   <meta name="description" content="MojnBot snakker kun sønderjysk. En chatbot fra Affenrå-egnen.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-  <link rel="stylesheet" href="css/stil.css?v=3">
+  <meta name="theme-color" content="#f6f1e6">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:title" content="MojnBot – æ synnejysk chatbot">
+  <meta property="og:description" content="Æ snakke kun synnejysk. Spøe mæ om byer, kaffe, ringrien, Æ Spritte elle naboerne.">
+  <meta property="og:image" content="https://folmerfestersen.github.io/MojnBot/assets/logo-512.png">
+  <link rel="stylesheet" href="css/stil.css?v=4">
 </head>
 <body>
   <header class="top">
-    <div class="brand">
-      <span class="logo">☕</span>
-      <div>
-        <h1>MojnBot</h1>
-        <p class="tagline">Æ snakke kun synnejysk. Do ka skryw, som do vil.</p>
-      </div>
-    </div>
-    <div class="status">
-      <button id="rydChat" class="ikon" title="Ryd samtale" aria-label="Ryd samtale">🧹</button>
+    <a class="brand" href="./">
+      <img src="assets/logo-512.png" alt="" width="34" height="34">
+      <span>MojnBot</span>
+    </a>
+    <div class="top-hoejre">
+      <button id="rydChat" class="ikon" title="Ny samtale" aria-label="Ny samtale">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+      </button>
     </div>
   </header>
 
-  <main class="chat" id="chat" aria-live="polite"></main>
-
-  <div class="forslag" id="forslag">
-    <button data-t="Mojn! Hvem er du?">Hvem æ do?</button>
-    <button data-t="Fortæl om Æ Spritte">Æ Spritte</button>
-    <button data-t="Hvad sker der med Gunnar og Birgit fra nummer 16?">Nummer 16</button>
-    <button data-t="Fortæl mig om det sønderjyske kaffebord">Æ kaffeboe</button>
-    <button data-t="Oversæt: Jeg vil gerne have en kop kaffe og et stykke kage">Øwersæt nau</button>
-    <button data-t="Hvad ved du om Rødekro?">Røekro</button>
-  </div>
-
-  <form class="skriv" id="form" autocomplete="off">
-    <input id="input" type="text" placeholder="Skryw nau tæ MojnBot…" maxlength="1000" required>
-    <button type="submit" id="send">Send</button>
-  </form>
-
+  <main class="scroll" id="scroll">
+    <section class="tom" id="tom">
+      <img class="tom-logo" src="assets/logo-512.png" alt="MojnBot">
+      <h1>Mojn!</h1>
+      <p>Æ æ MojnBot. Æ snakke kun synnejysk, men do må skryw lich som do vil.</p>
+      <div class="kort" id="forslag">
+        <button data-t="Hvem er du?"><strong>Hvem æ do?</strong><span>Lær MojnBot å kinne</span></button>
+        <button data-t="Fortæl om spritbådene fra Sønderborg"><strong>Æ Spritte</strong><span>Spritbådene fra Synneborre</span></button>
+        <button data-t="Hvad sker der med Gunnar og Birgit fra nummer 16?"><strong>Nummer 16</strong><span>Sladder fra æ vej</span></button>
+        <button data-t="Fortæl mig om det sønderjyske kaffebord"><strong>Æ kaffeboe</strong><span>Syw slaus kach, mindst</span></button>
+        <button data-t="Hvad ved du om Rødekro?"><strong>Røekro</strong><span>Elle en anne by</span></button>
+        <button data-t="Oversæt: Jeg vil gerne have en kop kaffe og et stykke kage"><strong>Øwersæt nau</strong><span>Rigsdansk → synnejysk</span></button>
+      </div>
+    </section>
+    <section class="chat" id="chat" aria-live="polite"></section>
+  </main>
 
   <footer class="bund">
-    <span>Bygget mæ snaps i æ kaffe · <a href="https://github.com/folmerfestersen/MojnBot" target="_blank" rel="noopener">GitHub</a> · <a href="docs/stilguide.md" target="_blank">Stilguide</a></span>
+    <form class="skriv" id="form" autocomplete="off">
+      <textarea id="input" rows="1" placeholder="Skryw tæ MojnBot…" maxlength="1000" required></textarea>
+      <button type="submit" id="send" aria-label="Send">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
+      </button>
+    </form>
+    <p class="lille">Bygget mæ snaps i æ kaffe · <a href="https://github.com/folmerfestersen/MojnBot" target="_blank" rel="noopener">GitHub</a> · <a href="docs/stilguide.md" target="_blank">Stilguide</a></p>
   </footer>
 
-  <script src="data/viden.js?v=3"></script>
-  <script src="js/oversaetter.js?v=3"></script>
-  <script src="js/mojnbot.js?v=3"></script>
-  <script src="js/app.js?v=3"></script>
+  <script src="data/viden.js?v=4"></script>
+  <script src="js/oversaetter.js?v=4"></script>
+  <script src="js/mojnbot.js?v=4"></script>
+  <script src="js/app.js?v=4"></script>
 </body>
 </html>

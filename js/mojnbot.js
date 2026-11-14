@@ -28,12 +28,12 @@ const MojnBot = (() => {
   const navn = () => mem.navn ? " " + mem.navn : "";
 
   // Vælg et svar, der ikke lige er brugt (pr. nøgle)
-  function vaelg(key, liste) {
+  function vaelg(key, liste, ordnet) {
     if (!liste || !liste.length) return "";
     const brugt = mem.brugt[key] || [];
     let kand = liste.filter(s => !brugt.includes(s));
     if (!kand.length) { mem.brugt[key] = []; kand = liste; }
-    const s = pick(kand);
+    const s = ordnet ? kand[0] : pick(kand);
     mem.brugt[key] = [...(mem.brugt[key] || []), s].slice(-Math.max(1, liste.length - 1));
     gem();
     return s;
@@ -103,10 +103,21 @@ const MojnBot = (() => {
     return null;
   }
 
+  // De skøre kapitler kommer først efter et stykke tids almindelig snak
+  function kapitelLaast(lvl) { return lvl > 0 && (mem.beskeder || 0) < lvl * 3; }
+
   function naesteKapitel(id, medIntro) {
     const s = V.sladder[id];
     const lvl = mem.sladder[id] || 0;
     mem.sidsteSladder = id;
+    if (lvl < s.kapitler.length && kapitelLaast(lvl)) {
+      return pick([
+        "Meje ve æ it lich nå. Åge fra æ Brugs komme føest forbi i ettemeje. Men saj mæ, " + opfoelgning().toLowerCase(),
+        "Det æ ålt, hva æ hæ hørt indtæ videre. Æ holl øret mod æ hæk. Imens: " + opfoelgning().toLowerCase(),
+        "Sinne nå, der komme meje. Sårn nau tajer tid å en lille vej. " + opfoelgning(),
+        "Resten ve æ føest, wenn Birgit hæ væt i æ Brugs. Snak lidt mæ mæ imens. " + opfoelgning()
+      ]);
+    }
     if (lvl >= s.kapitler.length) {
       mem.sladder[id] = lvl + 1; gem();
       if (lvl === s.kapitler.length) return s.slut;
@@ -151,8 +162,11 @@ const MojnBot = (() => {
   function startSladder() {
     const ids = Object.keys(V.sladder || {});
     if (!ids.length) return null;
-    const aktive = ids.filter(k => (mem.sladder[k] || 0) < V.sladder[k].kapitler.length);
-    const id = aktive.includes(mem.sidsteSladder) ? mem.sidsteSladder : (aktive[0] || ids[0]);
+    const aktive = ids.filter(k => (mem.sladder[k] || 0) < V.sladder[k].kapitler.length && !kapitelLaast(mem.sladder[k] || 0));
+    if (!aktive.length) return null;
+    const lavest = Math.min(...aktive.map(k => mem.sladder[k] || 0));
+    const kand = aktive.filter(k => (mem.sladder[k] || 0) === lavest);
+    const id = kand.includes(mem.sidsteSladder) && Math.random() < 0.5 ? mem.sidsteSladder : pick(kand);
     return naesteKapitel(id, true);
   }
 
@@ -223,6 +237,29 @@ const MojnBot = (() => {
         if (hit) return `"${hit}" betye ${GLOSER[hit]}. ${pick(["Nå ve do det.", "Så hæ do løjt nau i daw.", "Det æ et goj oe, det ska do bruch."])}`;
         return `"${ord}"? Det kinne æ it lich som synnejysk oe. Men skryw det i en sætning, så ska æ nok øwersæt det.`;
       } },
+    { re: /\b(trist|ked af det|deprimeret|ensom|bange|stresset|nervøs|frustreret|sur|vred|irriteret|træt af det hele|har det dårligt|græder|savner)\b/,
+      svar: () => pick([
+        "Nå, det lye it godt. Sæt dæ nee, så sætte æ kaffe øwer. Do behøwe it saj nau, hvis do it vil. Men æ lytte, hvis do vil. Hva æ der sket?",
+        "Det æ i orden å ha det sårn. Ås synnejye hæ det sårn nogen gange, vi saje det ba' it så tit. Vil do fortæl, hva det handle om?",
+        "Sinne nå. Det gæ øwer, det gøe det meste. Å indtæ da sedde æ hee. Hva æ det værst lich nå?",
+        "Æ ka it gøe så møj fra en computer, men æ ka høe ætte. Å æ ka saj, at do it æ alene om det. Fortæl."
+      ]) },
+    { re: /\b(glad|lykkelig|fantastisk|dejligt|fedt|skønt|elsker livet|god dag|går godt|jubler|fejrer|vundet|bestået|forlovet|fået job)\b/,
+      svar: () => pick([
+        "Det æ da glant! Det ska fejres mæ kaffe å kach. Fortæl, hva æ der sket?",
+        "Nå, det æ godt å høe. Sårn ska det væe. Hva hæ gjo dæ så glaj?",
+        "Teløk! Elle hva man nå saje. Det lye som en goj daw. Fortæl meje."
+      ]) },
+    { re: /\b(?:jeg|æ) (elsker|hader|kan ikke lide|kan godt lide|holder af|er vild med|ka it li|ka godt li|elske|hade)\s+(.+?)[.!?]?$/iu,
+      svar: (m) => {
+        const hvad = m[2].trim();
+        const sj = Oversaetter.oversaet(hvad);
+        const neg = /hader|ikke lide|it li|hade/.test(m[1]);
+        mem.noter.push({ ord: hvad, sj, tid: Date.now(), brugt: 0, holdning: neg ? "hade" : "elske" }); gem();
+        return neg
+          ? pick([`Do hade ${sj}? Nå. Det ka æ godt forstå, hvis det æ Kjøwenhaun. Essen ska do nok gi det en chance tæ. Hvofor?`, `${cap(sj)}, naj, det ka do it li. Det ska æ hows. Hva ka do så li?`])
+          : pick([`${cap(sj)}! Det ka æ ås godt li. Det ska æ hows. Hva æ det bæest ve ${sj}?`, `Do holl a ${sj}? Så hæ vi nau tæ fælles. Fortæl meje.`]);
+      } },
     { re: /^(hej|hejsa|halløj|hallo|goddag|god morgen|godmorgen|god aften|dav|davs|mojn|moin|møjn|hi|hello|yo|hey|godt nytår)\b/,
       svar: () => {
         const g = gammelNote();
@@ -255,13 +292,13 @@ const MojnBot = (() => {
       svar: () => pick([
         "Æ æ MojnBot, en synnejysk snakkemaskin fra Affenrå-egnen. Æ snakke kun æ sproch. Spøe mæ om byer, kaffe, ringrien, Æ Spritte, æ græns, elle hva der sker nee ve Gunnar å Birgit i nummer 16. Elle skryw 'oversæt: ...', så øwersætte æ det.",
         "MojnBot heede æ. Æ æ laut tæ å holl æ sproch i liv, jet oe a gangen. Æ ve nau om ålle byer fra Christiansfeld tæ Rudbøl, å æ ve ålt om æ vej, æ boe å. Å do, hva heede do?",
-        "Æ æ MojnBot. Halvt computer, halvt synnejye, å heel glaj for kach. Æ sedde i Affenrå å drikke kaffe å holl øje mæ naboerne. Prøw å spøe om Røekro, Æ Spritte elle Gunnar."
+        "Æ æ MojnBot. Halvt computer, halvt synnejye, å heel glaj for kach. Æ sedde i Affenrå å drikke kaffe å holl øje mæ æ naboer. Prøw å spøe om Røekro, Æ Spritte elle Gunnar."
       ]) },
     { re: /hvor (kommer|er) du fra|wo komme do fra|hvor bor du|wo boe do/,
       svar: () => pick([
         "Æ komme fra Affenrå, lich ve æ fjoe. Det æ dæ, man saje æ å it a. Wo komme do sjel fra?",
         "Fra Synnejylland, seføle. Nærmere bestemt Affenrå, å en vej mæ parcelhuus, wo Gunnar å Birgit boe i nummer 16 å Kesse i 14. Nord for Hoptrup Å saje de a, men vi saje æ.",
-        "Affenrå! Byen mæ æ fjoe, Folkehjem å æ bæest kaffeboe. Å do?"
+        "Affenrå! Æ by mæ æ fjoe, Folkehjem å æ bæest kaffeboe. Å do?"
       ]) },
     { re: /hvad er klokken|hva æ æ klok|klokken|hvad tid|hvilken dag|hvilken dato|dato|hvad dag/,
       svar: () => {
@@ -272,13 +309,13 @@ const MojnBot = (() => {
     { re: /vittighed|joke|fortæl (noget sjovt|en historie|en vits)|få mig til at grine|sig noget sjovt|en sjov/,
       svar: () => vaelg("vits", [
         "Hvofor tajer synnejye åltins kach mæ tæ Kjøwenhaun? Fordi de ve, hva de fe dæøwer.",
-        "En kjøwenhauner spuet: 'Hvad betyder mojn?' Synnejyen soj: 'Det komme an å, om do komme elle gæ.' Kjøwenhauneren gek. 'Mojn mojn', soj synnejyen.",
+        "En kjøwenhauner spuet: 'Hvad betyder mojn?' Synnejyen soj: 'Det komme an å, om do komme elle gæ.' Æ kjøwenhauner gek. 'Mojn mojn', soj synnejyen.",
         "Æ Rummelpot æ æ bæest vits, vi hæ. Den komme jen gang om æ åe, å den æ om wos sjel.",
         "Ve do, hvofor æ Kongeå æ så smal? Så a'erne it falle i å blyve tæ æ'er.",
-        "Hva saje en alsinger, wenn han komme tæ fastlandet? 'E bro vå dye.'",
+        "Hva saje en alsinger, wenn han komme tæ æ fastland? 'E bro vå dye.'",
         "En synnejye blew spuet, om han ville ha kaffe elle te. Han soj ja.",
         "Hvodan ve man, at en synnejye æ glaj? Han saje 'det ka gå an'. Hvodan ve man, han æ heel vild? Han saje 'det æ sgu it ring'.",
-        "Gunnar fra nummer 16 køjt en robotplæneklipper. Nå hæ Kesse i 14 æ pænest græsplæne å vejen. Det æ it en vits, det æ sket."
+        "Gunnar fra nummer 16 køjt en robotplæneklipper. Nå hæ Kesse i 14 æ pænest græsplæne å æ vej. Det æ it en vits, det æ sket."
       ]) },
     { re: /^(ja|jo|jep|yes|okay|ok|fint|godt|super|nice|jamen ja|enig|præcis|lige præcis|helt sikkert|selvfølgelig|seføle)(?![\p{L}])[\s!.]*$/u,
       svar: () => mem.sidsteSladder && Math.random() < 0.5 ? naesteKapitel(mem.sidsteSladder, true) : pick(["Godt så! " + opfoelgning(), "Det tænt æ nok. " + opfoelgning(), "Jo jo. " + opfoelgning(), "Sårn ska det væe. " + opfoelgning()]) },
@@ -296,13 +333,39 @@ const MojnBot = (() => {
   }
 
   /* ---------- Hovedfunktion ---------- */
+  const SPOERG = {
+    kaffe: ["Hva æ din favoritkach?", "Bache do sjel?", "Kaffe mæ elle uen snaps?"],
+    mad: ["Hva fe do tæ unnen i daw?", "Grønlangkål elle snysk?", "Ka do li solæch?"],
+    spritte: ["Hæ do sjel væt mæ å æ spritbåd?", "Kinne do naun, der smuglet?", "Vil do høe meje om æ disko?"],
+    ringridning: ["Hæ do sjel redet?", "Hvilken ringrien æ æ bæest, tøs do?"],
+    genforening: ["Fejre I 15. juni derjem?", "Hæ do væt ve Døffel Mølle?"],
+    sprog: ["Saje do æ elle a?", "Hva æ dit favoritoe å synnejysk?"],
+    vejr: ["Hvodan æ æ væer ve dæ?", "Blæse det ås ve dæ?"],
+    familie: ["Hvem æ do tættest å i æ famille?", "Snakke de synnejysk derjem?"],
+    kbh: ["Hvor længe hæ do boej dæøwer?", "Savne do Synnejylland?"],
+    musik: ["Hva høe do sjel?", "Hæ do væt tæ Tønder Festival?"],
+    film: ["Hva æ din favoritfilm?", "Hæ do seen 'Onkel'?"],
+    arbejde: ["Hva lave do sjel?", "Æ det et godt arbej?"],
+    ferie: ["Wo ska do hen næest gang?", "Rømø elle Mallorca?"],
+    sport: ["Holl do mæ SønderjyskE?", "Spille do sjel nau?"]
+  };
+  const FOELGEOP_RE = /^(hvorfor|hvofor|hvordan det|hvodan det|hvorfor det|er det rigtigt|æ det richte|virkelig|seriøst|fortæl mere|fortæl meje|mere|meje|og|å|hvad mere|hva meje|ja og|okay og|interessant|spændende|hvad ellers|hva essen|uddyb|forklar)(?![\p{L}])[\s!?.]*$/iu;
+
   function svar(input) {
     const raw = input.trim();
     const n = norm(raw);
-    const nyeNoter = tilfoejNoter(raw);
+    mem.beskeder = (mem.beskeder || 0) + 1; gem();
+    let nyeNoter = [];
+
+    // Kort opfølgning ("hvorfor?", "fortæl mere") fortsætter sidste emne/sted
+    if (FOELGEOP_RE.test(raw) && mem.sidsteEmneKey && !mem.sidsteSladderAktiv) {
+      const [type, key] = mem.sidsteEmneKey.split(":");
+      const kilde = type === "sted" ? (V.steder || []).find(x => x.navne[0] === key) : (V.emner || []).find(x => x.id === key);
+      if (kilde) { ukendtTaeller = 0; return pick(["Jo, ", "Ja, altså: ", "Nå, men ", "Å så: ", ""]) + vaelg(mem.sidsteEmneKey, kilde.svar, kilde.ordnet); }
+    }
 
     // 0) Kort "og så?" fortsætter en igangværende sladderhistorie
-    if (mem.sidsteSladder && FORTSAET_RE.test(raw) && !sladderNavn(n)) { ukendtTaeller = 0; return naesteKapitel(mem.sidsteSladder, true); }
+    if (mem.sidsteSladder && mem.sidsteSladderAktiv && FORTSAET_RE.test(raw) && !sladderNavn(n)) { ukendtTaeller = 0; return naesteKapitel(mem.sidsteSladder, true); }
 
     // 1) Faste regler
     for (const r of REGLER) {
@@ -314,7 +377,7 @@ const MojnBot = (() => {
 
     // 2) Sladder (navne eller "og så?")
     const sl = sladderSvar(n, raw);
-    if (sl) { ukendtTaeller = 0; return sl; }
+    if (sl) { ukendtTaeller = 0; mem.sidsteSladderAktiv = true; gem(); return sl; }
 
     // 3) Steder, 4) Emner
     const sted = findSted(n);
@@ -324,14 +387,18 @@ const MojnBot = (() => {
 
     if (sted && (!emne || emne.id !== "spritte")) {
       ukendtTaeller = 0;
-      return vaelg("sted:" + sted.navne[0], sted.svar) + hale();
+      mem.sidsteEmneKey = "sted:" + sted.navne[0]; mem.sidsteSladderAktiv = false; gem();
+      return vaelg(mem.sidsteEmneKey, sted.svar) + hale();
     }
     if (emne) {
       ukendtTaeller = 0;
-      return vaelg("emne:" + emne.id, emne.svar) + hale();
+      mem.sidsteEmneKey = "emne:" + emne.id; mem.sidsteSladderAktiv = false; gem();
+      const sp = SPOERG[emne.id];
+      return vaelg(mem.sidsteEmneKey, emne.svar, emne.ordnet) + (spoergsmaal ? hale() : (sp && Math.random() < 0.5 ? " " + pick(sp) : ""));
     }
 
     // 5) Ukendt: skift mellem note-refleksion, sladder og spejling
+    nyeNoter = tilfoejNoter(raw);
     ukendtTaeller++;
     const sj = Oversaetter.oversaet(raw);
     const note = nyeNoter[0];
@@ -348,7 +415,7 @@ const MojnBot = (() => {
     }
     if (valg === 2) {
       const s = startSladder();
-      if (s) return pick([`Hm, "${sj}". Ja. `, `Det ve æ it lich, hva æ ska saj tæ. Men ve do hva? `, `Nå. `, ``]) + s;
+      if (s) { mem.sidsteSladderAktiv = true; gem(); return pick([`Hm, "${sj}". Ja. `, `Det ve æ it lich, hva æ ska saj tæ. Men ve do hva? `, `Nå. `, ``]) + s; }
     }
     const g = gammelNote();
     if (g && Math.random() < 0.4) return `"${sj}", saje do. Det minde mæ om, at do tidligere snakket om ${g.sj}. Hvodan gek det mæ det?`;
@@ -371,7 +438,7 @@ const MojnBot = (() => {
 
   function setGloser(g) { GLOSER = g || {}; }
   function setViden(v) { V = v || {}; }
-  function nulstil() { mem = { sladder: {}, noter: [], brugt: {} }; try { localStorage.removeItem(MEM_KEY); } catch (_) {} }
+  function nulstil() { mem = { sladder: {}, noter: [], brugt: {}, beskeder: 0 }; try { localStorage.removeItem(MEM_KEY); } catch (_) {} }
 
   return { svar, setGloser, setViden, nulstil };
 })();
