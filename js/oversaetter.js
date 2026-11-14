@@ -133,12 +133,13 @@ const Oversaetter = (() => {
     "hele": "heel", "lyde": "lye", "lyder": "lye", "møje": "møj", "ud": "u", "af": "a", "weekend": "løwde-synde",
     "weekenden": "æ løwde-synde", "lave": "lav", "laver": "lave", "der": "dæ", "hvis": "wis", "når": "wenn",
     "plejer": "plejje", "tror": "troe", "godt": "godt", "dejlig": "dejle", "dejligt": "dejle", "hyggeligt": "gemytle",
-    "hyggelig": "gemytle", "sikke": "sikke", "kom": "kom", "gerne": "gern", "ville": "vil", "kunne": "ku", "skulle": "sku"
+    "hyggelig": "gemytle", "sikke": "sikke", "høre": "høe", "nogensinde": "naunsinde", "altså": "ålså", "kom": "kom", "gerne": "gern", "ville": "vil", "kunne": "ku", "skulle": "sku"
   };
   function efterbehandl(tekst) {
     if (!tekst) return tekst;
     // Fjern evt. tænke-tags fra modellen
     tekst = tekst.replace(/<\|?channel\|?>thought[\s\S]*?<\|?channel\|?>/g, "").replace(/<\/?think>[\s\S]*?<\/think>/g, "").trim();
+    tekst = tekst.replace(/\blich lige\b/gi, "lich").replace(/\blige lich\b/gi, "lich");
     return tekst.replace(/[\p{L}']+/gu, (w, off, hel) => {
       const lw = w.toLowerCase();
       const foer = hel.slice(Math.max(0, off - 3), off).toLowerCase();
