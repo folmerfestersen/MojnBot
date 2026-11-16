@@ -121,7 +121,19 @@ export default {
       return json({ ok: true }, 200, h);
     }
 
-    if (request.method === "GET") return json({ ok: true, version: 3, model: MODEL, modeller: MODELLER, feedback: !!env.FEEDBACK }, 200, h);
+    // Besøgstæller: "hvor mange hæ væt tæ kaffe" (gemmes i samme KV)
+    if (sti === "/besog") {
+      if (!env.FEEDBACK) return json({ ok: false, grund: "ingen-kv-binding" }, 200, h);
+      let antal = parseInt(await env.FEEDBACK.get("taeller:besog") || "0", 10) || 0;
+      if (request.method === "POST") {
+        if (origin && !TILLADTE_ORIGINS.includes(origin)) return json({ ok: false, grund: "origin" }, 403, h);
+        antal += 1;
+        await env.FEEDBACK.put("taeller:besog", String(antal));
+      }
+      return json({ ok: true, antal }, 200, h);
+    }
+
+    if (request.method === "GET") return json({ ok: true, version: 4, model: MODEL, modeller: MODELLER, feedback: !!env.FEEDBACK }, 200, h);
     if (request.method !== "POST") return json({ fallback: true, grund: "metode" }, 405, h);
     if (origin && !TILLADTE_ORIGINS.includes(origin)) return json({ fallback: true, grund: "origin" }, 403, h);
     if (!env.AI) return json({ fallback: true, grund: "ingen-ai-binding" }, 500, h);

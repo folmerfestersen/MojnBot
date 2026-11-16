@@ -12,7 +12,7 @@
   <meta property="og:title" content="MojnBot – æ synnejysk chatbot">
   <meta property="og:description" content="Æ snakke kun synnejysk. Spøe mæ om byer, kaffe, ringrien, Æ Spritte elle naboerne.">
   <meta property="og:image" content="https://folmerfestersen.github.io/MojnBot/assets/logo-512.png">
-  <link rel="stylesheet" href="css/stil.css?v=27">
+  <link rel="stylesheet" href="css/stil.css?v=28">
 </head>
 <body>
   <header class="top">
@@ -45,14 +45,34 @@
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
       </button>
     </form>
-    <p class="lille">Bygget mæ snaps i æ kaffe · <a href="https://github.com/folmerfestersen/MojnBot" target="_blank" rel="noopener">GitHub</a> · <a href="docs/stilguide.md" target="_blank">Stilguide</a></p>
+    <p class="lille">Bygget mæ snaps i æ kaffe · <a href="https://github.com/folmerfestersen/MojnBot" target="_blank" rel="noopener">GitHub</a> · <a href="docs/stilguide.md" target="_blank">Stilguide</a><span id="besog" hidden></span></p>
   </footer>
 
-  <script src="data/viden.js?v=27"></script>
-  <script src="js/oversaetter.js?v=27"></script>
-  <script src="js/mojnbot.js?v=27"></script>
-  <script src="data/prompt.js?v=27"></script>
-  <script src="js/config.js?v=27"></script>
-  <script src="js/app.js?v=27"></script>
+  <script src="data/viden.js?v=28"></script>
+  <script src="js/oversaetter.js?v=28"></script>
+  <script src="js/mojnbot.js?v=28"></script>
+  <script src="data/prompt.js?v=28"></script>
+  <script src="js/config.js?v=28"></script>
+  <script src="js/app.js?v=28"></script>
+<div class="smaakach" id="smaakach" role="dialog" aria-labelledby="smaakachTitel" hidden>
+    <div class="smaakach-boks">
+      <div class="smaakach-ikon" aria-hidden="true">🍪</div>
+      <h2 id="smaakachTitel">Hee bruge vi småkach</h2>
+      <p>Mojn! MojnBot bruge småkach for å gi dæ den bejst oplevels ve æ kaffeboe. Vi deele dem mæ wos samarbejdspartnere: Gunnar å Birgit fra nr. 16, Åge fra æ Brugs å Moster Erna fra Bodum.</p>
+      <details>
+        <summary>Hvilke småkach?</summary>
+        <ul>
+          <li><strong>Nødvendige småkach</strong>: vaniljekranse, brune kach å jødekach. Ka it slås fra.</li>
+          <li><strong>Statistik-småkach</strong>: Åge tælle, hvor manne do spise.</li>
+          <li><strong>Markedsføringssmåkach</strong>: Erna fortælle ålle i Bodum, at do vå hee.</li>
+        </ul>
+      </details>
+      <div class="smaakach-knapper">
+        <button type="button" data-valg="naj">Fanme naj!</button>
+        <button type="button" data-valg="aggevas">Det hæ æ ålle hat aggevas mæ</button>
+        <button type="button" data-valg="fint" class="primaer">Det æ fint</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

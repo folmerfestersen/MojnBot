@@ -345,6 +345,44 @@
   blandForslag();
   visDagensOrd();
 
+  /* Besøgstæller: én gang pr. browser pr. dag */
+  (async () => {
+    if (!CFG.workerUrl) return;
+    const el = document.getElementById("besog");
+    const idag = new Date().toLocaleDateString("sv-SE");
+    let metode = "GET";
+    try { if (localStorage.getItem("mojnbot.besog") !== idag) metode = "POST"; } catch (_) {}
+    try {
+      const r = await fetch(CFG.workerUrl.replace(/\/$/, "") + "/besog", { method: metode });
+      const d = await r.json();
+      if (!d.ok || !d.antal) return;
+      if (metode === "POST") try { localStorage.setItem("mojnbot.besog", idag); } catch (_) {}
+      el.textContent = ` · ☕ ${d.antal.toLocaleString("da-DK")} hæ væt tæ kaffe ve MojnBot`;
+      el.hidden = false;
+    } catch (_) {}
+  })();
+
+  /* Småkach-popup (for sjov) */
+  const SMAAKACH_KEY = "mojnbot.smaakach";
+  const smaakach = document.getElementById("smaakach");
+  const SMAAKACH_SVAR = {
+    naj: ["Nå nå, så fe do ingen kach. Men do må gern blyw lichevel.", "Så hæ do fået lov å sidde ve æ kaffeboe uden kach. Det æ synd for dæ."],
+    aggevas: ["Det ve æ goj! Kach hæ ålle gjoet nauen fortræd.", "Seføle it. Så spise do jo ås syw slaus."],
+    fint: ["Glant! Æ sætte æ kaffe over.", "Det æ en goj jen. Do fe den mæ æ mest flødeskum."]
+  };
+  try {
+    if (!localStorage.getItem(SMAAKACH_KEY)) setTimeout(() => { smaakach.hidden = false; requestAnimationFrame(() => smaakach.classList.add("vis")); }, 1200);
+  } catch (_) {}
+  smaakach.addEventListener("click", e => {
+    const b = e.target.closest("button[data-valg]");
+    if (!b) return;
+    try { localStorage.setItem(SMAAKACH_KEY, b.dataset.valg); } catch (_) {}
+    smaakach.classList.remove("vis");
+    setTimeout(() => { smaakach.hidden = true; }, 250);
+    const s = SMAAKACH_SVAR[b.dataset.valg];
+    toast(s[Math.floor(Math.random() * s.length)]);
+  });
+
   document.getElementById("rydChat").addEventListener("click", () => {
     if (historik.length && !confirm("Vil do slet æ samtale å start forfra?")) return;
     historik = [];
