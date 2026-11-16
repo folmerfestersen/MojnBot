@@ -21,7 +21,7 @@
     if (role === "bot") {
       const av = document.createElement("div");
       av.className = "avatar";
-      av.innerHTML = '<img src="assets/logo.svg?v=2" alt="">';
+      av.innerHTML = '<img src="assets/logo.svg?v=3" alt="">';
       el.appendChild(av);
     }
     const ind = document.createElement("div");
@@ -92,7 +92,7 @@
 
   /* Del: tegn samtalen som et billede med logo */
   const logoImg = new Image();
-  logoImg.src = "assets/logo-512.png?v=2";
+  logoImg.src = "assets/logo-512.png?v=3";
 
   function ombryd(ctx, tekst, maks) {
     const linjer = [];
