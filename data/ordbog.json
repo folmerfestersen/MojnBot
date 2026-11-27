@@ -1284,7 +1284,7 @@
   "snafel": "snabel",
   "snaphaan": "en der tror, han er noget",
   "snært o": "tæt på",
-  "snøkk op": "snøfte",
+  "snøkk op": "1) snøfte  2) så ka do snøkk op = så må du sulte til næste måltid",
   "spi'el": "spiller",
   "staj": "by, købstad; stajse = bybo, stajsgaffel = byboer (især om Haderslev)",
   "stej": "sted",
@@ -1322,7 +1322,36 @@
   "zweck": "formål, nytte (af tysk Zweck)",
   "ærch": "ærgrelse",
   "øie": "ødelægge",
-  "øjs": "økse"
+  "øjs": "økse",
+  "fårhoj": "fåresyge (oversættelseslån fra plattysk Schaapkop)",
+  "beram": "på slump, efter skøn",
+  "skuster": "skomager; nedsættende: skoflikker",
+  "buddike": "æske med låg, smørkasse eller madkasse",
+  "læddike": "lille rum i en kiste til penge og småting",
+  "gi li": "kunne lide; æ gi li dæ = jeg kan lide dig",
+  "gi væt æwe": "gide; det gi æ it væt æwe = det gider jeg ikke",
+  "lev som lus i skorre": "leve overdådigt",
+  "stjamp": "fjols",
+  "gjaffet": "gøede (om hunde)",
+  "helle emæl æ skind å æ bælle": "skinhellig, hellig mellem skindet og bælgen",
+  "tuchen": "glubende, grådig (om børn og storspisere)",
+  "ringeriins fløjmol": "kort byge under ringridning",
+  "smusket": "støvregnede",
+  "gå ga'langs": "gå tur ned ad gaden i byen",
+  "knæpnørre": "pebernødder",
+  "knæpkach": "småkager bagt af rug- og bygmel",
+  "knæppesukker": "hugget sukker",
+  "hopmål": "hinkeleg",
+  "klabunius": "en gemme- og fangeleg",
+  "gååsaws": "hæksaks",
+  "snøkke": "toldbetjent, kontrollør (en der snuser)",
+  "gammel hat": "afvisning: den er gammel, hold op",
+  "no må do ha min kniw": "skepsis: den historie tror jeg ikke på",
+  "hai do moch i æ øje": "så hør dog efter",
+  "jerre": "hedder",
+  "ha": "han",
+  "hu": "hun",
+  "ka do vær en kårl om æ nat": "ordsprog: kan man være en karl om natten, kan man også være det om dagen"
  },
  "detaljer": {
   "a": {
@@ -1351,7 +1380,8 @@
    "v": [
     "akkevas",
     "aggewaas",
-    "aggevaes"
+    "aggevaes",
+    "aggevaas"
    ]
   },
   "amjast": {
@@ -1549,7 +1579,11 @@
   "bom": {
    "k": "sb",
    "e": "Æ knejt fek en tut bom.",
-   "d": "Drengen fik en pose bolsjer."
+   "d": "Drengen fik en pose bolsjer.",
+   "v": [
+    "bonbon",
+    "bom-bom"
+   ]
   },
   "bomtulle": {
    "k": "sb",
@@ -3262,7 +3296,12 @@
   "løbbels": {
    "k": "sb",
    "e": "Vi spillet løbbels i skoolgåen.",
-   "d": "Vi spillede marmorkugler i skolegården."
+   "d": "Vi spillede marmorkugler i skolegården.",
+   "v": [
+    "løbbes",
+    "nøbbes"
+   ],
+   "s": "os27"
   },
   "løchel": {
    "k": "sb",
@@ -3746,7 +3785,11 @@
   "pissel": {
    "k": "sb",
    "e": "Æ pissel bruch vi kun tæ juel.",
-   "d": "Den fine stue bruger vi kun til jul."
+   "d": "Den fine stue bruger vi kun til jul.",
+   "v": [
+    "pisel"
+   ],
+   "s": "os27"
   },
   "pjag": {
    "k": "sb",
@@ -4325,7 +4368,8 @@
   "stjaf": {
    "k": "sb",
    "e": "Han æ en stjaf.",
-   "d": "Han er et fjollehoved."
+   "d": "Han er et fjollehoved.",
+   "v": []
   },
   "stjambe": {
    "k": "adj",
@@ -5793,7 +5837,12 @@
   "tarre": {
    "k": "sb",
    "e": "Æ buend sow tarre å æ mark.",
-   "d": "Bonden såede boghvede på marken."
+   "d": "Bonden såede boghvede på marken.",
+   "v": [
+    "tadder",
+    "bochet"
+   ],
+   "s": "os27"
   },
   "taal o jen": {
    "k": "udtryk",
@@ -5909,7 +5958,11 @@
   "zweck": {
    "k": "sb",
    "e": "Det hæ ingen zweck.",
-   "d": "Det nytter ikke noget."
+   "d": "Det nytter ikke noget.",
+   "v": [
+    "svæk"
+   ],
+   "s": "os27"
   },
   "ærch": {
    "k": "sb",
@@ -5925,6 +5978,212 @@
    "k": "sb",
    "e": "Hug brænne mæ æ øjs.",
    "d": "Hug brænde med øksen."
+  },
+  "fårhoj": {
+   "k": "sb",
+   "e": "Æ knejt hæ fået fårhoj.",
+   "d": "Drengen har fået fåresyge.",
+   "s": "os27"
+  },
+  "beram": {
+   "k": "adv",
+   "e": "Han hælle æ mjel i beram.",
+   "d": "Han hældte melet i på slump.",
+   "s": "os27"
+  },
+  "skuster": {
+   "k": "sb",
+   "e": "Æ ska ne tæ æ skuster mæ mi støwl.",
+   "d": "Jeg skal ned til skomageren med mine støvler.",
+   "s": "os27"
+  },
+  "buddike": {
+   "k": "sb",
+   "e": "Han hæ æ mellemmad i en buddike.",
+   "d": "Han har madpakken i en madkasse.",
+   "s": "os27",
+   "v": [
+    "bojek",
+    "bork"
+   ]
+  },
+  "læddike": {
+   "k": "sb",
+   "e": "Æ peeng lå i æ læddike.",
+   "d": "Pengene lå i det lille rum i kisten.",
+   "s": "os27"
+  },
+  "gi li": {
+   "k": "udtryk",
+   "e": "Æ gi li dæ.",
+   "d": "Jeg kan lide dig.",
+   "s": "os7"
+  },
+  "gi væt æwe": {
+   "k": "udtryk",
+   "e": "Det gi æ it væt æwe i daw.",
+   "d": "Det gider jeg ikke i dag.",
+   "s": "os7"
+  },
+  "lev som lus i skorre": {
+   "k": "udtryk",
+   "e": "Di lev som lus i skorre ætte di vandt i lotto.",
+   "d": "De lever overdådigt, efter de vandt i lotto.",
+   "s": "os7"
+  },
+  "stjamp": {
+   "k": "sb",
+   "e": "Do æ en stjamp!",
+   "d": "Du er et fjols!",
+   "s": "os7"
+  },
+  "gjaffet": {
+   "k": "vb",
+   "e": "Æ hun gjaffet hiele natten.",
+   "d": "Hunden gøede hele natten.",
+   "s": "os7"
+  },
+  "helle emæl æ skind å æ bælle": {
+   "k": "udtryk",
+   "e": "Han æ helle emæl æ skind å æ bælle.",
+   "d": "Han er skinhellig.",
+   "s": "os7"
+  },
+  "tuchen": {
+   "k": "adj",
+   "e": "Vær it så tuchen!",
+   "d": "Vær ikke så grådig!",
+   "s": "os7"
+  },
+  "ringeriins fløjmol": {
+   "k": "udtryk",
+   "e": "Vi fek en ringeriins fløjmol, men så klåe det op.",
+   "d": "Vi fik en byge under ringridningen, men så klarede det op.",
+   "s": "os7"
+  },
+  "smusket": {
+   "k": "vb",
+   "e": "Det smusket hiele formæe.",
+   "d": "Det støvregnede hele formiddagen.",
+   "s": "os7"
+  },
+  "gå ga'langs": {
+   "k": "udtryk",
+   "e": "Om synde gek vi te stajs å gå ga'langs.",
+   "d": "Om søndagen gik vi en tur i byen.",
+   "s": "os7"
+  },
+  "knæpnørre": {
+   "k": "sb",
+   "e": "Vi bache knæpnørre tæ juel.",
+   "d": "Vi bager pebernødder til jul.",
+   "s": "os7"
+  },
+  "knæpkach": {
+   "k": "sb",
+   "e": "Knæpkach o ø telle?",
+   "d": "Skal du have småkager?",
+   "s": "os7",
+   "v": [
+    "knæpkaach"
+   ]
+  },
+  "knæppesukker": {
+   "k": "sb",
+   "e": "Gi mæ et stykke knæppesukker tæ æ kaffe.",
+   "d": "Giv mig et stykke hugget sukker til kaffen.",
+   "s": "os7"
+  },
+  "hopmål": {
+   "k": "sb",
+   "e": "Æ pige leche hopmål å æ fortov.",
+   "d": "Pigerne leger hinkeleg på fortovet.",
+   "s": "os7"
+  },
+  "klabunius": {
+   "k": "sb",
+   "e": "Vi leche klabunius til det blew mørk.",
+   "d": "Vi legede gemmeleg, til det blev mørkt.",
+   "s": "os7",
+   "v": [
+    "klabuni"
+   ]
+  },
+  "gååsaws": {
+   "k": "sb",
+   "e": "Hent æ gååsaws, æ hæk ska klippes.",
+   "d": "Hent hæksaksen, hækken skal klippes.",
+   "s": "os7"
+  },
+  "snøkke": {
+   "k": "sb",
+   "e": "Æ snøkke kikke i æ bagagerum.",
+   "d": "Tolderen kiggede i bagagerummet.",
+   "s": "os7"
+  },
+  "gammel hat": {
+   "k": "udbrud",
+   "e": "Gammel hat! Den hæ æ hørt før.",
+   "d": "Gammel nyhed! Den har jeg hørt før.",
+   "s": "os7"
+  },
+  "no må do ha min kniw": {
+   "k": "udtryk",
+   "e": "Naj, no må do ha min kniw!",
+   "d": "Nej, den tror jeg ikke på!",
+   "s": "os7"
+  },
+  "hai do moch i æ øje": {
+   "k": "udtryk",
+   "e": "Hai do moch i æ øje? Æ soj jo nej!",
+   "d": "Så hør dog efter! Jeg sagde jo nej!",
+   "s": "tvsyd"
+  },
+  "jerre": {
+   "k": "vb",
+   "e": "Hva jerre do?",
+   "d": "Hvad hedder du?",
+   "s": "os39"
+  },
+  "ha": {
+   "k": "pron",
+   "e": "Ha kommer i morn.",
+   "d": "Han kommer i morgen.",
+   "s": "bjerrum"
+  },
+  "hu": {
+   "k": "pron",
+   "e": "Hu æ ue i æ kalgo.",
+   "d": "Hun er ude i haven.",
+   "s": "bjerrum"
+  },
+  "ka do vær en kårl om æ nat": {
+   "k": "udtryk",
+   "e": "Ka do vær en kårl om æ nat, ka do ås vær en kårl om æ daw.",
+   "d": "Kan du være en karl om natten, kan du også være en karl om dagen.",
+   "s": "tvsyd"
+  }
+ },
+ "kilder": {
+  "os27": {
+   "t": "Ord & Sag: om høj- og plattyske låneord i sønderjysk (med eksempler fra Hostrup-Dansk og Feilberg)",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/142201/185900/310099"
+  },
+  "os7": {
+   "t": "Hans Ohrt: Løst og fast om ord og vendinger fra min sønderjyske hjemstavn, Ord & Sag 7 (1987)",
+   "u": "https://tidsskrift.dk/ordogsag/issue/download/10560/2388"
+  },
+  "os39": {
+   "t": "Marie Birkkjær Jacobsen: Synnejysk å skrift, Ord & Sag 39",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/150559/193281/331849"
+  },
+  "bjerrum": {
+   "t": "Anders Bjerrum: Om de danske dialekter i Sønderjylland",
+   "u": "https://core.ac.uk/download/233779063.pdf"
+  },
+  "tvsyd": {
+   "t": "Sønderjyske udtryk fra TV Syd, citeret på skagenonline.dk",
+   "u": "https://www.skagenonline.dk/faq/hvordan-siger-man-hej-pa-sonderjysk"
   }
  }
 }
