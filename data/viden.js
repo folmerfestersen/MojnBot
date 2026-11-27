@@ -55,7 +55,7 @@ window.VIDEN = {
     ] },
     { navne: ["padborg", "pattburg", "padborg transportcenter", "lastbil", "lastbiler"], svar: [
       "Padborg! Lastbiler, lastbiler å lastbiler. Padborg Transportcenter æ et a de stoest i Nordeuropa, å ålle de svensk å norsk lastbiler holl dæ å sawe.",
-      "Padborg ligge lich ve æ græns, å Frøslevlejren ligge lich ve siden a. Så dæ æ båe historie å dieselrøg."
+      "Padborg ligge lich ve æ græns, å Frøslevlejren ligge lich ve siden a. Så dæ æ både historie å dieselrøg."
     ] },
     { navne: ["bov", "oldemorstoft", "bov kirke", "smedeby"], svar: [
       "Bov! Bov Kirk, Oldemorstoft museum å æ gammel Bov Kommune, som nå æ en del a Affenraa. Folk i Bov saje stadig 'vi æ fra Bov', it 'fra Affenrå'. Det æ stolthed."
@@ -317,7 +317,7 @@ window.VIDEN = {
       svar: [
         "Synnejysk æ it en dialekt, det æ æ sproch. Vi hæ foranstillet artikel (æ hus), vi saje æ for jeg, do for du, it for ikke, å vi tajer g'et å gøe det tæ ch: sproch, kach, lich. Det æ it dansk mæ accent, det æ et system.",
         "Synnejysk hæ it nau fast retskrivning, så ålle skrywe lidt som de snakke. Æ holl mæ tæ Affenraa-måden: æ, do, it, tæ, å, -ch å -f. Vest for Tinglev saje de 'si'e', nord for Hoptrup Å saje de 'a', å å Als saje de 'e'. Fie sproch i jen landsdel.",
-        "Mojn komme fra plattysk 'moin', som komme fra 'moien' = goj. Så mojn betye 'goj daw', å det ka bruges heel dagen å båe tæ goddaw å farvel. Æ tyskere haj forbudt det i 30'erne, fordi det vå for uformelt. Vi blew ve. Nå saje ålle det.",
+        "Mojn komme fra plattysk 'moin', som komme fra 'moien' = goj. Så mojn betye 'goj daw', å det ka bruges heel dagen å både tæ goddaw å farvel. Æ tyskere haj forbudt det i 30'erne, fordi det vå for uformelt. Vi blew ve. Nå saje ålle det.",
         "Æ sproch hæ lånt masse fra tysk å plattysk: gesvindt (hurtig), unle (mærkelig), fæk (lomme), kritbar (trillebør, fra Karre), bom (slik, fra Bonbon). Å vi hæ gin nau tebach tæ plattysk syd for æ græns. Sproch æ it nau, der stæe stille.",
         "Æ Rummelpot komme hvert åe i novembe. Det æ Synnejyllands egen satire, å den æ å synnejysk. Å VM i Synnejysk i Sønderjyllandshallen. Å Rikke Thomsen. Æ sproch lewe. Det æ ba' lidt sinne."
       ] },
@@ -445,7 +445,7 @@ window.VIDEN = {
         "Birgit hæ invitert heel æ vej tæ kaffeboe å synde for å 'glatte u'. Hun hæ bacht 21 slaus kach. Kesse kom mæ en brunsviger fra Netto. Gunnar gek u i æ garage å kom it tebach føe klok ni.",
         "Det vise sæ, at Gunnar it såd i æ garage. Han vå køet tæ Flensborre. I Æ Passat. Mæ æ trailer. Han kom jem mæ 40 kasser øl å soj, det vå tæ ringrien. Ringrien æ om fem måneder.",
         "Birgit hæ fundet en kvittering i Gunnars jakke. Fra Scandinavian Park. 40 kasser øl, 12 flasker snaps, å et stoet badebassin. Hun hæ ringet tæ Brian i Kjøffenhaun. Brian soj 'mor, slap af'. Å rigsdansk.",
-        "Æ badebassin stæe nå i æ haw. Det æ 5 meter i diameter, å det ka ses fra Røekro. Gunnar sedde i det hver ettemeje mæ en øl å æ robotplæneklipper køe rundt om det. Kesse hæ sat en stige op ve æ hegn.",
+        "Æ badebassin stæe nå i æ haw. Det æ 5 meter i diameter, å det ka ses fra Røekro. Gunnar sedde i det hver ettemerre mæ en øl å æ robotplæneklipper køe rundt om det. Kesse hæ sat en stige op ve æ hegn.",
         "Nå æ der sket det, at Åge fra æ Brugs hæ fortalt ålle, at Birgit æ begyndt å gå tæ linedance i Hjordkær. Hver tiisde. Mæ Kesse. I cowboystøwl. Gunnar ve det it. Han sedde i æ bassin.",
         "Gunnar fant u a det mæ linedance, fordi Kesse sto å øwede i sin haw mæ musik å. Nå hæ Gunnar meldt sæ tæ ringrien for føest gang siden 1988. Han hæ lejet en hest. Æ hest heeje Preben å æ 24 åe gammel.",
         "Ringrien kom. Gunnar rej å Preben. Preben sto stille unne æ galge å spiste græs. Gunnar tow nul ringe. Kesse tow 24 ringe å blew konge. Birgit sat æ krans å ham. Æ vej vå stille i en uch.",
@@ -497,7 +497,7 @@ window.VIDEN = {
         "Erna invitert så heel Bodum tæ kaffe i staj. 40 folk i hendes lille døns. Manden, der it vå dø, kom ås. Han fek det bæest styk. Det tøs Erna, han haj fortjent, ætte sårn en forskrækkelse.",
         "Nå hæ Erna begyndt å bach tæ folk, der it æ dø, hver uch. Hun kalle det 'forsinket begravelseskaffe'. Man ska ba' væe øwer 70 å i liv. Der æ kø. Åge fra æ Brugs hæ meldt sæ, sjelom han ska køe fra Røekro.",
         "Erna hæ fån et brev fra æ kommune. De vil ha, hun ska ha en fødevaretilladels, hvis hun serverer for så manne. Erna skrøw tebach å synnejysk. Æ kommune ku it løjs det. Sachen æ sat i bero.",
-        "TV Syd hørt om Ernas kaffe å kom å filmet. Erna soj it et oe å rigsdansk. Journalisten fra Kolding forsto it nau, men spist seks styk kach. Æ indslag vå fem minutter langt å bestod mest a kach.",
+        "TV Syd hørt om Ernas kaffe å kom å filmet. Erna soj it et oe å rigsdansk. Journalisten fra Kolding forstou it nau, men spist seks styk kach. Æ indslag vå fem minutter langt å bestod mest a kach.",
         "Nå hæ Erna fån et tilbud fra et stoet bageri i Esbjerg om å sælg hendes opskrift å brødtort. Hun soj naj. 'Æ opskrift æ it min, den æ Bodums', soj hun. Bodum hæ 112 indbyggere. De hæ holdt møde om det. De æ ås imod.",
         "Erna hæ brækket æ ben. Hun falt øwer Søren, æ kat, mæ en brødtort i æ hinne. Æ tort øwerlewet. Erna ligge nå å sygehuset i Affenraa å bache i hendes hoej. Æ sygeplejerske hæ fån opskrifter å ålle 14 slaus. Æ sygehus hæ aldrig haj så godt kaffeboe.",
         "Erna æ jem igen mæ gips å stok. Hun hæ laut en rampe tæ æ køøchen, så hun ka bach fra kørestol. Søren æ blewn forvist tæ æ garage. Bodum hæ laut en vagtplan, så der åltins æ jen tæ å hent mjalk. Erna saje, hun aldrig hæ haj det bæe.",
@@ -512,7 +512,7 @@ window.VIDEN = {
       kapitler: [
         "Æ præst fra Tingle hæ begyndt å prædike å synnejysk. Føest søndag kom der 12 folk. Anne søndag 60. Nå ska man bestill plads. Biskoppen hæ ringet å spuet, hva der foregæ. Æ præst soj 'mojn' å lagt å.",
         "Nå hæ æ præst laut en synnejysk salmeboch. 'Dejlig æ æ joe' å 'Nå falle æ ro'. Menigheden synge højere end naunsinde, fordi de for føest gang forstæe, hva de synge. Æ organist æ fra Odense å græde lidt.",
-        "Æ præst blew inviteret tæ Kjøffenhaun for å prædike i Vor Frue Kirke. Han gjo det å synnejysk. Ingen forsto et oe, men ålle soj, det vå den smukkest gudstjenest, de haj væt tæ. Æ biskop i Kjøffenhaun hæ bedt om en oversættels. Han vente enno.",
+        "Æ præst blew inviteret tæ Kjøffenhaun for å prædike i Vor Frue Kirke. Han gjo det å synnejysk. Ingen forstou et oe, men ålle soj, det vå den smukkest gudstjenest, de haj væt tæ. Æ biskop i Kjøffenhaun hæ bedt om en oversættels. Han vente enno.",
         "Æ præst hæ fån en hund. En stoe sankt bernhard, der heeje Luther. Luther gæ mæ i kirk å ligge ve æ alter. Wenn æ præst saje 'amen', gø Luther jen gang. Menigheden tøs, det æ godt. Biskoppen hæ it hørt om det enno.",
         "Nå hæ æ præst vielset Gunnar å Birgit fra Røekro igen. De haj væt gift i 40 åe, men ætte ålt det mæ æ garage ville de start forfra. Luther vå forlover. Æ Puch Maxi vå bryllupsbiel. Birgit såd bachpå i brudekjole. Kesse køe bachetter mæ æ traktor mæ dåser.",
         "Æ præst æ blewn indstillet tæ biskop i Haderslev Stift. Han hæ soj, at hvis han blyve det, ska ålle gudstjenester i stiftet væe å synnejysk om synda, å rigsdansk kun om tirsde. Haasle saje 'a' å æ nervøse. Affenraa saje 'æ' å jubler.",

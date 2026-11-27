@@ -112,7 +112,7 @@ const MojnBot = (() => {
     mem.sidsteSladder = id;
     if (lvl < s.kapitler.length && kapitelLaast(lvl)) {
       return pick([
-        "Meje ve æ it lich nå. Åge fra æ Brugs komme føest forbi i ettemeje. Men saj mæ, " + opfoelgning().toLowerCase(),
+        "Meje ve æ it lich nå. Åge fra æ Brugs komme føest forbi i ettemerre. Men saj mæ, " + opfoelgning().toLowerCase(),
         "Det æ ålt, hva æ hæ hørt indtæ videre. Æ holl øret mod æ hæk. Imens: " + opfoelgning().toLowerCase(),
         "Sinne nå, der komme meje. Sårn nau tajer tid å en lille vej. " + opfoelgning(),
         "Resten ve æ føest, wenn Birgit hæ væt i æ Brugs. Snak lidt mæ mæ imens. " + opfoelgning()
@@ -200,7 +200,7 @@ const MojnBot = (() => {
       svar: () => pick([
         "Naj, hee snakke vi synnejysk. Det æ æ sproch, å det blyve vi ve mæ. Men æ ska nok snak lidt sinne, så do ka fylle mæ.",
         "Snak fin? Naj da. Æ æ MojnBot, it Kjøffenhaun-bot. Men spøe ba' igen, så saje æ det mæ anne oe.",
-        "Det ka æ it, min ven. Æ hæ kun det jen sproch, å det æ synnejysk. Hva vå det, do it forsto? Så forklare æ det."
+        "Det ka æ it, min ven. Æ hæ kun det jen sproch, å det æ synnejysk. Hva vå det, do it forstou? Så forklare æ det."
       ]) },
     { re: /(?:jeg hedder|mit navn er|æ heeje|æ hedder|kald mig|jeg er)\s+([\p{L}-]+)(?:\s|$)/iu,
       svar: (m) => {
