@@ -345,6 +345,13 @@
   blandForslag();
   visDagensOrd();
 
+  /* Åbnet fra ordbogen med ?q=…: stil spørgsmålet med det samme */
+  const qParam = new URLSearchParams(location.search).get("q");
+  if (qParam && qParam.trim()) {
+    history.replaceState(null, "", location.pathname + location.hash);
+    setTimeout(() => svarPaa(qParam.trim().slice(0, 500)), 300);
+  }
+
   /* Besøgstæller: én gang pr. browser pr. dag */
   (async () => {
     if (!CFG.workerUrl) return;

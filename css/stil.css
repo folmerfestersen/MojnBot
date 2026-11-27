@@ -161,3 +161,7 @@ a { color: inherit; }
 .smaakach-knapper .primaer:hover { background: var(--brun); border-color: var(--brun); }
 @media (prefers-color-scheme: dark) { .smaakach h2 { color: var(--tekst); } }
 @media (max-width: 520px) { .smaakach-knapper button { flex: 1 1 100%; } }
+
+.top-hoejre { display: flex; align-items: center; gap: .2rem; }
+.ordbog-link { text-decoration: none; gap: .35rem; align-items: center; font-size: .88rem; font-weight: 600; }
+@media (max-width: 420px) { .ordbog-link span { display: none; } }
