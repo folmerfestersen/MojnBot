@@ -174,7 +174,7 @@
   "gav": "gaw",
   "givet": "gin",
   "får": "fæe",
-  "få": "få",
+  "få": "fæ",
   "fik": "fek",
   "fået": "fån",
   "køber": "køwer",
@@ -195,7 +195,7 @@
   "står": "stæe",
   "stå": "stau",
   "stod": "sto",
-  "ligger": "lige",
+  "ligger": "ligge",
   "ligge": "lich",
   "lå": "lå",
   "løber": "renne",
@@ -864,7 +864,12 @@
   "indbilsk": "narworn",
   "ondskabsfuld": "skarnworn",
   "sjusket": "sluæe",
-  "ulykke": "maløije"
+  "ulykke": "maløije",
+  "sig": "sæ",
+  "vennerne": "æ wenner",
+  "stranden": "æ strand",
+  "strand": "strand",
+  "skynde": "skynd"
  },
  "gloser": {
   "mojn": "hej (og farvel: mojn mojn). Sønderjyllands vigtigste ord.",

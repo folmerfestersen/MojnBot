@@ -92,9 +92,12 @@ const Oversaetter = (() => {
       if (ORD[k] && k.length >= 3) return "æ " + ORD[k];
     }
     if ((m[2] === "erne" || m[2] === "ene") && stam.length >= 3) return "æ " + lydregler(stam);
+    // Ukendte navneord: "stranden" -> "æ strand", "vinduet" -> "æ vindu"
+    if ((m[2] === "en" || m[2] === "et") && stam.length >= 4 && !IKKE_BESTEMT.has(w)) return "æ " + lydregler(stam);
     return null;
   }
 
+  const IKKE_BESTEMT = new Set(["sjælden", "moden", "åben", "sulten", "voksen", "vågen", "nøgen", "doven", "liden", "tilfreden", "sikret", "lukket", "åbnet", "ringet", "skrevet", "drevet", "givet", "taget", "budt", "fundet", "bundet", "spundet", "vundet", "hentet", "ventet", "sendt", "kostet", "virket", "regnet", "elsket", "hjulpet", "løbet", "lovet", "levet", "hoppet", "kigget", "snakket", "talet", "tænkt", "travlet", "temmelig", "nemlig", "måtte", "herinden", "derinden", "derovre", "heroppe", "dernede", "derude", "herude", "derfra", "omkring", "imellem", "nedenunder", "ovenpå", "forbi", "endnu", "hinanden", "mellemmåltidet"]);
   const IKKE_NAVNEORD = new Set(["næsten", "siden", "inden", "uden", "igen", "eksempel", "sammen", "hen", "frem", "hjemmet", "måske", "altid", "ellers", "egentlig", "temmelig", "meget", "noget", "intet", "andet", "lidt", "godt", "slet", "helt", "sket", "fået", "været"]);
   const HJAELPEVERBER = new Set(["har", "havde", "hæ", "haj", "er", "æ", "blev", "blew", "var", "vå", "og", "å", "bliver", "blyve", "være", "været", "have", "ha'", "ha"]);
   function oversaetOrd(raw, forrige) {
@@ -125,6 +128,7 @@ const Oversaetter = (() => {
     t = t.replace(/[\p{L}']+/gu, w => { const r = oversaetOrd(w, forrige); forrige = w; return r; });
     // 3) lås op
     t = t.replace(/\u0001(\d+)\u0002/g, (_, i) => laast[+i]).replace(/([Aa])\u0003/g, "$1t");
+    t = t.replace(/(?<![\p{L}])mæ mæ å(?![\p{L}])/gu, "mæ å");
     return t.trim().replace(/\s+([,.!?;:])/g, "$1");
   }
 
