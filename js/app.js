@@ -288,7 +288,7 @@
     { t: "Hvad ved du om Tønder?", s: "Tynne", u: "Festival å marsk" },
     { t: "Hvad ved du om Als?", s: "Als", u: "Øen i æ øst" },
     { t: "Hvad spiser man i Sønderjylland?", s: "Synnejysk mad", u: "Sortsuppe å kach" },
-    { t: "Hvad synes du om København?", s: "Kjøwenhaun", u: "Hva tøs do om æ hovedstad?" },
+    { t: "Hvad synes du om København?", s: "Kjøffenhaun", u: "Hva tøs do om æ hovedstad?" },
     { t: "Hvad er rummelpot?", s: "Rummelpot", u: "Nytårsaften på æ land" },
     { t: "Hvordan er vejret i dag?", s: "Æ vejr", u: "Blæst å moll" }
   ];
@@ -374,7 +374,7 @@
   const smaakach = document.getElementById("smaakach");
   const SMAAKACH_SVAR = {
     naj: ["Nå nå, så fe do ingen kach. Men do må gern blyw lichevel.", "Så hæ do fået lov å sidde ve æ kaffeboe uden kach. Det æ synd for dæ."],
-    aggevas: ["Det ve æ goj! Kach hæ ålle gjoet nauen fortræd.", "Seføle it. Så spise do jo ås syw slaus."],
+    aggevas: ["Det ve æ goj! Kach hæ ålle gjoet nauen fortræd.", "Sefølle it. Så spise do jo ås syw slaus."],
     fint: ["Glant! Æ sætte æ kaffe over.", "Det æ en goj jen. Do fe den mæ æ mest flødeskum."]
   };
   try {

@@ -51,12 +51,12 @@ const MojnBot = (() => {
       "Hva hæ do fån tæ unnen?",
       "Hæ do væt tæ ringrien naun gang?",
       "Wenn vå do sidst i Synnejylland?",
-      "Hva heede do forresten?",
+      "Hva heeje do forresten?",
       "Hæ do seen Æ Spritte å TV Syd?",
       "Kinne do Gunnar å Birgit fra nummer 16?",
       "Hvilken by i Synnejylland holl do mest a?"
     ];
-    const f = liste.filter(s => !(mem.navn && s.includes("heede do")) && !(mem.by && s.includes("wo komme do fra")) && !(mem.sladder.gunnar && s.includes("Gunnar")));
+    const f = liste.filter(s => !(mem.navn && s.includes("heeje do")) && !(mem.by && s.includes("wo komme do fra")) && !(mem.sladder.gunnar && s.includes("Gunnar")));
     return pick(f);
   }
 
@@ -123,7 +123,7 @@ const MojnBot = (() => {
       if (lvl === s.kapitler.length) return s.slut;
       const andre = Object.keys(V.sladder).filter(k => k !== id && (mem.sladder[k] || 0) < V.sladder[k].kapitler.length);
       if (andre.length) { const a = andre[0]; return `Meje om ${PERSON[id]} hæ æ it lich nå. Men ve do, hva der æ sket mæ ${PERSON[a]}? ` + naesteKapitel(a, false); }
-      return pick(["Det æ heel historien, så langt som Åge ve den. Men der komme meje, der gøe der åltins å den vej.", "Meje ve æ it ennu. Men æ sedde mæ øret mod æ hæk, så spøe igen i morn."]);
+      return pick(["Det æ heel historien, så langt som Åge ve den. Men der komme meje, der gøe der åltins å den vej.", "Meje ve æ it enno. Men æ sedde mæ øret mod æ hæk, så spøe igen i morn."]);
     }
     mem.sladder[id] = lvl + 1; gem();
     const tekst = s.kapitler[lvl];
@@ -199,10 +199,10 @@ const MojnBot = (() => {
     { samtale: true, re: /\b(skriv|snak|tal|svar)\b.*\b(rigsdansk|dansk|normalt|almindeligt|københavnsk|engelsk)\b|\b(rigsdansk|dansk)\b.*\b(tak|please)\b|kan du ikke (skrive|tale) dansk|forstår (dig )?ikke|speak english|in english|forstår ikke hvad du/,
       svar: () => pick([
         "Naj, hee snakke vi synnejysk. Det æ æ sproch, å det blyve vi ve mæ. Men æ ska nok snak lidt sinne, så do ka fylle mæ.",
-        "Snak fin? Naj da. Æ æ MojnBot, it Kjøwenhaun-bot. Men spøe ba' igen, så saje æ det mæ anne oe.",
+        "Snak fin? Naj da. Æ æ MojnBot, it Kjøffenhaun-bot. Men spøe ba' igen, så saje æ det mæ anne oe.",
         "Det ka æ it, min ven. Æ hæ kun det jen sproch, å det æ synnejysk. Hva vå det, do it forsto? Så forklare æ det."
       ]) },
-    { re: /(?:jeg hedder|mit navn er|æ heede|æ hedder|kald mig|jeg er)\s+([\p{L}-]+)(?:\s|$)/iu,
+    { re: /(?:jeg hedder|mit navn er|æ heeje|æ hedder|kald mig|jeg er)\s+([\p{L}-]+)(?:\s|$)/iu,
       svar: (m) => {
         const n = m[1];
         if (n[0] !== n[0].toUpperCase() || n[0] === n[0].toLowerCase()) return null;
@@ -220,15 +220,15 @@ const MojnBot = (() => {
         if (s) return vaelg("sted:" + s.navne[0], s.svar) + " " + pick(["Så do æ jen a wos!", "Så ve do, hva æ snakke om.", "Goj egn.", ""]);
         return pick([`${by}? Det ska æ lich hows. Dæ snakke de vel fin? Nå, do æ velkommen hee lichevel.`, `Fra ${by}! Så æ do langt hjemmefra, wenn do snakke mæ mæ. Hva bringe dæ tæ Synnejylland?`]);
       } },
-    { re: /hvad hedder jeg|hva heede æ|husker du mit navn|hvor er jeg fra|wo æ æ fra|hvad ved du om mig|hva ve do om mæ|husker du/,
+    { re: /hvad hedder jeg|hva heeje æ|husker du mit navn|hvor er jeg fra|wo æ æ fra|hvad ved du om mig|hva ve do om mæ|husker du/,
       svar: () => {
         const dele = [];
-        if (mem.navn) dele.push(`do heede ${mem.navn}`);
+        if (mem.navn) dele.push(`do heeje ${mem.navn}`);
         if (mem.by) dele.push(`do æ fra ${mem.by}`);
         const noter = mem.noter.filter(n => !(mem.navn && n.ord.toLowerCase() === mem.navn.toLowerCase()) && !(mem.by && mem.by.toLowerCase().includes(n.ord.toLowerCase()))).slice(-3).map(n => n.sj);
         if (noter.length) dele.push(`do hæ snakket om ${noter.join(", ")}`);
-        if (!dele.length) return "Det hæ do it soj ennu. Hva heede do, å wo komme do fra?";
-        return cap(dele.join(", å ")) + ". Æ glemme it nau, æ æ synnejye." + (!mem.navn ? " Men hva heede do?" : "");
+        if (!dele.length) return "Det hæ do it soj enno. Hva heeje do, å wo komme do fra?";
+        return cap(dele.join(", å ")) + ". Æ glemme it nau, æ æ synnejye." + (!mem.navn ? " Men hva heeje do?" : "");
       } },
     { re: /hva[d]? betyder (.+)|betydning(en)? af (.+)|hva[d]? er (?:en |et )?["']?([\p{L}æøå' ]+?)["']? på (?:rigs)?dansk|hva betye (.+)/u,
       svar: (m) => {
@@ -257,7 +257,7 @@ const MojnBot = (() => {
         const neg = /hader|ikke lide|it li|hade/.test(m[1]);
         mem.noter.push({ ord: hvad, sj, tid: Date.now(), brugt: 0, holdning: neg ? "hade" : "elske" }); gem();
         return neg
-          ? pick([`Do hade ${sj}? Nå. Det ka æ godt forstå, hvis det æ Kjøwenhaun. Essen ska do nok gi det en chance tæ. Hvofor?`, `${cap(sj)}, naj, det ka do it li. Det ska æ hows. Hva ka do så li?`])
+          ? pick([`Do hade ${sj}? Nå. Det ka æ godt forstå, hvis det æ Kjøffenhaun. Essen ska do nok gi det en chance tæ. Hvofor?`, `${cap(sj)}, naj, det ka do it li. Det ska æ hows. Hva ka do så li?`])
           : pick([`${cap(sj)}! Det ka æ ås godt li. Det ska æ hows. Hva æ det bæest ve ${sj}?`, `Do holl a ${sj}? Så hæ vi nau tæ fælles. Fortæl meje.`]);
       } },
     { samtale: true, re: /^(hej|hejsa|halløj|hallo|goddag|god morgen|godmorgen|god aften|dav|davs|mojn|moin|møjn|hi|hello|yo|hey|godt nytår)\b/,
@@ -288,17 +288,17 @@ const MojnBot = (() => {
         "Åh, det gæ sinne. Vi hæ it traffelt hee. Hva mæ dæ?",
         "Det gæ. Gunnar fra nummer 16 hæ laut ballade igen, men essen æ det roligt. Hva mæ dæ?"
       ]) },
-    { samtale: true, re: /hvem er du|hva[d]? hedder du|hva heede do|hvem æ do|hvad er du|er du en (robot|bot|computer|ai)|hvad kan du|hva ka do|^hjælp|hjælp$|hvad laver du/,
+    { samtale: true, re: /hvem er du|hva[d]? hedder du|hva heeje do|hvem æ do|hvad er du|er du en (robot|bot|computer|ai)|hvad kan du|hva ka do|^hjælp|hjælp$|hvad laver du/,
       svar: () => pick([
-        "Æ æ MojnBot, en synnejysk snakkemaskin fra Affenrå-egnen. Æ snakke kun æ sproch. Spøe mæ om byer, kaffe, ringrien, Æ Spritte, æ græns, elle hva der sker nee ve Gunnar å Birgit i nummer 16. Elle skryw 'oversæt: ...', så øwersætte æ det.",
-        "MojnBot heede æ. Æ æ laut tæ å holl æ sproch i liv, jet oe a gangen. Æ ve nau om ålle byer fra Christiansfeld tæ Rudbøl, å æ ve ålt om æ vej, æ boe å. Å do, hva heede do?",
-        "Æ æ MojnBot. Halvt computer, halvt synnejye, å heel glaj for kach. Æ sedde i Affenrå å drikke kaffe å holl øje mæ æ naboer. Prøw å spøe om Røekro, Æ Spritte elle Gunnar."
+        "Æ æ MojnBot, en synnejysk snakkemaskin fra Affenraa-egnen. Æ snakke kun æ sproch. Spøe mæ om byer, kaffe, ringrien, Æ Spritte, æ græns, elle hva der sker nee ve Gunnar å Birgit i nummer 16. Elle skryw 'oversæt: ...', så øwersætte æ det.",
+        "MojnBot heeje æ. Æ æ laut tæ å holl æ sproch i liv, jet oe a gangen. Æ ve nau om ålle byer fra Christiansfeld tæ Rudbøl, å æ ve ålt om æ vej, æ boe å. Å do, hva heeje do?",
+        "Æ æ MojnBot. Halvt computer, halvt synnejye, å heel glaj for kach. Æ sedde i Affenraa å drikke kaffe å holl øje mæ æ naboer. Prøw å spøe om Røekro, Æ Spritte elle Gunnar."
       ]) },
     { samtale: true, re: /hvor (kommer|er) du fra|wo komme do fra|hvor bor du|wo boe do/,
       svar: () => pick([
-        "Æ komme fra Affenrå, lich ve æ fjoe. Det æ dæ, man saje æ å it a. Wo komme do sjel fra?",
-        "Fra Synnejylland, seføle. Nærmere bestemt Affenrå, å en vej mæ parcelhuus, wo Gunnar å Birgit boe i nummer 16 å Kesse i 14. Nord for Hoptrup Å saje de a, men vi saje æ.",
-        "Affenrå! Æ by mæ æ fjoe, Folkehjem å æ bæest kaffeboe. Å do?"
+        "Æ komme fra Affenraa, lich ve æ fjoe. Det æ dæ, man saje æ å it a. Wo komme do sjel fra?",
+        "Fra Synnejylland, sefølle. Nærmere bestemt Affenraa, å en vej mæ parcelhuus, wo Gunnar å Birgit boe i nummer 16 å Kesse i 14. Nord for Hoptrup Å saje de a, men vi saje æ.",
+        "Affenraa! Æ by mæ æ fjoe, Folkehjem å æ bæest kaffeboe. Å do?"
       ]) },
     { re: /hvad er klokken|hva æ æ klok|klokken|hvad tid|hvilken dag|hvilken dato|dato|hvad dag/,
       svar: () => {
@@ -308,8 +308,8 @@ const MojnBot = (() => {
       } },
     { re: /vittighed|joke|fortæl (noget sjovt|en historie|en vits)|få mig til at grine|sig noget sjovt|en sjov/,
       svar: () => vaelg("vits", [
-        "Hvofor tajer synnejye åltins kach mæ tæ Kjøwenhaun? Fordi de ve, hva de fe dæøwer.",
-        "En kjøwenhauner spuet: 'Hvad betyder mojn?' Synnejyen soj: 'Det komme an å, om do komme elle gæ.' Æ kjøwenhauner gek. 'Mojn mojn', soj synnejyen.",
+        "Hvofor tajer synnejye åltins kach mæ tæ Kjøffenhaun? Fordi de ve, hva de fe dæøwer.",
+        "En kjøffenhaune spuet: 'Hvad betyder mojn?' Synnejyen soj: 'Det komme an å, om do komme elle gæ.' Æ kjøffenhaune gek. 'Mojn mojn', soj synnejyen.",
         "Æ Rummelpot æ æ bæest vits, vi hæ. Den komme jen gang om æ åe, å den æ om wos sjel.",
         "Ve do, hvofor æ Kongeå æ så smal? Så a'erne it falle i å blyve tæ æ'er.",
         "Hva saje en alsinger, wenn han komme tæ æ fastland? 'E bro vå dye.'",
@@ -317,7 +317,7 @@ const MojnBot = (() => {
         "Hvodan ve man, at en synnejye æ glaj? Han saje 'det ka gå an'. Hvodan ve man, han æ heel vild? Han saje 'det æ sgu it ring'.",
         "Gunnar fra nummer 16 køjt en robotplæneklipper. Nå hæ Kesse i 14 æ pænest græsplæne å æ vej. Det æ it en vits, det æ sket."
       ]) },
-    { samtale: () => !mem.sidsteSladderAktiv, re: /^(ja|jo|jep|yes|okay|ok|fint|godt|super|nice|jamen ja|enig|præcis|lige præcis|helt sikkert|selvfølgelig|seføle)(?![\p{L}])[\s!.]*$/u,
+    { samtale: () => !mem.sidsteSladderAktiv, re: /^(ja|jo|jep|yes|okay|ok|fint|godt|super|nice|jamen ja|enig|præcis|lige præcis|helt sikkert|selvfølgelig|sefølle)(?![\p{L}])[\s!.]*$/u,
       svar: () => mem.sidsteSladder && Math.random() < 0.5 ? naesteKapitel(mem.sidsteSladder, true) : pick(["Godt så! " + opfoelgning(), "Det tænt æ nok. " + opfoelgning(), "Jo jo. " + opfoelgning(), "Sårn ska det væe. " + opfoelgning()]) },
     { samtale: true, re: /^(nej|naj|næ|nope|niks|ikke rigtig|desværre|nej tak)(?![\p{L}])[\s!.]*$/u,
       svar: () => pick(["Naj? Nå, men så. " + opfoelgning(), "Det æ ås i orden. " + opfoelgning(), "Nå. Så lae vi det lich. " + opfoelgning()]) },
@@ -360,7 +360,7 @@ const MojnBot = (() => {
     if (MOD_BOT.test(n)) return true;
     return n.split(" ").length <= 3 && !/^(det|sikke|hvor|sådan|åh|ej|nej|hvilken|hvilket|noget|æv|øv|pyha)(?![\p{L}])/u.test(n);
   }
-  const SKAELD_NAVNE = ["stjaf", "fjoch", "tokkebæe", "klomme", "pjolt", "stjamp", "klojfas", "aaf", "skarnworn knejt", "narworne kjøwenhauner", "pjok", "gelleve", "fissemand", "jappgaf", "skvadderhovede stjaf"];
+  const SKAELD_NAVNE = ["stjaf", "fjoch", "tokkebæe", "klomme", "pjolt", "stjamp", "klojfas", "aaf", "skarnworn knejt", "narworne kjøffenhaune", "pjok", "gelleve", "fissemand", "jappgaf", "skvadderhovede stjaf"];
   const SKAELD_SVAR = [
     // 1: rolig
     () => pick([
@@ -379,7 +379,7 @@ const MojnBot = (() => {
       `Do æ en ${pick(SKAELD_NAVNE)} å en ${pick(SKAELD_NAVNE)} å nå æ æ helt nøks! Pekkel a mæ dæ.`,
       `Hum dæ, do ${pick(SKAELD_NAVNE)}! Do ka it engång stav tæ "mojn". Æ moster Erna ka skæld bejer ud, å hun æ 84.`,
       `Naj nå ska do hør, do jappgaf: Do æ så tokket, at do tøs æ trillebør æ en flywmaskine. Ga hjem å drik en kop kaffe å kom tebach, nå do ka skæg dæ.`,
-      `Do ${pick(SKAELD_NAVNE)}! Do snakke som en kjøwenhauner mæ æ mund fuld a remoulade. Høg dæ, æ ska drikke kaffe.`
+      `Do ${pick(SKAELD_NAVNE)}! Do snakke som en kjøffenhaune mæ æ mund fuld a remoulade. Høg dæ, æ ska drikke kaffe.`
     ])
   ];
   function skaeldSvar() {
@@ -499,12 +499,12 @@ const MojnBot = (() => {
         `Hm, "${sj}". Godt spøsmål. Æ tøs, svaret æ: en kop kaffe å så se å det igen. ${opfoelgning()}`,
         `Do spøe: "${sj}". Det hæ æ it et færre svar å, men ${opfoelgning().toLowerCase()}`,
         `"${sj}", saje do. Det ska æ tæn øwer, mens æ fe en kop kaffe. ${opfoelgning()}`,
-        `Spøe do mæ? Æ ville saj: det komme an å, om do æ fra Affenrå elle Haasle. ${opfoelgning()}`
+        `Spøe do mæ? Æ ville saj: det komme an å, om do æ fra Affenraa elle Haasle. ${opfoelgning()}`
       ]);
     }
     return pick([
       `"${sj}". Ja, det ka do godt saj. ${opfoelgning()}`,
-      `Å synnejysk heede det: "${sj}". ${opfoelgning()}`,
+      `Å synnejysk heeje det: "${sj}". ${opfoelgning()}`,
       `Nå, "${sj}". Det æ da godt. ${opfoelgning()}`,
       `Æ høe dæ: "${sj}". ${opfoelgning()}`,
       `"${sj}", saje do. Det lye richte. ${opfoelgning()}`
@@ -527,7 +527,7 @@ const MojnBot = (() => {
   // Hvad AI'en skal vide om brugeren og æ vej
   function profil() {
     const linjer = [];
-    if (mem.navn) linjer.push(`Brugeren heede ${mem.navn}.`);
+    if (mem.navn) linjer.push(`Brugeren heeje ${mem.navn}.`);
     if (mem.by) linjer.push(`Brugeren æ fra ${mem.by}.`);
     const noter = mem.noter.slice(-6).map(n => n.holdning ? `${n.ord} (${n.holdning === "hade" ? "ka it li" : "holl a"})` : n.ord);
     if (noter.length) linjer.push(`Brugeren hæ nævnt: ${noter.join(", ")}.`);

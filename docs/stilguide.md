@@ -20,7 +20,7 @@ mønstergenkendelse; ingen opslag er kopieret ind i dette repo).
 | Bestemt artikel efterhængt (huset) | **foranstillet æ** | æ hus, æ bil, æ sproch, æ kaffe |
 | Ubestemt artikel en/et | **jen / jet** (eller en/et) | jen bil, jet hus |
 | Flertal med endelse | ofte **uden endelse** | æ huus, manne biele, ålle bøen |
-| jeg | **æ** (nord for Hoptrup Å: a) | Æ æ fra Affenrå |
+| jeg | **æ** (nord for Hoptrup Å: a) | Æ æ fra Affenraa |
 | er | **æ** | det æ godt |
 | du / dig | **do / dæ** | Hvodan hæ do et? |
 | mig / med | **mæ** | kom mæ mæ |
@@ -32,7 +32,7 @@ mønstergenkendelse; ingen opslag er kopieret ind i dette repo).
 | nu | **nå** | nå ska vi |
 | noget | **nau** | it nau pråblem |
 | har / havde | **hæ / haj** | æ hæ it tid |
-| var / blev / blevet | **vå (war) / blew / blaun** | det vå godt nok billich |
+| var / blev / blevet | **vå (war) / blew / blewn** | det vå godt nok billich |
 | kan / skal / vil / kunne / skulle | **ka / ska / vil (will) / ku / sku** | det ka do tro |
 | hvad / hvor / hvordan / hvornår / hvem | **hva / wo / hvodan / hvonne / hvem** | wo komme do fra? |
 | når / hvis | **wenn / wis** (eller når/hvis) | wenn æ fe tid |
@@ -59,7 +59,7 @@ en tut bom (pose slik), mut/muttes (kys), kuen (kone), knejt (dreng), piich (pig
 bøen (børn), dawe (morgenmad), melme (frokost/mellemmåltid), unnen (middagsmad),
 narre (aftensmad), kaffeboe (kaffebord), glant (hyggelig/dejlig), fesen (fed/sjov),
 amjast/jamsk (træt), gemytle (hyggelig), kritbar (trillebør), gaf (hul), fæk (lomme),
-sinne (rolig), seføle (selvfølgelig), teløk (tillykke), haus (husk), meje (mere),
+sinne (rolig), sefølle (selvfølgelig), teløk (tillykke), haus (husk), meje (mere),
 manne (mange), møj (meget), ålle/olle (alle), åltins (altid), ås (også), lich (lige).
 
 ## 4. Tone
