@@ -1135,7 +1135,7 @@
   "ujens": "uenig",
   "vinne": "hvornår",
   "væneer": "hvornår",
-  "venøver": "uopdragen, gider ikke",
+  "venøver": "orke, gide, have lyst til (det giist han it vætøve = det orker han ikke); også: uopdragen",
   "vregle": "vippe på stolen",
   "vyste": "falde, slå en kolbøtte",
   "øfe": "råbe",
@@ -1407,7 +1407,73 @@
   "mejele": "le (til at slå korn)",
   "basse": "kæmpeneg af mange neg bundet sammen",
   "høsthave": "høstrive",
-  "kostald": "kostald"
+  "kostald": "kostald",
+  "krims": "småkager i det hele taget (Sydvest- og Sønderjylland)",
+  "krimskasten": "kassen man gemmer småkager i",
+  "bjæst": "råmælk, den tykke mælk lige efter kælvning",
+  "købe på kride": "købe på kredit",
+  "skriw det i æ skorsten": "glemme gælden og aldrig betale (Sundeved)",
+  "skriw det mæ kride å æ ryg": "minde en glemsom om noget (Gram)",
+  "harke": "håndrive, samlerive",
+  "høsken": "lille hus, skur; også das",
+  "vakkert": "1) for hurtigt (om et ur) 2) temmelig mange",
+  "skønne": "stor, vældig (forstærkende)",
+  "julmaand": "julemand (Als)",
+  "ulov": "orlov (Als)",
+  "snie": "sne (Als)",
+  "slej": "slæde (Als)",
+  "goa": "gård (Als)",
+  "knave": "gnave, nage",
+  "grønkol": "grønkål",
+  "slavdes": "slagtes",
+  "mørkning": "tusmørke, skumring",
+  "kri": "krig",
+  "forbojn": "forbudt",
+  "pikkelhat": "pikkelhue",
+  "chendarm": "gendarm, grænsevagt",
+  "kruk": "krukke",
+  "bluj": "blod",
+  "dybbe": "dyppe",
+  "kiil": "kedel; vaskekil = vaskekedel",
+  "hummel": "humle",
+  "nig": "neg",
+  "hove": "havre",
+  "hved": "hvede",
+  "øltynd": "øltønde",
+  "seltøj": "seletøj",
+  "brogaa": "brolagt gårdsplads",
+  "gyve": "indkørsel, gyde",
+  "lu": "lo, logulv (hvor man tærskede)",
+  "spindvøve": "spindelvæv",
+  "ky": "køer",
+  "svært": "sværte (til komfur eller sko)",
+  "skorstenslug": "skorstenslåge",
+  "fuu": "foder",
+  "kakluvn": "kakkelovn",
+  "lambe": "lamper",
+  "flahemusløjde": "flagermuslygte",
+  "olmo": "bedstemor, oldemor",
+  "ovtæjt": "aftægt (det de gamle fik, når gården blev overdraget)",
+  "jask": "tot, dusk",
+  "ovden": "juleaften",
+  "kalstikke": "kålstokke",
+  "frangol": "gang, entré",
+  "diskdug": "borddug",
+  "kadinne": "gardiner",
+  "løggelgaf": "nøglehul",
+  "mis": "kat",
+  "fikkniv": "lommekniv",
+  "griffel": "griffel (til skrivetavle); griffelkasten = griffeløske",
+  "mie tefrejs": "mere tilfreds",
+  "låden": "forretning, butik",
+  "antogh": "sæt tøj",
+  "sneje": "hurtigt",
+  "stammeser": "glansbilleder, som man byttede",
+  "skrabalder": "larm, spektakel; skrabaldre = larme",
+  "søt": "sylte, lave syltetøj (Vestsønderjylland)",
+  "lade": "udbyde til salg til en bestemt pris",
+  "magej": "have godt tag i, kunne styre noget",
+  "luch": "låge, lem (det sydlige og vestlige Sønderjylland)"
  },
  "detaljer": {
   "a": {
@@ -1638,7 +1704,8 @@
    "d": "Drengen fik en pose bolsjer.",
    "v": [
     "bonbon",
-    "bom-bom"
+    "bom-bom",
+    "bum"
    ]
   },
   "bomtulle": {
@@ -1672,7 +1739,10 @@
   "broe": {
    "k": "sb",
    "e": "Æ broe boe i Kjøwenhaun.",
-   "d": "Min bror bor i København."
+   "d": "Min bror bor i København.",
+   "v": [
+    "bru"
+   ]
   },
   "bruch": {
    "k": "vb",
@@ -1811,7 +1881,10 @@
   "daw": {
    "k": "sb",
    "e": "Goj daw!",
-   "d": "Goddag!"
+   "d": "Goddag!",
+   "v": [
+    "dav"
+   ]
   },
   "dawe": {
    "k": "sb",
@@ -1928,7 +2001,8 @@
     "dørns",
     "dørrens",
     "dørrensk",
-    "døns"
+    "døns",
+    "dønsk"
    ]
   },
   "dåge": {
@@ -2192,7 +2266,10 @@
   "foråe": {
    "k": "sb",
    "e": "Om foråe kommer æ troldblomme.",
-   "d": "Om foråret kommer mælkebøtterne."
+   "d": "Om foråret kommer mælkebøtterne.",
+   "v": [
+    "faare"
+   ]
   },
   "fowl": {
    "k": "sb",
@@ -2262,7 +2339,10 @@
   "føre": {
    "k": "talord",
    "e": "Han æ føre åe.",
-   "d": "Han er fyrre år."
+   "d": "Han er fyrre år.",
+   "v": [
+    "fétigh"
+   ]
   },
   "førre": {
    "k": "sb",
@@ -2497,7 +2577,10 @@
   "gål": {
    "k": "sb",
    "e": "Æ kat ligge å æ gål.",
-   "d": "Katten ligger på gulvet."
+   "d": "Katten ligger på gulvet.",
+   "v": [
+    "goll"
+   ]
   },
   "gån": {
    "k": "vb",
@@ -2572,7 +2655,10 @@
   "heel": {
    "k": "adj",
    "e": "Æ hæ væt hjem heel æ daw.",
-   "d": "Jeg har været hjemme hele dagen."
+   "d": "Jeg har været hjemme hele dagen.",
+   "v": [
+    "hiile"
+   ]
   },
   "helawten": {
    "k": "sb",
@@ -2911,7 +2997,11 @@
   "kalgo": {
    "k": "sb",
    "e": "Æ fae æ ue i æ kalgo.",
-   "d": "Far er ude i haven."
+   "d": "Far er ude i haven.",
+   "v": [
+    "kalgå",
+    "kalgård"
+   ]
   },
   "kalgoloeg": {
    "k": "sb",
@@ -3192,7 +3282,11 @@
   "køf": {
    "k": "vb",
    "e": "Æ ska køf brø.",
-   "d": "Jeg skal købe brød."
+   "d": "Jeg skal købe brød.",
+   "v": [
+    "kyf",
+    "køhf"
+   ]
   },
   "køjt": {
    "k": "vb",
@@ -3510,7 +3604,10 @@
   "moe": {
    "k": "sb",
    "e": "Æ moe kalle!",
-   "d": "Min mor kalder!"
+   "d": "Min mor kalder!",
+   "v": [
+    "mu"
+   ]
   },
   "moelwrambel": {
    "k": "sb",
@@ -3678,7 +3775,8 @@
    "s": "os23",
    "v": [
     "na'r",
-    "narre"
+    "narre",
+    "nare"
    ]
   },
   "naj": {
@@ -4014,7 +4112,10 @@
   "rummelpot": {
    "k": "sb",
    "e": "Vi gek mæ rummelpot nyåesawten.",
-   "d": "Vi gik med rummelpot nytårsaften."
+   "d": "Vi gik med rummelpot nytårsaften.",
+   "v": [
+    "rumlepotte"
+   ]
   },
   "runstyk": {
    "k": "sb",
@@ -4216,7 +4317,10 @@
   "skool": {
    "k": "sb",
    "e": "Æ bøen gæ i skool.",
-   "d": "Børnene går i skole."
+   "d": "Børnene går i skole.",
+   "v": [
+    "skul"
+   ]
   },
   "skoolmeste": {
    "k": "sb",
@@ -4643,7 +4747,10 @@
   "tant": {
    "k": "sb",
    "e": "Æ tant kommer å besøch.",
-   "d": "Min tante kommer på besøg."
+   "d": "Min tante kommer på besøg.",
+   "v": [
+    "tande"
+   ]
   },
   "tebach": {
    "k": "adv",
@@ -4915,7 +5022,14 @@
   "venøver": {
    "k": "adj",
    "e": "Æ knejt æ helt venøver.",
-   "d": "Drengen er helt uopdragen."
+   "d": "Drengen er helt uopdragen.",
+   "v": [
+    "vætøve",
+    "vænøve",
+    "vætøwe",
+    "vænøwe"
+   ],
+   "s": "os45"
   },
   "vest": {
    "k": "vb",
@@ -4956,7 +5070,10 @@
   "voe": {
    "k": "adj",
    "e": "Do æ helt voe!",
-   "d": "Du er helt våd!"
+   "d": "Du er helt våd!",
+   "v": [
+    "vu"
+   ]
   },
   "vonsde": {
    "k": "sb",
@@ -5029,7 +5146,10 @@
   "wenn": {
    "k": "konj",
    "e": "Wenn do kommer, sætte æ kaffe øwer.",
-   "d": "Når du kommer, sætter jeg kaffen over."
+   "d": "Når du kommer, sætter jeg kaffen over.",
+   "v": [
+    "væn"
+   ]
   },
   "wenner": {
    "k": "sb",
@@ -5107,7 +5227,8 @@
    "e": "Vil do ha et æfel?",
    "d": "Vil du have et æble?",
    "v": [
-    "efel"
+    "efel",
+    "efeld"
    ]
   },
   "ækeje": {
@@ -5205,7 +5326,10 @@
   "ålt": {
    "k": "pron",
    "e": "Det æ ålt å det.",
-   "d": "Det er det hele."
+   "d": "Det er det hele.",
+   "v": [
+    "olt"
+   ]
   },
   "åltins": {
    "k": "adv",
@@ -5267,7 +5391,10 @@
   "boest": {
    "k": "sb",
    "e": "Wo æ æ boest tæ æ sko?",
-   "d": "Hvor er børsten til skoene?"
+   "d": "Hvor er børsten til skoene?",
+   "v": [
+    "bost"
+   ]
   },
   "buld": {
    "k": "sb",
@@ -5703,7 +5830,8 @@
   "poppe": {
    "k": "sb",
    "e": "Æ piich leche mæ æ poppe.",
-   "d": "Pigen leger med dukken."
+   "d": "Pigen leger med dukken.",
+   "v": []
   },
   "pussworm": {
    "k": "sb",
@@ -5764,7 +5892,10 @@
   "seef": {
    "k": "sb",
    "e": "Vask dæ mæ seef.",
-   "d": "Vask dig med sæbe."
+   "d": "Vask dig med sæbe.",
+   "v": [
+    "sif"
+   ]
   },
   "sessel": {
    "k": "sb",
@@ -5864,7 +5995,10 @@
   "stoll": {
    "k": "sb",
    "e": "Æ helmus stæe i æ stoll.",
-   "d": "Hesten står i stalden."
+   "d": "Hesten står i stalden.",
+   "v": [
+    "stold"
+   ]
   },
   "staas": {
    "k": "sb",
@@ -5934,12 +6068,18 @@
   "traffelt": {
    "k": "adj",
    "e": "Æ hæ så traffelt i daw.",
-   "d": "Jeg har så travlt i dag."
+   "d": "Jeg har så travlt i dag.",
+   "v": [
+    "trafelt"
+   ]
   },
   "treesk": {
    "k": "sb",
    "e": "Han gæ i treesk.",
-   "d": "Han går i træsko."
+   "d": "Han går i træsko.",
+   "v": [
+    "træsk"
+   ]
   },
   "tremhus": {
    "k": "sb",
@@ -6062,7 +6202,10 @@
    "k": "sb",
    "e": "Æ ska ne tæ æ skuster mæ mi støwl.",
    "d": "Jeg skal ned til skomageren med mine støvler.",
-   "s": "os27"
+   "s": "os27",
+   "v": [
+    "skoste"
+   ]
   },
   "buddike": {
    "k": "sb",
@@ -6147,7 +6290,10 @@
    "k": "sb",
    "e": "Vi bache knæpnørre tæ juel.",
    "d": "Vi bager pebernødder til jul.",
-   "s": "os7"
+   "s": "os7",
+   "v": [
+    "knepnørre"
+   ]
   },
   "knæpkach": {
    "k": "sb",
@@ -6546,8 +6692,417 @@
    "s": "os23",
    "v": [
     "kræstald",
-    "kobås"
+    "kobås",
+    "kostold"
    ]
+  },
+  "krims": {
+   "k": "sb",
+   "e": "Hæ do krims tæ æ kaffe?",
+   "d": "Har du småkager til kaffen?",
+   "s": "os37"
+  },
+  "krimskasten": {
+   "k": "sb",
+   "e": "Æ krims æ i æ krimskasten.",
+   "d": "Småkagerne er i kagedåsen.",
+   "s": "os37"
+  },
+  "bjæst": {
+   "k": "sb",
+   "e": "Mormoe lau byttel a bjæst.",
+   "d": "Mormor lavede budding af råmælk.",
+   "s": "os37"
+  },
+  "købe på kride": {
+   "k": "udtryk",
+   "e": "Han køwer ålltins på kride ve æ høker.",
+   "d": "Han køber altid på kredit hos købmanden.",
+   "s": "os37"
+  },
+  "skriw det i æ skorsten": {
+   "k": "udtryk",
+   "e": "De peeng ka do skriw i æ skorsten.",
+   "d": "De penge kan du godt glemme.",
+   "s": "os37"
+  },
+  "skriw det mæ kride å æ ryg": {
+   "k": "udtryk",
+   "e": "Det må æ skriw mæ kride å dæ ryg.",
+   "d": "Det må jeg minde dig om.",
+   "s": "os37"
+  },
+  "harke": {
+   "k": "sb",
+   "e": "Ta æ harke å riw æ grajs sammen.",
+   "d": "Tag riven og riv græsset sammen.",
+   "s": "os37"
+  },
+  "høsken": {
+   "k": "sb",
+   "e": "Æ cykel stæe i æ høsken.",
+   "d": "Cyklen står i skuret.",
+   "s": "os37",
+   "v": [
+    "hysken"
+   ]
+  },
+  "vakkert": {
+   "k": "adv",
+   "e": "Æ klok gæ vakkert.",
+   "d": "Uret går for hurtigt.",
+   "s": "os40"
+  },
+  "skønne": {
+   "k": "adj",
+   "e": "Det vå en skønne bunke peeng.",
+   "d": "Det var en vældig bunke penge.",
+   "s": "os40"
+  },
+  "julmaand": {
+   "k": "sb",
+   "e": "Julmaand kom mæ en sæk gawe.",
+   "d": "Julemanden kom med en sæk gaver.",
+   "s": "os40"
+  },
+  "ulov": {
+   "k": "sb",
+   "e": "Han kom jem å ulov.",
+   "d": "Han kom hjem på orlov.",
+   "s": "os40"
+  },
+  "snie": {
+   "k": "sb",
+   "e": "Dæ ligge snie å æ mark.",
+   "d": "Der ligger sne på marken.",
+   "s": "os40",
+   "v": [
+    "sni"
+   ]
+  },
+  "slej": {
+   "k": "sb",
+   "e": "Æ bøen kørt slej ne a æ bakk.",
+   "d": "Børnene kørte på slæde ned ad bakken.",
+   "s": "os40"
+  },
+  "goa": {
+   "k": "sb",
+   "e": "Han bor å en goa ue å æ laan.",
+   "d": "Han bor på en gård ude på landet.",
+   "s": "os40"
+  },
+  "knave": {
+   "k": "vb",
+   "e": "Æ hun knave å æ ben.",
+   "d": "Hunden gnaver på benet.",
+   "s": "os40"
+  },
+  "grønkol": {
+   "k": "sb",
+   "e": "Tæ juel fek vi grønkol.",
+   "d": "Til jul fik vi grønkål.",
+   "s": "os40"
+  },
+  "slavdes": {
+   "k": "vb",
+   "e": "Æ gris ska slavdes tæ juel.",
+   "d": "Grisen skal slagtes til jul.",
+   "s": "os40"
+  },
+  "mørkning": {
+   "k": "sb",
+   "e": "I æ mørkning tænn vi æ lamp.",
+   "d": "I skumringen tænder vi lampen.",
+   "s": "os40"
+  },
+  "kri": {
+   "k": "sb",
+   "e": "Bestefae vå mæ i æ kri.",
+   "d": "Bedstefar var med i krigen.",
+   "s": "os40"
+  },
+  "forbojn": {
+   "k": "adj",
+   "e": "Det vå forbojn å snak dansk.",
+   "d": "Det var forbudt at tale dansk.",
+   "s": "os40"
+  },
+  "pikkelhat": {
+   "k": "sb",
+   "e": "Æ chendarm hai pikkelhat å.",
+   "d": "Gendarmen havde pikkelhue på.",
+   "s": "os40"
+  },
+  "chendarm": {
+   "k": "sb",
+   "e": "Æ chendarm gek langs æ græns.",
+   "d": "Gendarmen gik langs grænsen.",
+   "s": "os40"
+  },
+  "kruk": {
+   "k": "sb",
+   "e": "Æ sylt stæe i en kruk.",
+   "d": "Syltetøjet står i en krukke.",
+   "s": "os40"
+  },
+  "bluj": {
+   "k": "sb",
+   "e": "Do bløe! Dæ æ bluj å di hån.",
+   "d": "Du bløder! Der er blod på din hånd.",
+   "s": "os40"
+  },
+  "dybbe": {
+   "k": "vb",
+   "e": "Dybbe æ kach i æ kaffe.",
+   "d": "Dyp kagen i kaffen.",
+   "s": "os40"
+  },
+  "kiil": {
+   "k": "sb",
+   "e": "Sæt æ kiil å æ komfur.",
+   "d": "Sæt kedlen på komfuret.",
+   "s": "os40"
+  },
+  "hummel": {
+   "k": "sb",
+   "e": "Morfae dyrket hummel tæ æ øl.",
+   "d": "Morfar dyrkede humle til øllet.",
+   "s": "os40"
+  },
+  "nig": {
+   "k": "sb",
+   "e": "Vi satt æ nig op i skokk.",
+   "d": "Vi satte negene op i traver.",
+   "s": "os40"
+  },
+  "hove": {
+   "k": "sb",
+   "e": "Æ helmus fæe hove.",
+   "d": "Hesten får havre.",
+   "s": "os40"
+  },
+  "hved": {
+   "k": "sb",
+   "e": "Æ buend hæ sowt hved.",
+   "d": "Bonden har sået hvede.",
+   "s": "os40"
+  },
+  "øltynd": {
+   "k": "sb",
+   "e": "Æ øltynd æ toom.",
+   "d": "Øltønden er tom.",
+   "s": "os40"
+  },
+  "seltøj": {
+   "k": "sb",
+   "e": "Ta æ seltøj å æ helmus.",
+   "d": "Tag seletøjet på hesten.",
+   "s": "os40"
+  },
+  "brogaa": {
+   "k": "sb",
+   "e": "Æ bøen lech å æ brogaa.",
+   "d": "Børnene leger på den brolagte gårdsplads.",
+   "s": "os40"
+  },
+  "gyve": {
+   "k": "sb",
+   "e": "Æ biel holle i æ gyve.",
+   "d": "Bilen holder i indkørslen.",
+   "s": "os40"
+  },
+  "lu": {
+   "k": "sb",
+   "e": "Æ korn ble tæsket å æ lu.",
+   "d": "Kornet blev tærsket på loen.",
+   "s": "os40"
+  },
+  "spindvøve": {
+   "k": "sb",
+   "e": "Dæ æ spindvøve i ålle æ hjørne.",
+   "d": "Der er spindelvæv i alle hjørnerne.",
+   "s": "os40"
+  },
+  "ky": {
+   "k": "sb",
+   "e": "Æ ky ska malkes.",
+   "d": "Køerne skal malkes.",
+   "s": "os40"
+  },
+  "svært": {
+   "k": "sb",
+   "e": "Æ komfur ska ha svært.",
+   "d": "Komfuret skal sværtes.",
+   "s": "os40"
+  },
+  "skorstenslug": {
+   "k": "sb",
+   "e": "Luk æ skorstenslug!",
+   "d": "Luk skorstenslågen!",
+   "s": "os40"
+  },
+  "fuu": {
+   "k": "sb",
+   "e": "Æ ky fæe fuu.",
+   "d": "Køerne får foder.",
+   "s": "os40"
+  },
+  "kakluvn": {
+   "k": "sb",
+   "e": "Vi sedde ve æ kakluvn om awten.",
+   "d": "Vi sidder ved kakkelovnen om aftenen.",
+   "s": "os40"
+  },
+  "lambe": {
+   "k": "sb",
+   "e": "Tænn æ lambe.",
+   "d": "Tænd lamperne.",
+   "s": "os40"
+  },
+  "flahemusløjde": {
+   "k": "sb",
+   "e": "Han gek ue i æ stoll mæ en flahemusløjde.",
+   "d": "Han gik ud i stalden med en flagermuslygte.",
+   "s": "os40"
+  },
+  "olmo": {
+   "k": "sb",
+   "e": "Olmo sedde å pregle.",
+   "d": "Bedstemor sidder og strikker.",
+   "s": "os40"
+  },
+  "ovtæjt": {
+   "k": "sb",
+   "e": "Bestefae lev å ovtæjt.",
+   "d": "Bedstefar lever på aftægt.",
+   "s": "os40",
+   "v": [
+    "awtejt"
+   ]
+  },
+  "jask": {
+   "k": "sb",
+   "e": "En jask hoe.",
+   "d": "En tot hår.",
+   "s": "os40"
+  },
+  "ovden": {
+   "k": "sb",
+   "e": "Om ovden danse vi om æ juletræ.",
+   "d": "Juleaften danser vi om juletræet.",
+   "s": "os40"
+  },
+  "kalstikke": {
+   "k": "sb",
+   "e": "Æ kalstikke stod tebach ætte æ høst.",
+   "d": "Kålstokkene stod tilbage efter høsten.",
+   "s": "os40"
+  },
+  "frangol": {
+   "k": "sb",
+   "e": "Sæt æ sko i æ frangol.",
+   "d": "Sæt skoene i gangen.",
+   "s": "os40"
+  },
+  "diskdug": {
+   "k": "sb",
+   "e": "Læ en ren diskdug å.",
+   "d": "Læg en ren dug på.",
+   "s": "os40"
+  },
+  "kadinne": {
+   "k": "sb",
+   "e": "Træk æ kadinne for.",
+   "d": "Træk gardinerne for.",
+   "s": "os40"
+  },
+  "løggelgaf": {
+   "k": "sb",
+   "e": "Kik it gjænnem æ løggelgaf!",
+   "d": "Kig ikke gennem nøglehullet!",
+   "s": "os40"
+  },
+  "mis": {
+   "k": "sb",
+   "e": "Mis ligge å æ sofa.",
+   "d": "Katten ligger på sofaen.",
+   "s": "os40"
+  },
+  "fikkniv": {
+   "k": "sb",
+   "e": "Lån mæ di fikkniv.",
+   "d": "Lån mig din lommekniv.",
+   "s": "os40"
+  },
+  "griffel": {
+   "k": "sb",
+   "e": "Æ knejt glemt sin griffel.",
+   "d": "Drengen glemte sin griffel.",
+   "s": "os40"
+  },
+  "mie tefrejs": {
+   "k": "udtryk",
+   "e": "Ætte æ kaffe vå han mie tefrejs.",
+   "d": "Efter kaffen var han mere tilfreds.",
+   "s": "os40"
+  },
+  "låden": {
+   "k": "sb",
+   "e": "Æ låden luk klok sejs.",
+   "d": "Butikken lukker klokken seks.",
+   "s": "os45"
+  },
+  "antogh": {
+   "k": "sb",
+   "e": "Han fek en ny antogh tæ æ bryllup.",
+   "d": "Han fik et nyt sæt tøj til brylluppet.",
+   "s": "os45"
+  },
+  "sneje": {
+   "k": "adv",
+   "e": "Kom sneje!",
+   "d": "Kom hurtigt!",
+   "s": "os45"
+  },
+  "stammeser": {
+   "k": "sb",
+   "e": "Vi bytted stammeser i frikvarteret.",
+   "d": "Vi byttede glansbilleder i frikvarteret.",
+   "s": "os36",
+   "v": [
+    "stammese"
+   ]
+  },
+  "skrabalder": {
+   "k": "sb",
+   "e": "Hva æ det for et skrabalder?",
+   "d": "Hvad er det for et spektakel?",
+   "s": "os36"
+  },
+  "søt": {
+   "k": "vb",
+   "e": "Mormoe ska søt hansbær.",
+   "d": "Mormor skal sylte ribs.",
+   "s": "os36"
+  },
+  "lade": {
+   "k": "vb",
+   "e": "Han lade æ biel for tyyw tusin.",
+   "d": "Han udbyder bilen for tyve tusind.",
+   "s": "os40"
+  },
+  "magej": {
+   "k": "vb",
+   "e": "Han ka it magej æ helmus.",
+   "d": "Han kan ikke styre hesten.",
+   "s": "os44"
+  },
+  "luch": {
+   "k": "sb",
+   "e": "Luk æ luch tæ æ høloft.",
+   "d": "Luk lemmen til høloftet.",
+   "s": "os44"
   }
  },
  "kilder": {
@@ -6584,12 +7139,28 @@
    "u": "https://tidsskrift.dk/ordogsag/article/download/150481/193216"
   },
   "os44": {
-   "t": "Torben Arboe: Fra aks på mark til neg i lade eller stak, Ord & Sag",
-   "u": "https://tidsskrift.dk/ordogsag/article/download/152354/195010/336626"
+   "t": "Ord & Sag 44 (2024)",
+   "u": "https://tidsskrift.dk/ordogsag/issue/download/11802/2598"
   },
   "os23": {
    "t": "Spørg Skautrup: sønderjyske ord, Ord & Sag",
    "u": "https://tidsskrift.dk/ordogsag/article/download/149651/192471/329281"
+  },
+  "os37": {
+   "t": "Ord & Sag 37 (2017)",
+   "u": "https://jysk.au.dk/fileadmin/www.jysk.au.dk/publikationer/centrets_publikationer/ord___sag_26_-/ordsag37.pdf"
+  },
+  "os40": {
+   "t": "Ord & Sag 40 (2020), bl.a. Kirsten Lyshøjs tekst fra Als",
+   "u": "https://jysk.au.dk/fileadmin/www.jysk.au.dk/publikationer/centrets_publikationer/ord___sag_26_-/ordsag40.pdf"
+  },
+  "os45": {
+   "t": "Viggo Sørensen, Ord & Sag 45 (2025)",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/163174/204639/362517"
+  },
+  "os36": {
+   "t": "Ord & Sag 36 (2016)",
+   "u": "https://jysk.au.dk/fileadmin/www.jysk.au.dk/publikationer/centrets_publikationer/ord___sag_26_-/ordsag36.pdf"
   }
  }
 }
