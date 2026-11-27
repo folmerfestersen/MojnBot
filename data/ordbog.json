@@ -875,8 +875,8 @@
   "pudser": "viks",
   "sludder": "slurre",
   "vakkelvorn": "gichle",
-  "stub": "spolt",
-  "græstørv": "sajde"
+  "græstørv": "sajde",
+  "træstub": "spolt"
  },
  "gloser": {
   "mojn": "hej (og farvel: mojn mojn). Sønderjyllands vigtigste ord.",
@@ -1512,7 +1512,7 @@
   "slååch": "blød, om småkager der er blevet bløde",
   "slurre": "sludder",
   "gichle": "vakkelvorn",
-  "spolt": "stub",
+  "spolt": "træstub",
   "sajde": "græstørv"
  },
  "detaljer": {
@@ -7311,47 +7311,44 @@
   },
   "viks": {
    "k": "vb",
-   "s": "foraeldre",
    "e": "Do ska viks di sko, føe vi gæ i kirk.",
    "d": "Du skal pudse dine sko, før vi går i kirke."
   },
   "peiche": {
    "k": "adj",
-   "s": "foraeldre",
    "e": "Han æ så peiche, han gi it en krone.",
    "d": "Han er så nærig, han giver ikke en krone."
   },
   "naade": {
    "k": "adj",
-   "s": "foraeldre",
    "e": "Han æ fedte å naade.",
    "d": "Han er fedtet og nærig."
   },
   "slååch": {
    "k": "adj",
-   "s": "foraeldre",
    "e": "Æ småkach æ blewn slååch.",
    "d": "Småkagerne er blevet bløde."
   },
   "slurre": {
    "k": "sb",
-   "s": "foraeldre",
    "e": "Det æ ba slurre!",
    "d": "Det er bare sludder!"
   },
   "gichle": {
    "k": "adj",
-   "s": "foraeldre",
    "e": "Æ stol æ helt gichle.",
    "d": "Stolen er helt vakkelvorn."
   },
   "spolt": {
-   "k": "sb",
-   "s": "foraeldre"
+   "k": "sb"
   },
   "sajde": {
    "k": "sb",
-   "s": "foraeldre"
+   "v": [
+    "sejde"
+   ],
+   "e": "Æ hæ væn ue å skæe sejde å æ græjsplæne.",
+   "d": "Jeg har været ude at skære græstørv på græsplænen."
   }
  },
  "kilder": {
@@ -7410,10 +7407,6 @@
   "os36": {
    "t": "Ord & Sag 36 (2016)",
    "u": "https://jysk.au.dk/fileadmin/www.jysk.au.dk/publikationer/centrets_publikationer/ord___sag_26_-/ordsag36.pdf"
-  },
-  "foraeldre": {
-   "t": "Mikkel Folmer Festersens forældre (mundtligt)",
-   "u": ""
   }
  }
 }
