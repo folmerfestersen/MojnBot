@@ -897,7 +897,7 @@
   "bøen": "børn",
   "dawe": "morgenmad",
   "melme": "frokost / mellemmåltid med brød og kaffe",
-  "unnen": "middagsmad (det varme måltid)",
+  "unnen": "middagsmad, det varme måltid midt på dagen (ældgammel måltidsbetegnelse)",
   "narre": "aftensmad",
   "kaffeboe": "kaffebord. Det sønderjyske kaffebord med mindst 7 slags kager",
   "glant": "dejlig, rar, hyggelig (fra fransk galant)",
@@ -1091,7 +1091,7 @@
   "maggotrøje": "undertrøje",
   "nøx": "vred, arrig",
   "nøks": "vred, arrig",
-  "naer": "aftensmad",
+  "naer": "aftensmad (et ældgammelt ord, i familie med nadver)",
   "narworn": "indbilsk",
   "pekkel a": "stik af",
   "pissel": "den fine stue",
@@ -1351,7 +1351,58 @@
   "jerre": "hedder",
   "ha": "han",
   "hu": "hun",
-  "ka do vær en kårl om æ nat": "ordsprog: kan man være en karl om natten, kan man også være det om dagen"
+  "ka do vær en kårl om æ nat": "ordsprog: kan man være en karl om natten, kan man også være det om dagen",
+  "ri op": "cykle eller køre afsted (af tysk Rad)",
+  "affetek": "apotek",
+  "polte awden": "polterabend, aftenfest før et bryllup",
+  "gæ ue a ena'n": "skilles ad",
+  "mæ ena'n": "med hinanden",
+  "udlænger": "udbygninger, udhuse",
+  "et vælp": "en hvalp (dyreunger er intetkøn)",
+  "et kal": "en kalv (intetkøn)",
+  "æ æ låffen": "jeg er løbet, jeg smutter",
+  "sææl": "sælge",
+  "kjæw a": "ked af, led ved",
+  "vi æ oll adams bøen": "vi er alle Adams børn (vi er alle lige)",
+  "pæ jyllænder": "øgenavn for en nordjyde",
+  "holl a": "holde af",
+  "di slås som armt folk": "de slås, som kun fattige folk gør (om bitre skænderier)",
+  "i æ persille": "går det godt, lander det blødt",
+  "æ tått, æ høe en lus hoost": "ironisk svar til en næsvis: jeg syntes, jeg hørte en lus hoste",
+  "sønden om sæd for æ rørkær hunde": "om en frygtsom person",
+  "østen om gram for æ obbekær hunde": "om en frygtsom person (østlig variant)",
+  "ebach æ russere": "bagud, lidt dum",
+  "fra æ valakei": "dum, uvidende (fra Valakiet)",
+  "da skré æ tach": "drilleri mod en, der tvivler",
+  "skøjen": "grovædende, grådig",
+  "kvårnlyssen": "kornmod, lyn uden torden en sommeraften",
+  "sikken køn drææng": "sikke en pæn dreng",
+  "skokk": "skok, traver af neg",
+  "lykke": "lod, markstykke",
+  "bakhusdø": "udhusdør",
+  "nå, hææ ska æ pump stå": "mundheld når folk samles og snakker: her står vi så",
+  "å meel": "at udvælge med en remse (hvem der er den)",
+  "drejs om": "toppes, slås om",
+  "potte ude": "ude af spillet",
+  "blakken": "fangeleg med bold",
+  "sprang strik": "sjippe, hoppe i reb",
+  "sukke solt peffe": "remse ved sjip, der sætter tempoet op",
+  "tåsk": "torsk",
+  "smach": "smage",
+  "borrestu": "folkestue (hvor tjenestefolkene spiste)",
+  "håw": "1) kunne lide, synes om 2) tro, mene",
+  "gist li": "kunne lide; gist do li? = kan du lide?",
+  "hovsom": "nogenlunde, passende",
+  "essel": "vældig, forfærdelig; forstærker: en essel ro = en vældig ro (Als)",
+  "esselt": "meget, overordentlig (Als)",
+  "fej": "slemt, forfærdeligt; forstærker, lidt svagere end essel (Als)",
+  "jåls": "hilse",
+  "skraw": "træbuk, skammel man kan stille noget på",
+  "lejder": "stige (af nedertysk leider)",
+  "mejele": "le (til at slå korn)",
+  "basse": "kæmpeneg af mange neg bundet sammen",
+  "høsthave": "høstrive",
+  "kostald": "kostald"
  },
  "detaljer": {
   "a": {
@@ -3469,7 +3520,8 @@
   "mojn": {
    "k": "udbrud",
    "e": "Mojn! Hvodan gæ det?",
-   "d": "Hej! Hvordan går det?"
+   "d": "Hej! Hvordan går det?",
+   "s": "os8b"
   },
   "mojn mojn": {
    "k": "udbrud",
@@ -3617,7 +3669,12 @@
   "naer": {
    "k": "sb",
    "e": "Hva ska vi ha tæ naer?",
-   "d": "Hvad skal vi have til aftensmad?"
+   "d": "Hvad skal vi have til aftensmad?",
+   "s": "os23",
+   "v": [
+    "na'r",
+    "narre"
+   ]
   },
   "naj": {
    "k": "udbrud",
@@ -3967,7 +4024,8 @@
   "ræw": {
    "k": "sb",
    "e": "Æ ræw tåch æ høøn.",
-   "d": "Ræven tog hønen."
+   "d": "Ræven tog hønen.",
+   "v": []
   },
   "røj": {
    "k": "adj",
@@ -4806,7 +4864,8 @@
   "unnen": {
    "k": "sb",
    "e": "Klok tolv spise vi unnen.",
-   "d": "Klokken tolv spiser vi middagsmad."
+   "d": "Klokken tolv spiser vi middagsmad.",
+   "s": "os23"
   },
   "unskyld": {
    "k": "udbrud",
@@ -5566,7 +5625,10 @@
   "mæ æ nan": {
    "k": "udtryk",
    "e": "Di snakke it mæ æ nan.",
-   "d": "De snakker ikke med hinanden."
+   "d": "De snakker ikke med hinanden.",
+   "v": [
+    "mæ ena'n"
+   ]
   },
   "naachen": {
    "k": "adj",
@@ -6035,7 +6097,10 @@
    "k": "sb",
    "e": "Do æ en stjamp!",
    "d": "Du er et fjols!",
-   "s": "os7"
+   "s": "os7",
+   "v": [
+    "e stjamp"
+   ]
   },
   "gjaffet": {
    "k": "vb",
@@ -6162,6 +6227,322 @@
    "e": "Ka do vær en kårl om æ nat, ka do ås vær en kårl om æ daw.",
    "d": "Kan du være en karl om natten, kan du også være en karl om dagen.",
    "s": "tvsyd"
+  },
+  "ri op": {
+   "k": "vb",
+   "e": "Æ ska ri op å æ affetek.",
+   "d": "Jeg skal cykle op til apoteket.",
+   "s": "os7"
+  },
+  "affetek": {
+   "k": "sb",
+   "e": "Hent æ medisin å æ affetek.",
+   "d": "Hent medicinen på apoteket.",
+   "s": "os7"
+  },
+  "polte awden": {
+   "k": "sb",
+   "e": "Vi vå tæ polte awden hos Birgit.",
+   "d": "Vi var til polterabend hos Birgit.",
+   "s": "os7"
+  },
+  "gæ ue a ena'n": {
+   "k": "udtryk",
+   "e": "Ætte kaffen gek vi ue a ena'n.",
+   "d": "Efter kaffen skiltes vi.",
+   "s": "os7"
+  },
+  "mæ ena'n": {
+   "k": "udtryk",
+   "e": "Di snakke mæ ena'n.",
+   "d": "De snakker med hinanden.",
+   "s": "os7",
+   "v": [
+    "mæ æ nan"
+   ]
+  },
+  "udlænger": {
+   "k": "sb",
+   "e": "Æ kat bor i æ udlænger.",
+   "d": "Katten bor i udhusene.",
+   "s": "os7"
+  },
+  "et vælp": {
+   "k": "sb",
+   "e": "Vi hæ fået et vælp.",
+   "d": "Vi har fået en hvalp.",
+   "s": "os7"
+  },
+  "et kal": {
+   "k": "sb",
+   "e": "Æ ko fek et kal i nat.",
+   "d": "Koen fik en kalv i nat.",
+   "s": "os7"
+  },
+  "æ æ låffen": {
+   "k": "udtryk",
+   "e": "Tak for kaffe, æ æ låffen!",
+   "d": "Tak for kaffe, jeg smutter!",
+   "s": "os7"
+  },
+  "sææl": {
+   "k": "vb",
+   "e": "Vi ska sææl æ biel.",
+   "d": "Vi skal sælge bilen.",
+   "s": "os7"
+  },
+  "kjæw a": {
+   "k": "udtryk",
+   "e": "Æ æ kjæw a det.",
+   "d": "Jeg er ked af det.",
+   "s": "os7"
+  },
+  "vi æ oll adams bøen": {
+   "k": "udtryk",
+   "e": "Vi æ oll Adams bøen, så hjælp ham nå.",
+   "d": "Vi er alle lige, så hjælp ham nu.",
+   "s": "os7"
+  },
+  "pæ jyllænder": {
+   "k": "sb",
+   "e": "Han æ en rigtig pæ jyllænder.",
+   "d": "Han er en rigtig nordjyde.",
+   "s": "os7"
+  },
+  "holl a": {
+   "k": "udtryk",
+   "e": "Æ holle a dæ.",
+   "d": "Jeg holder af dig.",
+   "s": "os7"
+  },
+  "di slås som armt folk": {
+   "k": "udtryk",
+   "e": "Ve æ arv slås di som armt folk.",
+   "d": "Ved arven sloges de bittert.",
+   "s": "os7"
+  },
+  "i æ persille": {
+   "k": "udtryk",
+   "e": "Det gæ nok i æ persille.",
+   "d": "Det skal nok gå godt.",
+   "s": "os7"
+  },
+  "æ tått, æ høe en lus hoost": {
+   "k": "udtryk",
+   "e": "Æ tått, æ høe en lus hoost!",
+   "d": "Hør lige ham, den næsvise!",
+   "s": "os7"
+  },
+  "sønden om sæd for æ rørkær hunde": {
+   "k": "udtryk",
+   "e": "Han tør it nau, han æ sønden om Sæd for æ Rørkær hunde.",
+   "d": "Han tør ikke noget, han er bange af sig.",
+   "s": "os7"
+  },
+  "østen om gram for æ obbekær hunde": {
+   "k": "udtryk",
+   "e": "Han æ østen om Gram for æ Obbekær hunde.",
+   "d": "Han er bange af sig.",
+   "s": "os7"
+  },
+  "ebach æ russere": {
+   "k": "udtryk",
+   "e": "Han æ lidt ebach æ russere.",
+   "d": "Han er lidt bagud.",
+   "s": "os7"
+  },
+  "fra æ valakei": {
+   "k": "udtryk",
+   "e": "Han snakke, som om han vå fra æ Valakei.",
+   "d": "Han snakker, som om han ikke ved noget.",
+   "s": "os7"
+  },
+  "da skré æ tach": {
+   "k": "udtryk",
+   "e": "Do tvivle å det? Da skré æ tach!",
+   "d": "Tvivler du på det? Så skred taget!",
+   "s": "os7"
+  },
+  "skøjen": {
+   "k": "adj",
+   "e": "Vær it så skøjen!",
+   "d": "Vær ikke så grådig!",
+   "s": "os7"
+  },
+  "kvårnlyssen": {
+   "k": "sb",
+   "e": "I awten så vi kvårnlyssen øwer æ mark.",
+   "d": "I aften så vi kornmod over marken.",
+   "s": "os7"
+  },
+  "sikken køn drææng": {
+   "k": "udtryk",
+   "e": "Sikken køn drææng do hæ!",
+   "d": "Sikke en pæn dreng, du har!",
+   "s": "os7"
+  },
+  "skokk": {
+   "k": "sb",
+   "e": "Vi satt æ havre i skokk.",
+   "d": "Vi satte havren i traver.",
+   "s": "os7"
+  },
+  "lykke": {
+   "k": "sb",
+   "e": "Han hæ en lykke ve æ å.",
+   "d": "Han har et markstykke ved åen.",
+   "s": "os7"
+  },
+  "bakhusdø": {
+   "k": "sb",
+   "e": "Luk æ bakhusdø!",
+   "d": "Luk udhusdøren!",
+   "s": "os7"
+  },
+  "nå, hææ ska æ pump stå": {
+   "k": "udtryk",
+   "e": "Nå, hææ ska æ pump stå!",
+   "d": "Nå, her står vi så og snakker!",
+   "s": "os7"
+  },
+  "å meel": {
+   "k": "vb",
+   "e": "Vi ska lich meel, hvem dæ æ den.",
+   "d": "Vi skal lige vælge med en remse, hvem der er den.",
+   "s": "os7"
+  },
+  "drejs om": {
+   "k": "vb",
+   "e": "Æ knejte drejs om æ buld.",
+   "d": "Drengene toppes om bolden.",
+   "s": "os7"
+  },
+  "potte ude": {
+   "k": "udtryk",
+   "e": "Do æ potte ude!",
+   "d": "Du er ude af spillet!",
+   "s": "os7"
+  },
+  "blakken": {
+   "k": "sb",
+   "e": "Vi leche blakken i æ frikvarter.",
+   "d": "Vi legede boldfangeleg i frikvarteret.",
+   "s": "os7"
+  },
+  "sprang strik": {
+   "k": "sb",
+   "e": "Æ pige sprang strik ve æ skool.",
+   "d": "Pigerne sjippede ved skolen.",
+   "s": "os7"
+  },
+  "sukke solt peffe": {
+   "k": "udtryk",
+   "e": "Sukke, solt, peffe! Nå gæ det stærkt!",
+   "d": "Sukker, salt, peber! Nu går det stærkt!",
+   "s": "os7"
+  },
+  "tåsk": {
+   "k": "sb",
+   "e": "Vi fek kogt tåsk.",
+   "d": "Vi fik kogt torsk.",
+   "s": "os7"
+  },
+  "smach": {
+   "k": "vb",
+   "e": "Det smach godt!",
+   "d": "Det smager godt!",
+   "s": "os7"
+  },
+  "borrestu": {
+   "k": "sb",
+   "e": "Æ karle spiste i æ borrestu.",
+   "d": "Karlene spiste i folkestuen.",
+   "s": "os7"
+  },
+  "håw": {
+   "k": "vb",
+   "e": "Det howwer mæ it.",
+   "d": "Det huer mig ikke.",
+   "s": "os8",
+   "v": [
+    "howwer"
+   ]
+  },
+  "gist li": {
+   "k": "udtryk",
+   "e": "Gist do li sortsuppe?",
+   "d": "Kan du lide sortsuppe?",
+   "s": "os8"
+  },
+  "hovsom": {
+   "k": "adj",
+   "e": "Æ væer æ hovsom i daw.",
+   "d": "Vejret er nogenlunde i dag.",
+   "s": "os8"
+  },
+  "essel": {
+   "k": "adj",
+   "e": "Det vå en essel blæst.",
+   "d": "Det var en forfærdelig blæst.",
+   "s": "os8b"
+  },
+  "esselt": {
+   "k": "adv",
+   "e": "Det koste esselt manne peeng.",
+   "d": "Det kostede rigtig mange penge.",
+   "s": "os8b"
+  },
+  "fej": {
+   "k": "adj",
+   "e": "Det vå fej koldt.",
+   "d": "Det var slemt koldt.",
+   "s": "os8b"
+  },
+  "jåls": {
+   "k": "vb",
+   "e": "Do ska jåls fra mæ.",
+   "d": "Du skal hilse fra mig.",
+   "s": "os39"
+  },
+  "skraw": {
+   "k": "sb",
+   "e": "Sæt æ balje å æ skraw.",
+   "d": "Sæt baljen på træbukken.",
+   "s": "os33"
+  },
+  "lejder": {
+   "k": "sb",
+   "e": "Sæt æ lejder op å æ høloft.",
+   "d": "Sæt stigen op til høloftet.",
+   "s": "os33"
+  },
+  "mejele": {
+   "k": "sb",
+   "e": "Æ morfae slow æ korn mæ en mejele.",
+   "d": "Morfar slog kornet med en le.",
+   "s": "os44"
+  },
+  "basse": {
+   "k": "sb",
+   "e": "Hurra for æ basse!",
+   "d": "Hurra for kæmpeneget!",
+   "s": "os44"
+  },
+  "høsthave": {
+   "k": "sb",
+   "e": "Ta æ høsthave mæ ue å æ mark.",
+   "d": "Tag høstriven med ud på marken.",
+   "s": "os44"
+  },
+  "kostald": {
+   "k": "sb",
+   "e": "Æ køe stæe i æ kostald.",
+   "d": "Køerne står i kostalden.",
+   "s": "os23",
+   "v": [
+    "kræstald",
+    "kobås"
+   ]
   }
  },
  "kilder": {
@@ -6171,7 +6552,7 @@
   },
   "os7": {
    "t": "Hans Ohrt: Løst og fast om ord og vendinger fra min sønderjyske hjemstavn, Ord & Sag 7 (1987)",
-   "u": "https://tidsskrift.dk/ordogsag/issue/download/10560/2388"
+   "u": "https://tidsskrift.dk/ordogsag/article/download/149543/192381/329058"
   },
   "os39": {
    "t": "Marie Birkkjær Jacobsen: Synnejysk å skrift, Ord & Sag 39",
@@ -6184,6 +6565,26 @@
   "tvsyd": {
    "t": "Sønderjyske udtryk fra TV Syd, citeret på skagenonline.dk",
    "u": "https://www.skagenonline.dk/faq/hvordan-siger-man-hej-pa-sonderjysk"
+  },
+  "os8": {
+   "t": "Nina K. Grøftehauge og Viggo Sørensen: Det howwer a godt!, Ord & Sag",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/149629/192451/329226"
+  },
+  "os8b": {
+   "t": "Ord & Sag 8 (1988): spørgsmål og svar om sønderjyske ord",
+   "u": "https://tidsskrift.dk/ordogsag/issue/download/10561/2395"
+  },
+  "os33": {
+   "t": "Torben Arboe: Skrave, skagle, lejder, Ord & Sag",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/150481/193216"
+  },
+  "os44": {
+   "t": "Torben Arboe: Fra aks på mark til neg i lade eller stak, Ord & Sag",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/152354/195010/336626"
+  },
+  "os23": {
+   "t": "Spørg Skautrup: sønderjyske ord, Ord & Sag",
+   "u": "https://tidsskrift.dk/ordogsag/article/download/149651/192471/329281"
   }
  }
 }
