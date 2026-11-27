@@ -166,7 +166,7 @@
     a.href = URL.createObjectURL(blob); a.download = "mojnbot.png";
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(() => URL.revokeObjectURL(a.href), 4000);
-    toast("Billedet æ gemt. Del det mæ hvem do vil!");
+    toast("Æ billed æ gemt. Del det mæ hvem do vil!");
   }
 
   const gemHistorik = () => localStorage.setItem(HIST_KEY, JSON.stringify(historik.slice(-80)));
