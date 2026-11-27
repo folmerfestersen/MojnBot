@@ -869,7 +869,8 @@
   "vennerne": "æ wenner",
   "stranden": "æ strand",
   "strand": "strand",
-  "skynde": "skynd"
+  "skynde": "skynd",
+  "gø": "gjæff"
  },
  "gloser": {
   "mojn": "hej (og farvel: mojn mojn). Sønderjyllands vigtigste ord.",
@@ -1202,7 +1203,7 @@
   "giss": "hælde; giss'kann = vandkande (af tysk gießen)",
   "gi venaue": "bryde sig om; gist do venaue? = vil du have?",
   "girakke": "kodriver, primula",
-  "gjæff": "gå",
+  "gjæff": "gø (om hunde)",
   "glase": "glarmester",
   "go'e raj": "gode råd (en slags småkager)",
   "grajs": "græs",
@@ -5554,8 +5555,8 @@
   },
   "gjæff": {
    "k": "vb",
-   "e": "Vi ska gjæff jem nå.",
-   "d": "Vi skal gå hjem nu."
+   "e": "Æ hun den gjæffe.",
+   "d": "Hunden gør."
   },
   "glase": {
    "k": "sb",
