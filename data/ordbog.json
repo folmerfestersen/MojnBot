@@ -1168,7 +1168,161 @@
   "snupdug": "lommetørklæde",
   "grønplet": "græsplæne",
   "pot": "gryde",
-  "sinne mæ æ vinne": "tag den med ro, slap af"
+  "sinne mæ æ vinne": "tag den med ro, slap af",
+  "anlons": "anderledes, på en anden måde",
+  "bachætte": "bagefter",
+  "biffel": "bibel",
+  "bisse": "vagabond, landstryger",
+  "blomme": "blomster; blommert = blomstret",
+  "blænd": "1) blande 2) bladre",
+  "boest": "børste",
+  "buld": "bold",
+  "daue": "duer; daue it = duer ikke",
+  "davle": "daglig, hverdags-",
+  "deh": "der",
+  "de'n": "degn, kirkesanger",
+  "dochens": "og dog, alligevel",
+  "draun": "drukne",
+  "dækkel": "tæsk; naun å æ dækkel = nogen på skrinet",
+  "dærre": "fordærvet, ødelagt",
+  "echen": "egen",
+  "fa": "fad",
+  "fa'øl": "fadøl",
+  "fakkeløjte": "gavtyv, spilopmager",
+  "falm": "visne, sygne hen",
+  "feje": "skorstensfejer",
+  "fichel": "flirte",
+  "fisepatentle": "pertentlig, pernittengryn",
+  "flager": "havelåger",
+  "flau": "sulten (som i brødflov)",
+  "frejle": "fredeligt",
+  "fremmed": "gæster (sagt med hårdt d)",
+  "fuchte": "fugtig",
+  "fåsichte": "forsigtigt",
+  "gast ve'e": "gad vide",
+  "giss": "hælde; giss'kann = vandkande (af tysk gießen)",
+  "gi venaue": "bryde sig om; gist do venaue? = vil du have?",
+  "girakke": "kodriver, primula",
+  "gjæff": "gå",
+  "glase": "glarmester",
+  "go'e raj": "gode råd (en slags småkager)",
+  "grajs": "græs",
+  "gråsse": "gråspurv",
+  "hai'j": "havde, haft",
+  "handtør": "håndklæde",
+  "hankat-kjafe": "tykke kinder (hankattekæber)",
+  "haueflokke": "havregryn",
+  "hæen": "skete; det hæen = det skete",
+  "hjule": "hjulmager, karetmager",
+  "hold'snut": "tie stille, holde mund",
+  "humble": "ujævn, hullet",
+  "hække": "købmand",
+  "hånne": "honning",
+  "i æ måned": "om måneden",
+  "jauen": "netop; også: jævnligt",
+  "jaut": "jagt",
+  "jæwwer": "hastigt, ivrigt",
+  "kissel": "kilden (af tysk kitzlig)",
+  "kjafe": "kinder, kæber",
+  "kjæv": "bedrøvet, sørgelig",
+  "klæpper": "klapre, smække (fx med en dør)",
+  "komfolut": "konvolut",
+  "komme for": "blive ekspederet, få en chance",
+  "kre": "kreatur, husdyr",
+  "kreddebae": "trillebør",
+  "kuje": "ålekvabbe",
+  "kvitte": "kvæde (frugten, af tysk Quitte)",
+  "kø'n stau": "den fine stue, stadsstuen",
+  "lachen": "lagen",
+  "laj": "lade",
+  "langs": "afsted, hen ad; komme langs = komme afsted",
+  "las": "læs",
+  "li'm": "kost (at feje med)",
+  "luftpumpe": "cykelpumpe",
+  "læ": "stige",
+  "løjte": "lygte",
+  "gå a mind": "aldrig blive glemt",
+  "mötz": "hue (af tysk Mütze)",
+  "mærken": "marked",
+  "mæ æ nan": "med hinanden",
+  "naachen": "nøgen",
+  "naueti'": "et stykke tid, nogen tid",
+  "nelkner": "nelliker",
+  "nørre": "nødder",
+  "olt æ lau": "alt imens",
+  "pakbære": "bagagebærer",
+  "passee": "passeret, sket",
+  "pernippen": "pillen, nippen",
+  "piif": "pibe",
+  "pikk'o": "banke på",
+  "plajde": "fallit",
+  "plats": "punktere",
+  "plomme": "blommer",
+  "poppe": "dukke (af tysk Puppe)",
+  "pussworm": "lodden larve",
+  "pustle": "vabler, blærer",
+  "raj": "bange",
+  "reef": "reb",
+  "roof å jen": "kalde på en",
+  "rolle": "rolig",
+  "russ": "rutsje",
+  "ryd'le": "ryddeligt, ryddet op",
+  "sammel": "samle sammen",
+  "saupos": "sovepose",
+  "seef": "sæbe",
+  "sessel": "lænestol",
+  "sidst dau": "forleden dag",
+  "sil": "sent; for sille = for sent",
+  "sinnre": "sindigt, langsomt, varsomt",
+  "simp": "sennep",
+  "sjuft": "skurk, slyngel (af tysk Schuft)",
+  "skassé": "landevej (af fransk chaussée)",
+  "skiff": "skib",
+  "skraldegrin": "skrupgrine",
+  "skåhat": "paddehat",
+  "smatte": "mudder, smattet",
+  "snafel": "snabel",
+  "snaphaan": "en der tror, han er noget",
+  "snært o": "tæt på",
+  "snøkk op": "snøfte",
+  "spi'el": "spiller",
+  "staj": "by, købstad; stajse = bybo, stajsgaffel = byboer (især om Haderslev)",
+  "stej": "sted",
+  "stiich": "stige",
+  "stoll": "stald",
+  "staas": "stads, pynt",
+  "stræue": "skynde sig",
+  "strik": "sejlgarn",
+  "svejn": "sveden, brændt på",
+  "sychbil": "ambulance",
+  "sølle": "ussel, sølle",
+  "søte": "artig, sød, køn",
+  "tarre": "boghvede",
+  "taal o jen": "kalde på en, tale med en",
+  "taule": "tåbelig",
+  "tepas": "tilpas",
+  "tik": "tagfat (leg)",
+  "traffelt": "travlt",
+  "treesk": "træsko",
+  "tremhus": "fængsel (tremmehus)",
+  "tumbe": "tosset, tumpet",
+  "tusle": "uredt, pjusket",
+  "tut": "kræmmerhus; en tut bom = en pose bolsjer",
+  "tæe": "tæer",
+  "ulle": "olie",
+  "vaachen": "vågen",
+  "vajs": "vokse",
+  "vausen": "voksen",
+  "viskegummi": "viskelæder",
+  "vorm": "orm (af tysk Wurm)",
+  "vrejn unger": "klejner",
+  "vunnere sæ": "undre sig (af tysk wundern)",
+  "værfle": "terninger (af tysk Würfel)",
+  "won": "hvordan",
+  "zweck": "formål, nytte (af tysk Zweck)",
+  "ærch": "ærgrelse",
+  "øie": "ødelægge",
+  "øjs": "økse"
  },
  "detaljer": {
   "a": {
@@ -1184,12 +1338,21 @@
   "aggevaes": {
    "k": "sb",
    "e": "Det vå et værre aggevaes mæ æ biel i daw.",
-   "d": "Det var noget værre bøvl med bilen i dag."
+   "d": "Det var noget værre bøvl med bilen i dag.",
+   "v": [
+    "aggevas",
+    "akkevas"
+   ]
   },
   "aggevas": {
    "k": "sb",
    "e": "Hold op mæ det aggevas!",
-   "d": "Hold op med det postyr!"
+   "d": "Hold op med det postyr!",
+   "v": [
+    "akkevas",
+    "aggewaas",
+    "aggevaes"
+   ]
   },
   "amjast": {
    "k": "adj",
@@ -1219,7 +1382,11 @@
   "awten": {
    "k": "sb",
    "e": "Æ awten va glant.",
-   "d": "Aftenen var dejlig."
+   "d": "Aftenen var dejlig.",
+   "v": [
+    "auten",
+    "avten"
+   ]
   },
   "ba'": {
    "k": "adv",
@@ -1344,7 +1511,10 @@
   "blyve": {
    "k": "vb",
    "e": "Æ blyve hee i awten.",
-   "d": "Jeg bliver her i aften."
+   "d": "Jeg bliver her i aften.",
+   "v": [
+    "blywe"
+   ]
   },
   "blyw": {
    "k": "vb",
@@ -1389,7 +1559,10 @@
   "bows": {
    "k": "sb",
    "e": "Do hæ en gaf i æ bows.",
-   "d": "Du har hul i bukserne."
+   "d": "Du har hul i bukserne.",
+   "v": [
+    "baus"
+   ]
   },
   "brauer": {
    "k": "egennavn",
@@ -1444,22 +1617,34 @@
   "buddeliv": {
    "k": "sb",
    "e": "Æ hæ ont i æ buddeliv.",
-   "d": "Jeg har ondt i maven."
+   "d": "Jeg har ondt i maven.",
+   "v": [
+    "butteliv"
+   ]
   },
   "buend": {
    "k": "sb",
    "e": "Æ buend kør mæ æ traktor.",
-   "d": "Bonden kører med traktoren."
+   "d": "Bonden kører med traktoren.",
+   "v": [
+    "bu'n"
+   ]
   },
   "bull": {
    "k": "sb",
    "e": "Pas å æ bull!",
-   "d": "Pas på tyren!"
+   "d": "Pas på tyren!",
+   "v": [
+    "boll"
+   ]
   },
   "butteliv": {
    "k": "sb",
    "e": "Æ butteliv æ helt sat.",
-   "d": "Maven er helt mæt."
+   "d": "Maven er helt mæt.",
+   "v": [
+    "buddeliv"
+   ]
   },
   "byttel": {
    "k": "sb",
@@ -1504,7 +1689,11 @@
   "baajmoe": {
    "k": "sb",
    "e": "Æ baajmoe kom klok tow om natten.",
-   "d": "Jordemoderen kom klokken to om natten."
+   "d": "Jordemoderen kom klokken to om natten.",
+   "v": [
+    "bajmoe",
+    "bejmoe"
+   ]
   },
   "baajværels": {
    "k": "sb",
@@ -1524,7 +1713,10 @@
   "dave": {
    "k": "sb",
    "e": "Hva fek do tæ dave?",
-   "d": "Hvad fik du til morgenmad?"
+   "d": "Hvad fik du til morgenmad?",
+   "v": [
+    "dawe"
+   ]
   },
   "daw": {
    "k": "sb",
@@ -1534,7 +1726,10 @@
   "dawe": {
    "k": "sb",
    "e": "Æ spiste æ dawe ve æ køøchenboe.",
-   "d": "Jeg spiste morgenmaden ved køkkenbordet."
+   "d": "Jeg spiste morgenmaden ved køkkenbordet.",
+   "v": [
+    "dave"
+   ]
   },
   "dejle": {
    "k": "adj",
@@ -1624,7 +1819,11 @@
   "døns": {
    "k": "sb",
    "e": "Æ beste sedde i æ døns.",
-   "d": "Bedstemor sidder i dagligstuen."
+   "d": "Bedstemor sidder i dagligstuen.",
+   "v": [
+    "dørens",
+    "dørns"
+   ]
   },
   "dørel": {
    "k": "sb",
@@ -1634,7 +1833,13 @@
   "dørens": {
    "k": "sb",
    "e": "Kom in i æ dørens.",
-   "d": "Kom ind i stuen."
+   "d": "Kom ind i stuen.",
+   "v": [
+    "dørns",
+    "dørrens",
+    "dørrensk",
+    "døns"
+   ]
   },
   "dåge": {
    "k": "adj",
@@ -1649,7 +1854,10 @@
   "ekeje": {
    "k": "adv",
    "e": "Æ ved det ekeje.",
-   "d": "Jeg ved det heller ikke."
+   "d": "Jeg ved det heller ikke.",
+   "v": [
+    "ækeje"
+   ]
   },
   "elle": {
    "k": "konj",
@@ -1689,7 +1897,10 @@
   "essen": {
    "k": "adv",
    "e": "Do ska kom nå, essen bliw æ kaffe kold.",
-   "d": "Du skal komme nu, ellers bliver kaffen kold."
+   "d": "Du skal komme nu, ellers bliver kaffen kold.",
+   "v": [
+    "æssen"
+   ]
   },
   "eteråe": {
    "k": "sb",
@@ -1699,7 +1910,10 @@
   "ettemeje": {
    "k": "sb",
    "e": "Vi ses i æ ettemeje.",
-   "d": "Vi ses i eftermiddag."
+   "d": "Vi ses i eftermiddag.",
+   "v": [
+    "ættemaje"
+   ]
   },
   "fadde": {
    "k": "adj",
@@ -1709,12 +1923,18 @@
   "fae": {
    "k": "sb",
    "e": "Æ fae æ ue å fisk.",
-   "d": "Min far er ude at fiske."
+   "d": "Min far er ude at fiske.",
+   "v": [
+    "fæ"
+   ]
   },
   "faeklue": {
    "k": "sb",
    "e": "Tør æ boe a mæ æ faeklue.",
-   "d": "Tør bordet af med karkluden."
+   "d": "Tør bordet af med karkluden.",
+   "v": [
+    "fæklue"
+   ]
   },
   "falle": {
    "k": "adv",
@@ -1769,12 +1989,20 @@
   "fik": {
    "k": "sb",
    "e": "Han putte æ hansk i æ fik.",
-   "d": "Han putter handskerne i lommen."
+   "d": "Han putter handskerne i lommen.",
+   "v": [
+    "fikk",
+    "fæk"
+   ]
   },
   "fikdug": {
    "k": "sb",
    "e": "Hæ do en fikdug?",
-   "d": "Har du et lommetørklæde?"
+   "d": "Har du et lommetørklæde?",
+   "v": [
+    "fikk-duk",
+    "fikk-klue"
+   ]
   },
   "fimmel": {
    "k": "adj",
@@ -2319,12 +2547,20 @@
   "hoppaj": {
    "k": "sb",
    "e": "Æ hoppaj hoppe i æ dam.",
-   "d": "Frøen hopper i dammen."
+   "d": "Frøen hopper i dammen.",
+   "v": [
+    "hopp-paj",
+    "hoppajt"
+   ]
   },
   "hoppajt": {
    "k": "sb",
    "e": "Dæ sedde en hoppajt å æ stien.",
-   "d": "Der sidder en frø på stenen."
+   "d": "Der sidder en frø på stenen.",
+   "v": [
+    "hoppaj",
+    "hopp-paj"
+   ]
   },
   "hum dæ": {
    "k": "udtryk",
@@ -2414,7 +2650,10 @@
   "hån": {
    "k": "sb",
    "e": "Gi mæ di hån.",
-   "d": "Giv mig din hånd."
+   "d": "Giv mig din hånd.",
+   "v": [
+    "ha'n"
+   ]
   },
   "haasle": {
    "k": "egennavn",
@@ -2504,7 +2743,10 @@
   "jegt": {
    "k": "sb",
    "e": "Æ mormoe hæ jegt i æ hinne.",
-   "d": "Min mormor har gigt i hænderne."
+   "d": "Min mormor har gigt i hænderne.",
+   "v": [
+    "jæcht"
+   ]
   },
   "jel": {
    "k": "adj",
@@ -2599,7 +2841,10 @@
   "kawring": {
    "k": "sb",
    "e": "Æ spise kawring tæ æ kaffe.",
-   "d": "Jeg spiser tvebakker til kaffen."
+   "d": "Jeg spiser tvebakker til kaffen.",
+   "v": [
+    "kavring"
+   ]
   },
   "keel": {
    "k": "sb",
@@ -2844,7 +3089,10 @@
   "kyt": {
    "k": "vb",
    "e": "Kyt æ bold hee!",
-   "d": "Kast bolden herhen!"
+   "d": "Kast bolden herhen!",
+   "v": [
+    "kytt"
+   ]
   },
   "køe": {
    "k": "vb",
@@ -2899,7 +3147,12 @@
   "kåe": {
    "k": "sb",
    "e": "Hent lich æ kåe!",
-   "d": "Hent lige trillebøren!"
+   "d": "Hent lige trillebøren!",
+   "v": [
+    "krittkåe",
+    "kritbar",
+    "kreddebae"
+   ]
   },
   "kåér": {
    "k": "vb",
@@ -3014,12 +3267,18 @@
   "løchel": {
    "k": "sb",
    "e": "Hæ do æ løchel tæ æ hus?",
-   "d": "Har du nøglen til huset?"
+   "d": "Har du nøglen til huset?",
+   "v": [
+    "løgel"
+   ]
   },
   "løgel": {
    "k": "sb",
    "e": "Æ ka it fin æ løgel.",
-   "d": "Jeg kan ikke finde nøglen."
+   "d": "Jeg kan ikke finde nøglen.",
+   "v": [
+    "løchel"
+   ]
   },
   "løjs": {
    "k": "vb",
@@ -3104,7 +3363,10 @@
   "mawle": {
    "k": "adj",
    "e": "Æ brø æ mawle.",
-   "d": "Brødet er muggent."
+   "d": "Brødet er muggent.",
+   "v": [
+    "mule"
+   ]
   },
   "meen": {
    "k": "vb",
@@ -3139,7 +3401,11 @@
   "merelaw": {
    "k": "sb",
    "e": "Æ fae sawe til merelaw.",
-   "d": "Far sover til middagspausen."
+   "d": "Far sover til middagspausen.",
+   "v": [
+    "mærlau",
+    "mærrelau"
+   ]
   },
   "mjalk": {
    "k": "sb",
@@ -3209,12 +3475,18 @@
   "muddes": {
    "k": "sb",
    "e": "Gi mæ en muddes.",
-   "d": "Giv mig et kys."
+   "d": "Giv mig et kys.",
+   "v": [
+    "mut"
+   ]
   },
   "mule": {
    "k": "adj",
    "e": "Æ ost æ mule.",
-   "d": "Osten er muggen."
+   "d": "Osten er muggen.",
+   "v": [
+    "mawle"
+   ]
   },
   "mun": {
    "k": "sb",
@@ -3234,7 +3506,10 @@
   "mut": {
    "k": "sb",
    "e": "Hun gaw ham et mut.",
-   "d": "Hun gav ham et kys."
+   "d": "Hun gav ham et kys.",
+   "v": [
+    "muddes"
+   ]
   },
   "muus": {
    "k": "sb",
@@ -3254,7 +3529,12 @@
   "mærlau": {
    "k": "sb",
    "e": "Æ buend sawe i æ mærlau.",
-   "d": "Bonden sover i middagspausen."
+   "d": "Bonden sover i middagspausen.",
+   "v": [
+    "mærrelau",
+    "møjelau",
+    "merelaw"
+   ]
   },
   "møds": {
    "k": "sb",
@@ -3279,7 +3559,11 @@
   "møs": {
    "k": "sb",
    "e": "Æ kat fang en møs.",
-   "d": "Katten fangede en mus."
+   "d": "Katten fangede en mus.",
+   "v": [
+    "möss",
+    "muus"
+   ]
   },
   "møts": {
    "k": "sb",
@@ -3324,7 +3608,10 @@
   "nee": {
    "k": "adv",
    "e": "Kom nee fra æ trap!",
-   "d": "Kom ned fra trappen!"
+   "d": "Kom ned fra trappen!",
+   "v": [
+    "nen"
+   ]
   },
   "neje": {
    "k": "adv",
@@ -3334,7 +3621,10 @@
   "nejs": {
    "k": "sb",
    "e": "Do hæ snat å æ nejs.",
-   "d": "Du har snot på næsen."
+   "d": "Du har snot på næsen.",
+   "v": [
+    "najs"
+   ]
   },
   "ny": {
    "k": "adj",
@@ -3354,12 +3644,18 @@
   "nøks": {
    "k": "adj",
    "e": "Æ moe blew helt nøks.",
-   "d": "Min mor blev helt vred."
+   "d": "Min mor blev helt vred.",
+   "v": [
+    "nøx"
+   ]
   },
   "nøx": {
    "k": "adj",
    "e": "Han æ nøx å mæ.",
-   "d": "Han er vred på mig."
+   "d": "Han er vred på mig.",
+   "v": [
+    "nøks"
+   ]
   },
   "nå": {
    "k": "adv",
@@ -3419,7 +3715,10 @@
   "pekkel a": {
    "k": "udtryk",
    "e": "Pekkel a mæ dæ!",
-   "d": "Stik af med dig!"
+   "d": "Stik af med dig!",
+   "v": [
+    "pikkel a"
+   ]
   },
   "pige": {
    "k": "sb",
@@ -3429,7 +3728,10 @@
   "piich": {
    "k": "sb",
    "e": "Æ lille piich æ to åe.",
-   "d": "Den lille pige er to år."
+   "d": "Den lille pige er to år.",
+   "v": [
+    "pich"
+   ]
   },
   "pinste": {
    "k": "sb",
@@ -3499,7 +3801,10 @@
   "pusser": {
    "k": "sb",
    "e": "Ta di pusser å.",
-   "d": "Tag dine hjemmesko på."
+   "d": "Tag dine hjemmesko på.",
+   "v": [
+    "pusse"
+   ]
   },
   "put": {
    "k": "sb",
@@ -3624,7 +3929,10 @@
   "røj": {
    "k": "adj",
    "e": "Æ hus æ røj.",
-   "d": "Huset er rødt."
+   "d": "Huset er rødt.",
+   "v": [
+    "rø"
+   ]
   },
   "sach": {
    "k": "sb",
@@ -3654,7 +3962,11 @@
   "sanse": {
    "k": "vb",
    "e": "Han sanse åltins æ biel sjel.",
-   "d": "Han ordner altid bilen selv."
+   "d": "Han ordner altid bilen selv.",
+   "v": [
+    "sannse",
+    "sans"
+   ]
   },
   "sat": {
    "k": "adj",
@@ -3739,7 +4051,10 @@
   "sjel": {
    "k": "pron",
    "e": "Det ka æ sjel.",
-   "d": "Det kan jeg selv."
+   "d": "Det kan jeg selv.",
+   "v": [
+    "sjell"
+   ]
   },
   "ska": {
    "k": "vb",
@@ -3749,7 +4064,10 @@
   "skaf": {
    "k": "sb",
    "e": "Æ kopp stæe i æ skaf.",
-   "d": "Kopperne står i skabet."
+   "d": "Kopperne står i skabet.",
+   "v": [
+    "skaff"
+   ]
   },
   "skarnworn": {
    "k": "adj",
@@ -3769,7 +4087,10 @@
   "skik": {
    "k": "vb",
    "e": "Do ska skik et breww.",
-   "d": "Du skal sende et brev."
+   "d": "Du skal sende et brev.",
+   "v": [
+    "skikk"
+   ]
   },
   "skikke": {
    "k": "vb",
@@ -3889,17 +4210,26 @@
   "snute": {
    "k": "adj",
    "e": "Vær it så snute!",
-   "d": "Vær ikke så næsvis!"
+   "d": "Vær ikke så næsvis!",
+   "v": [
+    "snutte"
+   ]
   },
   "snutte": {
    "k": "adj",
    "e": "Æ knejt æ lidt snutte.",
-   "d": "Drengen er lidt fræk."
+   "d": "Drengen er lidt fræk.",
+   "v": [
+    "snute"
+   ]
   },
   "soj": {
    "k": "vb",
    "e": "Han soj ingenting.",
-   "d": "Han sagde ingenting."
+   "d": "Han sagde ingenting.",
+   "v": [
+    "soej"
+   ]
   },
   "sokke": {
    "k": "sb",
@@ -3939,12 +4269,18 @@
   "spinkuen": {
    "k": "sb",
    "e": "Dæ æ en spinkuen i æ hjørn.",
-   "d": "Der er en edderkop i hjørnet."
+   "d": "Der er en edderkop i hjørnet.",
+   "v": [
+    "spinnkuen"
+   ]
   },
   "spinnkuen": {
    "k": "sb",
    "e": "Æ æ bange for spinnkuen.",
-   "d": "Jeg er bange for edderkopper."
+   "d": "Jeg er bange for edderkopper.",
+   "v": [
+    "spinkuen"
+   ]
   },
   "spise": {
    "k": "vb",
@@ -4029,12 +4365,18 @@
   "stuen": {
    "k": "sb",
    "e": "Æ ventet en stuen.",
-   "d": "Jeg ventede en time."
+   "d": "Jeg ventede en time.",
+   "v": [
+    "stuun"
+   ]
   },
   "stuun": {
    "k": "sb",
    "e": "Det tåch en stuun.",
-   "d": "Det tog en time."
+   "d": "Det tog en time.",
+   "v": [
+    "stuen"
+   ]
   },
   "stæe": {
    "k": "vb",
@@ -4289,12 +4631,18 @@
   "troldblomme": {
    "k": "sb",
    "e": "Æ grønplet æ fuld a troldblomme.",
-   "d": "Græsplænen er fuld af mælkebøtter."
+   "d": "Græsplænen er fuld af mælkebøtter.",
+   "v": [
+    "trollkuen"
+   ]
   },
   "trollkuen": {
    "k": "sb",
    "e": "Æ bøen plukke trollkuen.",
-   "d": "Børnene plukker løvetand."
+   "d": "Børnene plukker løvetand.",
+   "v": [
+    "troldblomme"
+   ]
   },
   "tte": {
    "k": "sb",
@@ -4314,7 +4662,10 @@
   "tynne": {
    "k": "egennavn",
    "e": "Vi vå tæ festival i Tynne.",
-   "d": "Vi var til festival i Tønder."
+   "d": "Vi var til festival i Tønder.",
+   "v": [
+    "tynner"
+   ]
   },
   "tyyw": {
    "k": "talord",
@@ -4324,7 +4675,10 @@
   "tæ": {
    "k": "præp",
    "e": "Vi køe tæ Affenrå.",
-   "d": "Vi kører til Aabenraa."
+   "d": "Vi kører til Aabenraa.",
+   "v": [
+    "te"
+   ]
   },
   "tæn": {
    "k": "vb",
@@ -4389,7 +4743,11 @@
   "ujens": {
    "k": "adj",
    "e": "Vi æ ujens om det.",
-   "d": "Vi er uenige om det."
+   "d": "Vi er uenige om det.",
+   "v": [
+    "u-jens",
+    "u-jenn"
+   ]
   },
   "unle": {
    "k": "adj",
@@ -4459,7 +4817,10 @@
   "vichte": {
    "k": "adj",
    "e": "Det æ møj vichte.",
-   "d": "Det er meget vigtigt."
+   "d": "Det er meget vigtigt.",
+   "v": [
+    "vigte"
+   ]
   },
   "vil": {
    "k": "vb",
@@ -4469,7 +4830,10 @@
   "vinne": {
    "k": "adv",
    "e": "Vinne kommer do?",
-   "d": "Hvornår kommer du?"
+   "d": "Hvornår kommer du?",
+   "v": [
+    "væneer"
+   ]
   },
   "vint": {
    "k": "vb",
@@ -4524,7 +4888,10 @@
   "væneer": {
    "k": "adv",
    "e": "Væneer kommer æ toch?",
-   "d": "Hvornår kommer toget?"
+   "d": "Hvornår kommer toget?",
+   "v": [
+    "vinne"
+   ]
   },
   "væt": {
    "k": "vb",
@@ -4589,12 +4956,18 @@
   "wos": {
    "k": "pron",
    "e": "Kom å besøch wos.",
-   "d": "Kom og besøg os."
+   "d": "Kom og besøg os.",
+   "v": [
+    "vos"
+   ]
   },
   "wost": {
    "k": "sb",
    "e": "Vil do ha wost å æ brø?",
-   "d": "Vil du have ost på brødet?"
+   "d": "Vil du have ost på brødet?",
+   "v": [
+    "vost"
+   ]
   },
   "wundle": {
    "k": "adj",
@@ -4624,12 +4997,18 @@
   "æfel": {
    "k": "sb",
    "e": "Vil do ha et æfel?",
-   "d": "Vil du have et æble?"
+   "d": "Vil du have et æble?",
+   "v": [
+    "efel"
+   ]
   },
   "ækeje": {
    "k": "adv",
    "e": "Æ vil ækeje.",
-   "d": "Jeg vil heller ikke."
+   "d": "Jeg vil heller ikke.",
+   "v": [
+    "ekeje"
+   ]
   },
   "ætte": {
    "k": "præp",
@@ -4639,7 +5018,10 @@
   "ævn": {
    "k": "sb",
    "e": "Han hæ blå ævn.",
-   "d": "Han har blå øjne."
+   "d": "Han har blå øjne.",
+   "v": [
+    "øvn"
+   ]
   },
   "øe": {
    "k": "sb",
@@ -4664,7 +5046,10 @@
   "øvn": {
    "k": "sb",
    "e": "Luk di øvn å sow.",
-   "d": "Luk dine øjne og sov."
+   "d": "Luk dine øjne og sov.",
+   "v": [
+    "ævn"
+   ]
   },
   "øwer": {
    "k": "præp",
@@ -4704,7 +5089,10 @@
   "ålle": {
    "k": "pron",
    "e": "Ålle ka li kach.",
-   "d": "Alle kan lide kage."
+   "d": "Alle kan lide kage.",
+   "v": [
+    "oll"
+   ]
   },
   "ålt": {
    "k": "pron",
@@ -4714,7 +5102,10 @@
   "åltins": {
    "k": "adv",
    "e": "Han kommer åltins for sjent.",
-   "d": "Han kommer altid for sent."
+   "d": "Han kommer altid for sent.",
+   "v": [
+    "olti'ns"
+   ]
   },
   "ås": {
    "k": "adv",
@@ -4725,6 +5116,815 @@
    "k": "talord",
    "e": "Vi spise klok ååt.",
    "d": "Vi spiser klokken otte."
+  },
+  "anlons": {
+   "k": "adv",
+   "e": "Det æ helt anlons i Kjøwenhaun.",
+   "d": "Det er helt anderledes i København."
+  },
+  "bachætte": {
+   "k": "adv",
+   "e": "Vi spise føest, å bachætte drikke vi kaffe.",
+   "d": "Vi spiser først, og bagefter drikker vi kaffe."
+  },
+  "biffel": {
+   "k": "sb",
+   "e": "Æ præst læser højt a æ biffel.",
+   "d": "Præsten læser højt af biblen."
+  },
+  "bisse": {
+   "k": "sb",
+   "e": "Dæ kom en bisse forbi å spuet ætte mar.",
+   "d": "Der kom en vagabond forbi og spurgte efter mad.",
+   "v": [
+    "boss"
+   ]
+  },
+  "blomme": {
+   "k": "sb",
+   "e": "Æ kalgo æ fuld a blomme.",
+   "d": "Haven er fuld af blomster.",
+   "v": [
+    "blommert"
+   ]
+  },
+  "blænd": {
+   "k": "vb",
+   "e": "Do ska blænd æ mjel å æ sokke.",
+   "d": "Du skal blande melet og sukkeret.",
+   "v": [
+    "blæ'nd"
+   ]
+  },
+  "boest": {
+   "k": "sb",
+   "e": "Wo æ æ boest tæ æ sko?",
+   "d": "Hvor er børsten til skoene?"
+  },
+  "buld": {
+   "k": "sb",
+   "e": "Kyt æ buld hee!",
+   "d": "Kast bolden herhen!"
+  },
+  "daue": {
+   "k": "vb",
+   "e": "Den knipser daue it.",
+   "d": "Den fjernbetjening duer ikke."
+  },
+  "davle": {
+   "k": "adj",
+   "e": "Det æ ba æ davle klæe.",
+   "d": "Det er bare hverdagstøjet."
+  },
+  "deh": {
+   "k": "adv",
+   "e": "Deh æ han jo!",
+   "d": "Der er han jo!"
+  },
+  "de'n": {
+   "k": "sb",
+   "e": "Æ de'n sang for i æ kirk.",
+   "d": "Degnen sang for i kirken."
+  },
+  "dochens": {
+   "k": "adv",
+   "e": "Dochens kom han.",
+   "d": "Og dog kom han."
+  },
+  "draun": {
+   "k": "vb",
+   "e": "Pas å, do it draun i æ fjoe!",
+   "d": "Pas på, du ikke drukner i fjorden!"
+  },
+  "dækkel": {
+   "k": "sb",
+   "e": "Han fek naun å æ dækkel.",
+   "d": "Han fik nogle på skrinet."
+  },
+  "dærre": {
+   "k": "adj",
+   "e": "Æ mjalk æ dærre.",
+   "d": "Mælken er fordærvet."
+  },
+  "echen": {
+   "k": "adj",
+   "e": "Han hæ sin echen biel.",
+   "d": "Han har sin egen bil."
+  },
+  "fa": {
+   "k": "sb",
+   "e": "Sæt æ fa å æ boe.",
+   "d": "Sæt fadet på bordet."
+  },
+  "fa'øl": {
+   "k": "sb",
+   "e": "Tow fa'øl, tak!",
+   "d": "To fadøl, tak!"
+  },
+  "fakkeløjte": {
+   "k": "sb",
+   "e": "Do æ en rigtig fakkeløjte!",
+   "d": "Du er en rigtig gavtyv!"
+  },
+  "falm": {
+   "k": "vb",
+   "e": "Æ blomme falm i æ varm.",
+   "d": "Blomsterne visner i varmen.",
+   "v": [
+    "falmet"
+   ]
+  },
+  "feje": {
+   "k": "sb",
+   "e": "Æ feje kommer i morn.",
+   "d": "Skorstensfejeren kommer i morgen."
+  },
+  "fichel": {
+   "k": "vb",
+   "e": "Han stod å fichel mæ æ piich ve æ bar.",
+   "d": "Han stod og flirtede med pigen ved baren."
+  },
+  "fisepatentle": {
+   "k": "adj",
+   "e": "Hun æ så fisepatentle mæ æ køøchen.",
+   "d": "Hun er så pertentlig med køkkenet."
+  },
+  "flager": {
+   "k": "sb",
+   "e": "Ålle æ flager stod åfen.",
+   "d": "Alle havelågerne stod åbne."
+  },
+  "flau": {
+   "k": "adj",
+   "e": "Æ æ helt flau, hvonne æ dæ mar?",
+   "d": "Jeg er helt sulten, hvornår er der mad?"
+  },
+  "frejle": {
+   "k": "adj",
+   "e": "Det æ så frejle hee å æ laan.",
+   "d": "Det er så fredeligt her på landet."
+  },
+  "fremmed": {
+   "k": "sb",
+   "e": "Vi fæe fremmed tæ awten.",
+   "d": "Vi får gæster i aften."
+  },
+  "fuchte": {
+   "k": "adj",
+   "e": "Æ klæe æ stadig fuchte.",
+   "d": "Tøjet er stadig fugtigt."
+  },
+  "fåsichte": {
+   "k": "adv",
+   "e": "Køe fåsichte, det æ glat.",
+   "d": "Kør forsigtigt, det er glat."
+  },
+  "gast ve'e": {
+   "k": "udtryk",
+   "e": "Gast ve'e, wo han æ blaun a.",
+   "d": "Gad vide, hvor han er blevet af."
+  },
+  "giss": {
+   "k": "vb",
+   "e": "Giss lich wand å æ blomme.",
+   "d": "Hæld lige vand på blomsterne."
+  },
+  "gi venaue": {
+   "k": "udtryk",
+   "e": "Gist do venaue en stykke kach?",
+   "d": "Vil du have et stykke kage?",
+   "v": [
+    "gist do venaue"
+   ]
+  },
+  "girakke": {
+   "k": "sb",
+   "e": "Æ girakke blomstre om foråe.",
+   "d": "Kodriverne blomstrer om foråret."
+  },
+  "gjæff": {
+   "k": "vb",
+   "e": "Vi ska gjæff jem nå.",
+   "d": "Vi skal gå hjem nu."
+  },
+  "glase": {
+   "k": "sb",
+   "e": "Æ glase ska sæt en ny rud i.",
+   "d": "Glarmesteren skal sætte en ny rude i."
+  },
+  "go'e raj": {
+   "k": "sb",
+   "e": "Moste bacht go'e raj tæ æ kaffeboe.",
+   "d": "Moster bagte gode råd til kaffebordet."
+  },
+  "grajs": {
+   "k": "sb",
+   "e": "Æ grajs ska slaas.",
+   "d": "Græsset skal slås.",
+   "v": [
+    "græjs"
+   ]
+  },
+  "gråsse": {
+   "k": "sb",
+   "e": "Dæ sedde en gråsse å æ tach.",
+   "d": "Der sidder en gråspurv på taget.",
+   "v": [
+    "gråssen"
+   ]
+  },
+  "hai'j": {
+   "k": "vb",
+   "e": "Æ hai'j it tij.",
+   "d": "Jeg havde ikke tid."
+  },
+  "handtør": {
+   "k": "sb",
+   "e": "Gi mæ lich et handtør.",
+   "d": "Giv mig lige et håndklæde."
+  },
+  "hankat-kjafe": {
+   "k": "sb",
+   "e": "Æ baen hæ ægte hankat-kjafe.",
+   "d": "Barnet har rigtige hankattekæber."
+  },
+  "haueflokke": {
+   "k": "sb",
+   "e": "Vi spise haueflokke tæ dave.",
+   "d": "Vi spiser havregryn til morgenmad."
+  },
+  "hæen": {
+   "k": "vb",
+   "e": "Hva hæen så?",
+   "d": "Hvad skete der så?"
+  },
+  "hjule": {
+   "k": "sb",
+   "e": "Æ oldefae vå hjule.",
+   "d": "Min oldefar var hjulmager."
+  },
+  "hold'snut": {
+   "k": "udtryk",
+   "e": "Nå ska do hold'snut!",
+   "d": "Nu skal du tie stille!"
+  },
+  "humble": {
+   "k": "adj",
+   "e": "Æ vej æ helt humble.",
+   "d": "Vejen er helt hullet."
+  },
+  "hække": {
+   "k": "sb",
+   "e": "Løb ne tæ æ hække å køf mjalk.",
+   "d": "Løb ned til købmanden og køb mælk."
+  },
+  "hånne": {
+   "k": "sb",
+   "e": "Vil do ha hånne å æ brø?",
+   "d": "Vil du have honning på brødet?"
+  },
+  "i æ måned": {
+   "k": "udtryk",
+   "e": "Han tjene gåt i æ måned.",
+   "d": "Han tjener godt om måneden."
+  },
+  "jauen": {
+   "k": "adv",
+   "e": "Jauen, det vå det æ soj.",
+   "d": "Netop, det var det, jeg sagde."
+  },
+  "jaut": {
+   "k": "sb",
+   "e": "Æ fae gæ å jaut om eteråe.",
+   "d": "Far går på jagt om efteråret."
+  },
+  "jæwwer": {
+   "k": "adv",
+   "e": "Han spiste så jæwwer.",
+   "d": "Han spiste så hastigt."
+  },
+  "kissel": {
+   "k": "adj",
+   "e": "Æ æ så kissel unne æ førre.",
+   "d": "Jeg er så kilden under fødderne."
+  },
+  "kjafe": {
+   "k": "sb",
+   "e": "Hun fek røj kjafe a æ kul.",
+   "d": "Hun fik røde kinder af kulden."
+  },
+  "kjæv": {
+   "k": "adj",
+   "e": "Han så helt kjæv ud.",
+   "d": "Han så helt bedrøvet ud."
+  },
+  "klæpper": {
+   "k": "vb",
+   "e": "Æ døe klæpper i æ blæst.",
+   "d": "Døren smækker i blæsten."
+  },
+  "komfolut": {
+   "k": "sb",
+   "e": "Læ æ breww i en komfolut.",
+   "d": "Læg brevet i en konvolut."
+  },
+  "komme for": {
+   "k": "udtryk",
+   "e": "Vi vint lenn føe vi kom for.",
+   "d": "Vi ventede længe, før vi blev ekspederet."
+  },
+  "kre": {
+   "k": "sb",
+   "e": "Æ kre stæe i æ stoll.",
+   "d": "Kreaturerne står i stalden."
+  },
+  "kreddebae": {
+   "k": "sb",
+   "e": "Læs æ jord å æ kreddebae.",
+   "d": "Læs jorden på trillebøren.",
+   "v": [
+    "kredtkår"
+   ]
+  },
+  "kuje": {
+   "k": "sb",
+   "e": "Vi fang en kuje ve æ havn.",
+   "d": "Vi fangede en ålekvabbe ved havnen.",
+   "v": [
+    "ålkuje"
+   ]
+  },
+  "kvitte": {
+   "k": "sb",
+   "e": "Mormoe lau gelé a kvitte.",
+   "d": "Mormor laver gelé af kvæder."
+  },
+  "kø'n stau": {
+   "k": "sb",
+   "e": "Æ kø'n stau bruch vi kun tæ juel.",
+   "d": "Stadsstuen bruger vi kun til jul."
+  },
+  "lachen": {
+   "k": "sb",
+   "e": "Ta et ren lachen å æ seng.",
+   "d": "Tag et rent lagen på sengen."
+  },
+  "laj": {
+   "k": "sb",
+   "e": "Æ høe ligge i æ laj.",
+   "d": "Høet ligger i laden."
+  },
+  "langs": {
+   "k": "adv",
+   "e": "Nå ska vi langs.",
+   "d": "Nu skal vi afsted."
+  },
+  "las": {
+   "k": "sb",
+   "e": "Han kom mæ et las sand.",
+   "d": "Han kom med et læs sand."
+  },
+  "li'm": {
+   "k": "sb",
+   "e": "Ta æ li'm å fej æ gål.",
+   "d": "Tag kosten og fej gulvet."
+  },
+  "luftpumpe": {
+   "k": "sb",
+   "e": "Hæ do en luftpumpe?",
+   "d": "Har du en cykelpumpe?"
+  },
+  "læ": {
+   "k": "sb",
+   "e": "Sæt æ læ op å æ tach.",
+   "d": "Sæt stigen op mod taget."
+  },
+  "løjte": {
+   "k": "sb",
+   "e": "Tæn æ løjte, det æ mørk.",
+   "d": "Tænd lygten, det er mørkt."
+  },
+  "gå a mind": {
+   "k": "udtryk",
+   "e": "Den daw gæ aldrig a mind.",
+   "d": "Den dag bliver aldrig glemt."
+  },
+  "mötz": {
+   "k": "sb",
+   "e": "Ta di mötz å.",
+   "d": "Tag din hue på."
+  },
+  "mærken": {
+   "k": "sb",
+   "e": "Vi gæ tæ mærken i Affenrå.",
+   "d": "Vi går til markedet i Aabenraa."
+  },
+  "mæ æ nan": {
+   "k": "udtryk",
+   "e": "Di snakke it mæ æ nan.",
+   "d": "De snakker ikke med hinanden."
+  },
+  "naachen": {
+   "k": "adj",
+   "e": "Æ baen løb naachen rundt i æ kalgo.",
+   "d": "Barnet løb nøgen rundt i haven."
+  },
+  "naueti'": {
+   "k": "adv",
+   "e": "Det æ naueti' sie.",
+   "d": "Det er nogen tid siden."
+  },
+  "nelkner": {
+   "k": "sb",
+   "e": "Hun fek en buket nelkner.",
+   "d": "Hun fik en buket nelliker."
+  },
+  "nørre": {
+   "k": "sb",
+   "e": "Æ egern samle nørre.",
+   "d": "Egernet samler nødder."
+  },
+  "olt æ lau": {
+   "k": "udtryk",
+   "e": "Sæt æ kaffe øwer, olt æ lau æ dække boe.",
+   "d": "Sæt kaffen over, imens jeg dækker bord."
+  },
+  "pakbære": {
+   "k": "sb",
+   "e": "Sæt dæ å æ pakbære.",
+   "d": "Sæt dig på bagagebæreren."
+  },
+  "passee": {
+   "k": "vb",
+   "e": "Hva æ dæ passee?",
+   "d": "Hvad er der sket?"
+  },
+  "pernippen": {
+   "k": "vb",
+   "e": "Hun sedde å pernippen ve æ mar.",
+   "d": "Hun sidder og piller ved maden."
+  },
+  "piif": {
+   "k": "sb",
+   "e": "Bestefae røch piif.",
+   "d": "Bedstefar røg pibe."
+  },
+  "pikk'o": {
+   "k": "vb",
+   "e": "Æ pikk'o æ døe.",
+   "d": "Jeg banker på døren."
+  },
+  "plajde": {
+   "k": "adj",
+   "e": "Æ firma gek plajde.",
+   "d": "Firmaet gik fallit."
+  },
+  "plats": {
+   "k": "vb",
+   "e": "Æ cykel plats å vejen jem.",
+   "d": "Cyklen punkterede på vejen hjem."
+  },
+  "plomme": {
+   "k": "sb",
+   "e": "Æ plomme æ moen.",
+   "d": "Blommerne er modne."
+  },
+  "poppe": {
+   "k": "sb",
+   "e": "Æ piich leche mæ æ poppe.",
+   "d": "Pigen leger med dukken."
+  },
+  "pussworm": {
+   "k": "sb",
+   "e": "Dæ kravle en pussworm å æ blaj.",
+   "d": "Der kravler en lodden larve på bladet."
+  },
+  "pustle": {
+   "k": "sb",
+   "e": "Æ hæ pustle å æ hinne.",
+   "d": "Jeg har vabler på hænderne."
+  },
+  "raj": {
+   "k": "adj",
+   "e": "Æ æ it raj for æ mørk.",
+   "d": "Jeg er ikke bange for mørket."
+  },
+  "reef": {
+   "k": "sb",
+   "e": "Bind det mæ et reef.",
+   "d": "Bind det med et reb."
+  },
+  "roof å jen": {
+   "k": "udtryk",
+   "e": "Roof å æ bøen, æ mar æ færre.",
+   "d": "Kald på børnene, maden er færdig.",
+   "v": [
+    "roef jen"
+   ]
+  },
+  "rolle": {
+   "k": "adj",
+   "e": "Tæ det rolle.",
+   "d": "Tag det roligt.",
+   "v": [
+    "rålle"
+   ]
+  },
+  "russ": {
+   "k": "vb",
+   "e": "Æ bøen russ ne a æ bakk.",
+   "d": "Børnene rutsjer ned ad bakken."
+  },
+  "ryd'le": {
+   "k": "adj",
+   "e": "Det æ så ryd'le hee.",
+   "d": "Det er så ryddeligt her."
+  },
+  "sammel": {
+   "k": "vb",
+   "e": "Sammel æ legetøj op.",
+   "d": "Saml legetøjet sammen."
+  },
+  "saupos": {
+   "k": "sb",
+   "e": "Husk di saupos tæ lejren.",
+   "d": "Husk din sovepose til lejren."
+  },
+  "seef": {
+   "k": "sb",
+   "e": "Vask dæ mæ seef.",
+   "d": "Vask dig med sæbe."
+  },
+  "sessel": {
+   "k": "sb",
+   "e": "Bestefae sedde i æ sessel.",
+   "d": "Bedstefar sidder i lænestolen."
+  },
+  "sidst dau": {
+   "k": "udtryk",
+   "e": "Æ så ham sidst dau.",
+   "d": "Jeg så ham forleden dag."
+  },
+  "sil": {
+   "k": "adv",
+   "e": "Det æ blaun sil.",
+   "d": "Det er blevet sent."
+  },
+  "sinnre": {
+   "k": "adv",
+   "e": "Køe sinnre igennem æ by.",
+   "d": "Kør langsomt gennem byen."
+  },
+  "simp": {
+   "k": "sb",
+   "e": "Vil do ha simp å æ pøls?",
+   "d": "Vil du have sennep på pølsen?"
+  },
+  "sjuft": {
+   "k": "sb",
+   "e": "Han æ en rigtig sjuft.",
+   "d": "Han er en rigtig slyngel."
+  },
+  "skassé": {
+   "k": "sb",
+   "e": "Vi kørt ue ad æ skassé.",
+   "d": "Vi kørte ud ad landevejen."
+  },
+  "skiff": {
+   "k": "sb",
+   "e": "Æ skiff sejle in i æ havn.",
+   "d": "Skibet sejler ind i havnen."
+  },
+  "skraldegrin": {
+   "k": "vb",
+   "e": "Vi skraldegrin a ham.",
+   "d": "Vi skrupgrinede af ham."
+  },
+  "skåhat": {
+   "k": "sb",
+   "e": "Spis it æ skåhat!",
+   "d": "Spis ikke paddehatten!"
+  },
+  "smatte": {
+   "k": "adj",
+   "e": "Det æ helt smatte å æ mark.",
+   "d": "Det er helt mudret på marken."
+  },
+  "snafel": {
+   "k": "sb",
+   "e": "Æ elefant hæ en lang snafel.",
+   "d": "Elefanten har en lang snabel."
+  },
+  "snaphaan": {
+   "k": "sb",
+   "e": "Han æ en rigtig snaphaan.",
+   "d": "Han tror, han er noget."
+  },
+  "snært o": {
+   "k": "adv",
+   "e": "Det vå snært o.",
+   "d": "Det var tæt på."
+  },
+  "snøkk op": {
+   "k": "vb",
+   "e": "Do ska it snøkk op, brug en snupdug.",
+   "d": "Du skal ikke snøfte, brug et lommetørklæde."
+  },
+  "spi'el": {
+   "k": "vb",
+   "e": "Han spi'el harmonika.",
+   "d": "Han spiller harmonika."
+  },
+  "staj": {
+   "k": "sb",
+   "e": "Vi ska tæ staj å køf ind.",
+   "d": "Vi skal til byen og handle."
+  },
+  "stej": {
+   "k": "sb",
+   "e": "Det æ et glant stej.",
+   "d": "Det er et dejligt sted."
+  },
+  "stiich": {
+   "k": "sb",
+   "e": "Klatte op ad æ stiich.",
+   "d": "Klatre op ad stigen."
+  },
+  "stoll": {
+   "k": "sb",
+   "e": "Æ helmus stæe i æ stoll.",
+   "d": "Hesten står i stalden."
+  },
+  "staas": {
+   "k": "sb",
+   "e": "Det æ ba staas.",
+   "d": "Det er bare stads."
+  },
+  "stræue": {
+   "k": "vb",
+   "e": "Do må stræue dæ!",
+   "d": "Du må skynde dig!"
+  },
+  "strik": {
+   "k": "sb",
+   "e": "Bind æ pakk mæ strik.",
+   "d": "Bind pakken med sejlgarn."
+  },
+  "svejn": {
+   "k": "adj",
+   "e": "Æ grød æ svejn.",
+   "d": "Grøden er brændt på."
+  },
+  "sychbil": {
+   "k": "sb",
+   "e": "Ring ætte en sychbil!",
+   "d": "Ring efter en ambulance!"
+  },
+  "sølle": {
+   "k": "adj",
+   "e": "Det vå en sølle løn.",
+   "d": "Det var en ussel løn."
+  },
+  "søte": {
+   "k": "adj",
+   "e": "Hun æ en søte piich.",
+   "d": "Hun er en sød pige."
+  },
+  "tarre": {
+   "k": "sb",
+   "e": "Æ buend sow tarre å æ mark.",
+   "d": "Bonden såede boghvede på marken."
+  },
+  "taal o jen": {
+   "k": "udtryk",
+   "e": "Æ ska lich taal o æ nabo.",
+   "d": "Jeg skal lige tale med naboen."
+  },
+  "taule": {
+   "k": "adj",
+   "e": "Det vå en taule idé.",
+   "d": "Det var en tåbelig idé."
+  },
+  "tepas": {
+   "k": "adv",
+   "e": "Æ supp æ tepas varm.",
+   "d": "Suppen er tilpas varm."
+  },
+  "tik": {
+   "k": "sb",
+   "e": "Æ bøen lech tik i æ skoolgåe.",
+   "d": "Børnene leger tagfat i skolegården."
+  },
+  "traffelt": {
+   "k": "adj",
+   "e": "Æ hæ så traffelt i daw.",
+   "d": "Jeg har så travlt i dag."
+  },
+  "treesk": {
+   "k": "sb",
+   "e": "Han gæ i treesk.",
+   "d": "Han går i træsko."
+  },
+  "tremhus": {
+   "k": "sb",
+   "e": "Han kom i tremhus.",
+   "d": "Han kom i fængsel."
+  },
+  "tumbe": {
+   "k": "adj",
+   "e": "Æ hun æ lidt tumbe.",
+   "d": "Hunden er lidt tosset."
+  },
+  "tusle": {
+   "k": "adj",
+   "e": "Do æ helt tusle i æ hoe.",
+   "d": "Du er helt uredt i håret."
+  },
+  "tut": {
+   "k": "sb",
+   "e": "Æ knejt fek en tut bom.",
+   "d": "Drengen fik en pose bolsjer."
+  },
+  "tæe": {
+   "k": "sb",
+   "e": "Æ hæ kolle tæe.",
+   "d": "Jeg har kolde tæer."
+  },
+  "ulle": {
+   "k": "sb",
+   "e": "Æ biel ska ha ulle.",
+   "d": "Bilen skal have olie."
+  },
+  "vaachen": {
+   "k": "adj",
+   "e": "Æ æ helt vaachen.",
+   "d": "Jeg er helt vågen.",
+   "v": [
+    "vagen"
+   ]
+  },
+  "vajs": {
+   "k": "vb",
+   "e": "Æ bøen vajs så stærkt.",
+   "d": "Børnene vokser så hurtigt.",
+   "v": [
+    "vejs"
+   ]
+  },
+  "vausen": {
+   "k": "adj",
+   "e": "Hun æ blaun vausen.",
+   "d": "Hun er blevet voksen."
+  },
+  "viskegummi": {
+   "k": "sb",
+   "e": "Lån mæ di viskegummi.",
+   "d": "Lån mig dit viskelæder."
+  },
+  "vorm": {
+   "k": "sb",
+   "e": "Æ fowl tåch en vorm.",
+   "d": "Fuglen tog en orm."
+  },
+  "vrejn unger": {
+   "k": "sb",
+   "e": "Vi bache vrejn unger tæ juel.",
+   "d": "Vi bager klejner til jul."
+  },
+  "vunnere sæ": {
+   "k": "vb",
+   "e": "Æ vunnere mæ øwer det.",
+   "d": "Jeg undrer mig over det."
+  },
+  "værfle": {
+   "k": "sb",
+   "e": "Kyt æ værfle!",
+   "d": "Kast terningerne!"
+  },
+  "won": {
+   "k": "adv",
+   "e": "Won gæ det?",
+   "d": "Hvordan går det?"
+  },
+  "zweck": {
+   "k": "sb",
+   "e": "Det hæ ingen zweck.",
+   "d": "Det nytter ikke noget."
+  },
+  "ærch": {
+   "k": "sb",
+   "e": "Det vå en stoe ærch.",
+   "d": "Det var en stor ærgrelse."
+  },
+  "øie": {
+   "k": "vb",
+   "e": "Do må it øie æ legetøj.",
+   "d": "Du må ikke ødelægge legetøjet."
+  },
+  "øjs": {
+   "k": "sb",
+   "e": "Hug brænne mæ æ øjs.",
+   "d": "Hug brænde med øksen."
   }
  }
 }
