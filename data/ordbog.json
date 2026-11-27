@@ -870,7 +870,13 @@
   "stranden": "æ strand",
   "strand": "strand",
   "skynde": "skynd",
-  "gø": "gjæff"
+  "gø": "gjæff",
+  "pudse": "viks",
+  "pudser": "viks",
+  "sludder": "slurre",
+  "vakkelvorn": "gichle",
+  "stub": "spolt",
+  "græstørv": "sajde"
  },
  "gloser": {
   "mojn": "hej (og farvel: mojn mojn). Sønderjyllands vigtigste ord.",
@@ -1471,9 +1477,9 @@
   "kjøffenhaune": "københavner",
   "sefølle": "selvfølgelig",
   "blewn": "blevet",
-  "affenraa": "Aabenraa (i fx Sønderborg også aaffenraa eller åffenraa)",
+  "affenraa": "Aabenraa (i fx Sønderborg også Aaffenraa eller Åffenraa)",
   "heeje": "hedder (nogle steder heede)",
-  "kjøffenhaun": "København (kjøwenhaun bruges også)",
+  "kjøffenhaun": "København (Kjøwenhaun bruges også)",
   "arbe": "arbejde (både navneord og udsagnsord)",
   "gøe": "gør, gøre, gjorde",
   "sto": "stod (i Aabenraa: stou)",
@@ -1486,7 +1492,28 @@
   "odens": "Odense (siges både med j-lyd og med hårdt d)",
   "toort": "tærte, lagkage; kan også bare betyde kage",
   "tåche": "tåget (tåche/tåchet; dåge nogle steder)",
-  "ejn": "egen (echen nogle steder)"
+  "ejn": "egen (echen nogle steder)",
+  "brauer": "Broager",
+  "døffel": "Dybbøl",
+  "esbjerre": "Esbjerg",
+  "flensborre": "Flensborg",
+  "haasle": "Haderslev",
+  "kolling": "Kolding",
+  "rif": "Ribe",
+  "synneborre": "Sønderborg",
+  "synnejylland": "Sønderjylland",
+  "tynne": "Tønder",
+  "vejl": "Vejle",
+  "åhus": "Aarhus (Århus)",
+  "kloste": "Løgumkloster",
+  "viks": "pudse, fx sko. Bruges også om onani",
+  "peiche": "nærig",
+  "naade": "nærig. Fedte å naade = fedtet og nærig",
+  "slååch": "blød, om småkager der er blevet bløde",
+  "slurre": "sludder",
+  "gichle": "vakkelvorn",
+  "spolt": "stub",
+  "sajde": "græstørv"
  },
  "detaljer": {
   "a": {
@@ -7281,6 +7308,50 @@
    "v": [
     "echen"
    ]
+  },
+  "viks": {
+   "k": "vb",
+   "s": "foraeldre",
+   "e": "Do ska viks di sko, føe vi gæ i kirk.",
+   "d": "Du skal pudse dine sko, før vi går i kirke."
+  },
+  "peiche": {
+   "k": "adj",
+   "s": "foraeldre",
+   "e": "Han æ så peiche, han gi it en krone.",
+   "d": "Han er så nærig, han giver ikke en krone."
+  },
+  "naade": {
+   "k": "adj",
+   "s": "foraeldre",
+   "e": "Han æ fedte å naade.",
+   "d": "Han er fedtet og nærig."
+  },
+  "slååch": {
+   "k": "adj",
+   "s": "foraeldre",
+   "e": "Æ småkach æ blewn slååch.",
+   "d": "Småkagerne er blevet bløde."
+  },
+  "slurre": {
+   "k": "sb",
+   "s": "foraeldre",
+   "e": "Det æ ba slurre!",
+   "d": "Det er bare sludder!"
+  },
+  "gichle": {
+   "k": "adj",
+   "s": "foraeldre",
+   "e": "Æ stol æ helt gichle.",
+   "d": "Stolen er helt vakkelvorn."
+  },
+  "spolt": {
+   "k": "sb",
+   "s": "foraeldre"
+  },
+  "sajde": {
+   "k": "sb",
+   "s": "foraeldre"
   }
  },
  "kilder": {
@@ -7339,6 +7410,10 @@
   "os36": {
    "t": "Ord & Sag 36 (2016)",
    "u": "https://jysk.au.dk/fileadmin/www.jysk.au.dk/publikationer/centrets_publikationer/ord___sag_26_-/ordsag36.pdf"
+  },
+  "foraeldre": {
+   "t": "Mikkel Folmer Festersens forældre (mundtligt)",
+   "u": ""
   }
  }
 }

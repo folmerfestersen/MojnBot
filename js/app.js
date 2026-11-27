@@ -292,7 +292,7 @@
     { t: "Hvad er rummelpot?", s: "Rummelpot", u: "Nytårsaften på æ land" },
     { t: "Hvordan er vejret i dag?", s: "Æ vejr", u: "Blæst å moll" }
   ];
-  const OVERSAET_KORT = { t: "oversæt", s: "Øwersæt nau", u: "Rigsdansk → synnejysk", o: true };
+  const OVERSAET_KORT = { t: "oversæt", s: "Æwersæt nau", u: "Rigsdansk → synnejysk", o: true };
   const forslagEl = document.getElementById("forslag");
 
   function blandForslag() {

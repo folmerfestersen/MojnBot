@@ -192,7 +192,7 @@ const MojnBot = (() => {
   }
 
   /* ---------- Faste regler ---------- */
-  const OVERSAET_RE = /^(?:oversæt|øwersæt|sig|skriv|hvad hedder(?! (?:jeg|du|do|æ)\b)|hva hedder(?! (?:jeg|du|do|æ)\b)|hvordan siger man|hvodan saje man)\s*:?\s*["']?(.+?)["']?(?:\s+(?:på|å|til|tæ)\s+(?:sønderjysk|synnejysk))?\s*\??$/iu;
+  const OVERSAET_RE = /^(?:oversæt|øwersæt|æwersæt|sig|skriv|hvad hedder(?! (?:jeg|du|do|æ)\b)|hva hedder(?! (?:jeg|du|do|æ)\b)|hvordan siger man|hvodan saje man)\s*:?\s*["']?(.+?)["']?(?:\s+(?:på|å|til|tæ)\s+(?:sønderjysk|synnejysk))?\s*\??$/iu;
 
   const REGLER = [
     { re: OVERSAET_RE, svar: (m, raw) => { const mm = raw.match(OVERSAET_RE); const t = (mm ? mm[1] : m[1]).trim(); return `Å synnejysk saje vi: "${cap(Oversaetter.oversaet(t))}"`; } },
@@ -235,7 +235,7 @@ const MojnBot = (() => {
         const ord = (m[1] || m[3] || m[4] || m[5] || "").replace(/[?.!]/g, "").trim().toLowerCase();
         const hit = Object.keys(GLOSER).find(k => k.toLowerCase() === ord) || Object.keys(GLOSER).find(k => ord.includes(k.toLowerCase()) && k.length > 2);
         if (hit) return `"${hit}" betye ${GLOSER[hit]}. ${pick(["Nå ve do det.", "Så hæ do løjt nau i daw.", "Det æ et goj oe, det ska do bruch."])}`;
-        return `"${ord}"? Det kinne æ it lich som synnejysk oe. Men skryw det i en sætning, så ska æ nok øwersæt det.`;
+        return `"${ord}"? Det kinne æ it lich som synnejysk oe. Men skryw det i en sætning, så ska æ nok æwersæt det.`;
       } },
     { samtale: true, re: /\b(trist|ked af det|deprimeret|ensom|bange|stresset|nervøs|frustreret|sur|vred|irriteret|træt af det hele|har det dårligt|græder|savner)\b/,
       svar: () => pick([
@@ -290,7 +290,7 @@ const MojnBot = (() => {
       ]) },
     { samtale: true, re: /hvem er du|hva[d]? hedder du|hva heeje do|hvem æ do|hvad er du|er du en (robot|bot|computer|ai)|hvad kan du|hva ka do|^hjælp|hjælp$|hvad laver du/,
       svar: () => pick([
-        "Æ æ MojnBot, en synnejysk snakkemaskin fra Affenraa-egnen. Æ snakke kun æ sproch. Spøe mæ om byer, kaffe, ringrien, Æ Spritte, æ græns, elle hva der sker nee ve Gunnar å Birgit i nummer 16. Elle skryw 'oversæt: ...', så øwersætte æ det.",
+        "Æ æ MojnBot, en synnejysk snakkemaskin fra Affenraa-egnen. Æ snakke kun æ sproch. Spøe mæ om byer, kaffe, ringrien, Æ Spritte, æ græns, elle hva der sker nee ve Gunnar å Birgit i nummer 16. Elle skryw 'oversæt: ...', så æwersætte æ det.",
         "MojnBot heeje æ. Æ æ laut tæ å holl æ sproch i liv, jet oe a gangen. Æ ve nau om ålle byer fra Christiansfeld tæ Rudbøl, å æ ve ålt om æ vej, æ boe å. Å do, hva heeje do?",
         "Æ æ MojnBot. Halvt computer, halvt synnejye, å heel glaj for kach. Æ sedde i Affenraa å drikke kaffe å holl øje mæ æ naboer. Prøw å spøe om Røekro, Æ Spritte elle Gunnar."
       ]) },
