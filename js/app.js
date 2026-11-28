@@ -325,7 +325,7 @@
   const dagensOrdEl = document.getElementById("dagensOrd");
   function visDagensOrd() {
     // Kun ægte sønderjyske gloser: ingen småord, egennavne eller ord, resten af landet også bruger
-    const UDEN = new Set(["mojn", "nau", "lich", "hæ", "goj", "meje", "ålle", "hee", "jem", "wo", "vå", "gek", "soj", "daw", "jen", "tow", "trej", "fie", "syw", "ååt", "tyyw", "klok", "ring", "pråblem", "put", "pot", "bull", "kjø", "wie", "svat", "røj", "biel", "boch", "moe", "fae", "broe", "duels"]);
+    const UDEN = new Set(["mojn", "nau", "lich", "hæ", "goj", "meje", "ålle", "hee", "jem", "wo", "vå", "gek", "soj", "daw", "jen", "tow", "trej", "fie", "syw", "ååt", "tyyw", "klok", "ring", "pråblem", "put", "pot", "bull", "kjø", "wie", "svat", "svot", "røj", "biel", "boch", "moe", "fae", "broe", "duels"]);
     const ord = Object.keys(ordbog.gloser || {})
       .filter(k => k.length > 3 && !UDEN.has(k) && k === k.toLowerCase() && !/[\/(]/.test(k)).sort();
     if (!ord.length) return;
