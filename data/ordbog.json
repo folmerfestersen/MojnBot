@@ -227,8 +227,8 @@
   "ventede": "vint",
   "høre": "høe",
   "hører": "høe",
-  "hørte": "høt",
-  "hørt": "høt",
+  "hørte": "høe",
+  "hørt": "høe",
   "forstår": "forstæe",
   "forstå": "forstå",
   "forstod": "forstou",
@@ -649,7 +649,7 @@
   "fisk": "fisk",
   "mus": "muus",
   "ræv": "ræw",
-  "frø": "hoppaj",
+  "frø": "hoppajt",
   "edderkop": "spinkuen",
   "hveps": "ginning",
   "myre": "pismyre",
@@ -800,8 +800,8 @@
   "middagspause": "mærlau",
   "rosiner": "sinne",
   "græskar": "kørbis",
-  "græsplæne": "grønplet",
-  "græsplænen": "æ grønplet",
+  "græsplæne": "grajsplæn",
+  "græsplænen": "æ grajsplæn",
   "gryde": "pot",
   "gryden": "æ pot",
   "tyr": "bull",
@@ -814,11 +814,11 @@
   "huskeseddel": "dosmeserl",
   "fugleskræmsel": "fissemand",
   "peberkager": "mussenør",
-  "medister": "istebåen",
+  "medister": "mediste",
   "muldvarp": "moelwrambel",
   "gulvklud": "fojelstyk",
   "karklud": "faeklue",
-  "havelåge": "hawflach",
+  "havelåge": "hawlåch",
   "fastelavnsbolle": "hedevik",
   "tvebakker": "kawring",
   "ribs": "hansbær",
@@ -829,7 +829,7 @@
   "byge": "moll",
   "kaste": "kyt",
   "råbe": "øfe",
-  "skynd": "strøv",
+  "skynd": "stræue",
   "næsvis": "snutte",
   "fræk": "snutte",
   "vred": "nøks",
@@ -857,7 +857,6 @@
   "forkælet": "fordrejn",
   "nærig": "fedde",
   "skør": "fimmel",
-  "øm": "jel",
   "gigt": "jegt",
   "forskrækket": "køssen",
   "ussel": "halme",
@@ -1046,9 +1045,9 @@
   "hum dæ": "forsvind, gå væk",
   "høg dæ": "flyt dig",
   "høker": "købmand",
-  "immevæk": "igen og igen, hele tiden",
+  "immevæk": "igen og igen, hele tiden, uafbrudt (af tysk/plattysk immerweg = hele tiden)",
   "iling": "regnbyge",
-  "istebåen": "medister",
+  "istebåen": "medister (oftest siger man mediste)",
   "jens": "enig",
   "jenn": "alene",
   "jever": "hurtig",
@@ -1057,7 +1056,6 @@
   "kjøvt": "kedeligt, trist",
   "kukmand": "gøg",
   "kalgo": "have",
-  "kalgoloeg": "havelåge",
   "kandiddel": "frisk og på toppen",
   "keel": "brønd",
   "kink knyst": "kighoste",
@@ -1122,7 +1120,6 @@
   "snel jen": "en sjov en",
   "snelken": "et lille stykke",
   "spåse": "underligt",
-  "strøv": "skynde sig",
   "stuen": "en time",
   "støt sæ": "slået sig",
   "støvde": "falde, vælte",
@@ -1149,10 +1146,9 @@
   "dwalle": "vammel, kvalmende sød",
   "fjoch": "fjols",
   "fojelstyk": "gulvklud",
-  "hawflach": "havelåge",
   "hedevik": "fastelavnsbolle",
   "hoppajt": "frø (dyret)",
-  "jawns": "tilfældigvis",
+  "jawns": "lige præcis",
   "jappgaf": "sludrechatol",
   "kawring": "tvebakker",
   "kjewt": "trist",
@@ -1173,7 +1169,6 @@
   "veekach": "franskbrød",
   "kørbis": "græskar",
   "snupdug": "lommetørklæde",
-  "grønplet": "græsplæne",
   "pot": "gryde",
   "sinne mæ æ vinne": "tag den med ro, slap af",
   "anlons": "anderledes, på en anden måde",
@@ -1222,7 +1217,6 @@
   "hjule": "hjulmager, karetmager",
   "hold'snut": "tie stille, holde mund",
   "humble": "ujævn, hullet",
-  "hække": "købmand",
   "hånne": "honning",
   "i æ måned": "om måneden",
   "jauen": "netop; også: jævnligt",
@@ -1353,9 +1347,6 @@
   "snøkke": "toldbetjent, kontrollør (en der snuser)",
   "gammel hat": "afvisning: den er gammel, hold op",
   "no må do ha min kniw": "skepsis: den historie tror jeg ikke på",
-  "hai do moch i æ øje": "så hør dog efter",
-  "jerre": "hedder",
-  "hu": "hun",
   "ka do vær en kårl om æ nat": "ordsprog: kan man være en karl om natten, kan man også være det om dagen",
   "ri op": "cykle eller køre afsted (af tysk Rad)",
   "affetek": "apotek",
@@ -1379,7 +1370,7 @@
   "ebach æ russere": "bagud, lidt dum",
   "fra æ valakei": "dum, uvidende (fra Valakiet)",
   "da skré æ tach": "drilleri mod en, der tvivler",
-  "skøjen": "grovædende, grådig",
+  "skøjen": "grovædende, grådig; betyder også at man er øssel",
   "kvårnlyssen": "kornmod, lyn uden torden en sommeraften",
   "sikken køn drææng": "sikke en pæn dreng",
   "skokk": "skok, traver af neg",
@@ -1401,7 +1392,6 @@
   "essel": "vældig, forfærdelig; forstærker: en essel ro = en vældig ro (Als)",
   "esselt": "meget, overordentlig (Als)",
   "fej": "slemt, forfærdeligt; forstærker, lidt svagere end essel (Als)",
-  "jåls": "hilse",
   "skraw": "træbuk, skammel man kan stille noget på",
   "lejder": "stige (af nedertysk leider)",
   "mejele": "le (til at slå korn)",
@@ -1478,7 +1468,7 @@
   "sefølle": "selvfølgelig",
   "blewn": "blevet",
   "affenraa": "Aabenraa (i fx Sønderborg også Aaffenraa eller Åffenraa)",
-  "heeje": "hedder (nogle steder heede)",
+  "heeje": "hedder (heede, heje og jerre bruges også)",
   "kjøffenhaun": "København (Kjøwenhaun bruges også)",
   "arbe": "arbejde (både navneord og udsagnsord)",
   "gøe": "gør, gøre, gjorde",
@@ -1513,7 +1503,17 @@
   "slurre": "sludder",
   "gichle": "vakkelvorn",
   "spolt": "træstub",
-  "sajde": "græstørv"
+  "sajde": "græstørv",
+  "grajsplæn": "græsplæne (grønplet bruges også)",
+  "hæ do moch i æ øjn": "så hør dog efter",
+  "hawlåch": "havelåge",
+  "hun": "1) hund 2) hun (stedord, skrives også hu)",
+  "høkke": "købmand",
+  "høe": "høre, hører, hørte, hørt (høt bruges også)",
+  "mediste": "medister",
+  "jel": "øm (de fleste siger bare øm)",
+  "hils": "hilse (jåls bruges også)",
+  "kalgolåch": "havelåge"
  },
  "detaljer": {
   "a": {
@@ -2586,11 +2586,6 @@
    "e": "Æ græs æ grøen.",
    "d": "Græsset er grønt."
   },
-  "grønplet": {
-   "k": "sb",
-   "e": "Æ hun løbe rundt å æ grønplet.",
-   "d": "Hunden løber rundt på græsplænen."
-  },
   "grønsache": {
    "k": "sb",
    "e": "Do ska spiis di grønsache.",
@@ -2672,11 +2667,6 @@
    "e": "Æ hause it hva han heeje.",
    "d": "Jeg husker ikke, hvad han hedder."
   },
-  "hawflach": {
-   "k": "sb",
-   "e": "Luk æ hawflach, så æ hun it renne væk.",
-   "d": "Luk havelågen, så hunden ikke løber væk."
-  },
   "hedevik": {
    "k": "sb",
    "e": "Vi spise hedevik tæ fastelavn.",
@@ -2755,15 +2745,6 @@
    "e": "Han holt en tale.",
    "d": "Han holdt en tale."
   },
-  "hoppaj": {
-   "k": "sb",
-   "e": "Æ hoppaj hoppe i æ dam.",
-   "d": "Frøen hopper i dammen.",
-   "v": [
-    "hopp-paj",
-    "hoppajt"
-   ]
-  },
   "hoppajt": {
    "k": "sb",
    "e": "Dæ sedde en hoppajt å æ stien.",
@@ -2788,7 +2769,8 @@
    "e": "Æ hun gøe.",
    "d": "Hunden gør.",
    "v": [
-    "hund"
+    "hund",
+    "hu"
    ]
   },
   "hungere": {
@@ -2839,7 +2821,10 @@
   "høe": {
    "k": "vb",
    "e": "Høe do, hva æ saje?",
-   "d": "Hører du, hvad jeg siger?"
+   "d": "Hører du, hvad jeg siger?",
+   "v": [
+    "høt"
+   ]
   },
   "høg dæ": {
    "k": "udtryk",
@@ -2850,11 +2835,6 @@
    "k": "sb",
    "e": "Æ køwer sokke ve æ høker.",
    "d": "Jeg køber sukker hos købmanden."
-  },
-  "høt": {
-   "k": "vb",
-   "e": "Æ hæ høt det før.",
-   "d": "Jeg har hørt det før."
   },
   "høøn": {
    "k": "sb",
@@ -2950,9 +2930,7 @@
    "d": "Hun er et rigtigt sludrechatol."
   },
   "jawns": {
-   "k": "adv",
-   "e": "Æ møj ham jawns i æ Brugs.",
-   "d": "Jeg mødte ham tilfældigvis i Brugsen."
+   "k": "adv"
   },
   "jegt": {
    "k": "sb",
@@ -2998,7 +2976,10 @@
   "joven": {
    "k": "adv",
    "e": "Joven! Det æ det æ mene.",
-   "d": "Netop! Det er det, jeg mener."
+   "d": "Netop! Det er det, jeg mener.",
+   "v": [
+    "jowen"
+   ]
   },
   "juel": {
    "k": "sb",
@@ -3044,11 +3025,6 @@
     "kalgård"
    ]
   },
-  "kalgoloeg": {
-   "k": "sb",
-   "e": "Æ kalgoloeg knaje.",
-   "d": "Havelågen knirker."
-  },
   "kandiddel": {
    "k": "adj",
    "e": "Æ æ helt kandiddel i daw.",
@@ -3075,7 +3051,10 @@
   "kejhane": {
    "k": "adj",
    "e": "Æ broe æ kejhane.",
-   "d": "Min bror er venstrehåndet."
+   "d": "Min bror er venstrehåndet.",
+   "v": [
+    "kejthane"
+   ]
   },
   "kik": {
    "k": "vb",
@@ -3274,7 +3253,7 @@
   },
   "kukmand": {
    "k": "sb",
-   "e": "Æ høt æ kukmand i æ skov.",
+   "e": "Æ høe æ kukmand i æ skov.",
    "d": "Jeg hørte gøgen i skoven."
   },
   "kusin": {
@@ -3631,7 +3610,7 @@
   },
   "moelwrambel": {
    "k": "sb",
-   "e": "Æ moelwrambel hæ grawt i æ grønplet.",
+   "e": "Æ moelwrambel hæ grawt i æ grajsplæn.",
    "d": "Muldvarpen har gravet i græsplænen."
   },
   "mogse af": {
@@ -4610,11 +4589,6 @@
    "e": "Moe hæ laut striftort.",
    "d": "Mor har lavet lagkage."
   },
-  "strøv": {
-   "k": "vb",
-   "e": "Do må strøv dæ!",
-   "d": "Du må skynde dig!"
-  },
   "stuen": {
    "k": "sb",
    "e": "Æ ventet en stuen.",
@@ -4895,7 +4869,7 @@
   },
   "troldblomme": {
    "k": "sb",
-   "e": "Æ grønplet æ fuld a troldblomme.",
+   "e": "Æ grajsplæn æ fuld a troldblomme.",
    "d": "Græsplænen er fuld af mælkebøtter.",
    "v": [
     "trollkuen"
@@ -5657,11 +5631,6 @@
    "e": "Æ vej æ helt humble.",
    "d": "Vejen er helt hullet."
   },
-  "hække": {
-   "k": "sb",
-   "e": "Løb ne tæ æ hække å køf mjalk.",
-   "d": "Løb ned til købmanden og køb mælk."
-  },
   "hånne": {
    "k": "sb",
    "e": "Vil do ha hånne å æ brø?",
@@ -6057,7 +6026,10 @@
   "stræue": {
    "k": "vb",
    "e": "Do må stræue dæ!",
-   "d": "Du må skynde dig!"
+   "d": "Du må skynde dig!",
+   "v": [
+    "strøv"
+   ]
   },
   "strik": {
    "k": "sb",
@@ -6398,24 +6370,6 @@
    "d": "Nej, den tror jeg ikke på!",
    "s": "os7"
   },
-  "hai do moch i æ øje": {
-   "k": "udtryk",
-   "e": "Hai do moch i æ øje? Æ soj jo nej!",
-   "d": "Så hør dog efter! Jeg sagde jo nej!",
-   "s": "tvsyd"
-  },
-  "jerre": {
-   "k": "vb",
-   "e": "Hva jerre do?",
-   "d": "Hvad hedder du?",
-   "s": "os39"
-  },
-  "hu": {
-   "k": "pron",
-   "e": "Hu æ ue i æ kalgo.",
-   "d": "Hun er ude i haven.",
-   "s": "bjerrum"
-  },
   "ka do vær en kårl om æ nat": {
    "k": "udtryk",
    "e": "Ka do vær en kårl om æ nat, ka do ås vær en kårl om æ daw.",
@@ -6691,12 +6645,6 @@
    "e": "Det vå fej koldt.",
    "d": "Det var slemt koldt.",
    "s": "os8b"
-  },
-  "jåls": {
-   "k": "vb",
-   "e": "Do ska jåls fra mæ.",
-   "d": "Du skal hilse fra mig.",
-   "s": "os39"
   },
   "skraw": {
    "k": "sb",
@@ -7162,7 +7110,9 @@
    "e": "Hva heeje do?",
    "d": "Hvad hedder du?",
    "v": [
-    "heede"
+    "heede",
+    "jerre",
+    "heje"
    ]
   },
   "kjøffenhaun": {
@@ -7352,6 +7302,61 @@
    ],
    "e": "Æ hæ væn ue å skæe sejde å æ græjsplæne.",
    "d": "Jeg har været ude at skære græstørv på græsplænen."
+  },
+  "grajsplæn": {
+   "k": "sb",
+   "e": "Æ hun løbe rundt å æ grajsplæn.",
+   "d": "Hunden løber rundt på græsplænen.",
+   "v": [
+    "grønplet"
+   ]
+  },
+  "hæ do moch i æ øjn": {
+   "k": "udtryk",
+   "e": "Hæ do moch i æ øjn? Æ soj jo nej!",
+   "d": "Så hør dog efter! Jeg sagde jo nej!",
+   "s": "tvsyd",
+   "v": [
+    "hai do moch i æ øje"
+   ]
+  },
+  "hawlåch": {
+   "k": "sb",
+   "e": "Luk æ hawlåch, så æ hun it renne væk.",
+   "d": "Luk havelågen, så hunden ikke løber væk.",
+   "v": [
+    "hawflach"
+   ]
+  },
+  "høkke": {
+   "k": "sb",
+   "e": "Løb ne tæ æ høkke å køf mjalk.",
+   "d": "Løb ned til købmanden og køb mælk.",
+   "v": [
+    "hække"
+   ]
+  },
+  "mediste": {
+   "k": "sb",
+   "e": "Vi fek mediste mæ kåel.",
+   "d": "Vi fik medister med kål."
+  },
+  "hils": {
+   "k": "vb",
+   "e": "Do ska hils fra mæ.",
+   "d": "Du skal hilse fra mig.",
+   "s": "os39",
+   "v": [
+    "jåls"
+   ]
+  },
+  "kalgolåch": {
+   "k": "sb",
+   "e": "Æ kalgolåch knaje.",
+   "d": "Havelågen knirker.",
+   "v": [
+    "kalgoloeg"
+   ]
   }
  },
  "kilder": {
