@@ -1895,7 +1895,7 @@
   },
   "dau": {
    "k": "sb",
-   "e": "Det tåch nau dau.",
+   "e": "Det taw nau dau.",
    "d": "Det tog nogle dage."
   },
   "dave": {
@@ -4161,7 +4161,7 @@
   },
   "ræw": {
    "k": "sb",
-   "e": "Æ ræw tåch æ høøn.",
+   "e": "Æ ræw taw æ høøn.",
    "d": "Ræven tog hønen.",
    "v": []
   },
@@ -4625,7 +4625,7 @@
   },
   "stuun": {
    "k": "sb",
-   "e": "Det tåch en stuun.",
+   "e": "Det taw en stuun.",
    "d": "Det tog en time.",
    "v": [
     "stuen"
@@ -4825,7 +4825,10 @@
   "toch": {
    "k": "sb",
    "e": "Æ toch æ forsinket.",
-   "d": "Toget er forsinket."
+   "d": "Toget er forsinket.",
+   "v": [
+    "tåch"
+   ]
   },
   "tokkebæe": {
    "k": "sb",
@@ -6185,7 +6188,7 @@
   },
   "vorm": {
    "k": "sb",
-   "e": "Æ fowl tåch en vorm.",
+   "e": "Æ fowl taw en vorm.",
    "d": "Fuglen tog en orm."
   },
   "vrejn unger": {
