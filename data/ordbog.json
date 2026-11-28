@@ -875,7 +875,8 @@
   "sludder": "slurre",
   "vakkelvorn": "gichle",
   "græstørv": "sajde",
-  "træstub": "spolt"
+  "træstub": "spolt",
+  "køkkenhave": "kalgo"
  },
  "gloser": {
   "mojn": "hej (og farvel: mojn mojn). Sønderjyllands vigtigste ord.",
@@ -1055,7 +1056,7 @@
   "kejhane": "venstrehåndet",
   "kjøvt": "kedeligt, trist",
   "kukmand": "gøg",
-  "kalgo": "have",
+  "kalgo": "have, køkkenhave",
   "kandiddel": "frisk og på toppen",
   "keel": "brønd",
   "kink knyst": "kighoste",
@@ -1513,7 +1514,8 @@
   "mediste": "medister",
   "jel": "øm (de fleste siger bare øm)",
   "hils": "hilse (jåls bruges også)",
-  "kalgolåch": "havelåge"
+  "kalgolåch": "havelåge",
+  "hawe": "have"
  },
  "detaljer": {
   "a": {
@@ -7356,6 +7358,12 @@
    "d": "Havelågen knirker.",
    "v": [
     "kalgoloeg"
+   ]
+  },
+  "hawe": {
+   "k": "sb",
+   "v": [
+    "haw"
    ]
   }
  },
